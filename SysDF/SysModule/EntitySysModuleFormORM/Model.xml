@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tables Version="9.14.7207.833" NameSpace="Hhz.SysDF.SysModule" ConnName="hhzinfosys" Output="" BaseClass="Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.newlifex.com https://raw.githubusercontent.com/NewLifeX/X/master/XCode/ModelSchema.xsd" ChineseFileName="True" xmlns="http://www.newlifex.com/ModelSchema.xsd">
+  <Table Name="ActUser" Description="用户" DbType="SqlServer">
+    <Columns>
+      <Column Name="id" DataType="Int32" Identity="True" PrimaryKey="True" />
+      <Column Name="UserID" DataType="String" Nullable="False" Description="登录用户名编号" />
+      <Column Name="UserName" DataType="String" Nullable="False" Description="名称。登录用户名" />
+      <Column Name="Detp" DataType="String" Description="部门" />
+      <Column Name="Summary" DataType="String" Description="备注" />
+      <Column Name="State" DataType="Boolean" Nullable="True" Description="状态" />
+      <Column Name="Email" DataType="String" Description="邮件" />
+      <Column Name="Tel" DataType="String" Length="250" Description="电话" />
+      <Column Name="Pwd" DataType="String" Description="密码" />
+      <Column Name="Detped" DataType="Boolean" Nullable="True" Description="部门控制" />
+      <Column Name="isStop" DataType="Int32" Nullable="True" Description="停用" />
+    </Columns>
+    <Indexes>
+      <Index Columns="UserName" Unique="True" />
+    </Indexes>
+  </Table>
+</Tables>

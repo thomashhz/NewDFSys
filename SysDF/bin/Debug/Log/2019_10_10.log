@@ -1,0 +1,395 @@
+﻿#Software: SysDF
+#ProcessID: 996 x64
+#AppDomain: SysDF.exe
+#BaseDirectory: D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\
+#CommandLine: "D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysDF.exe" 
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, .NET Framework 4
+#OS: Microsoft Windows NT 6.1.7601 Service Pack 1, XXB-HHZ/Administrator
+#CPU: 4
+#GC: IsServerGC=False, LatencyMode=Interactive
+#Date: 2019-10-10
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:20:11.149  1 N - NewLife.Core v8.3.2019.0923 Build 2019-09-25 00:26:34 .NET Framework 4
+18:20:11.188  1 N - 新生命X组件核心库 ©2002-2019 新生命开发团队
+18:20:11.188  1 N - SysDF v1.0.0.0 Build 2000-01-01 .NET Framework 4
+18:20:11.188  1 N - SysDF Copyright ©  2019
+18:20:11.188  1 N - Setting的配置文件Config\Core.config 不存在，准备用默认配置覆盖！
+18:20:11.909  1 N - Setting的配置文件Config\XCode.config 不存在，准备用默认配置覆盖！
+18:20:11.929  1 N - XCode v9.14.2019.0923 Build 2019-09-25 00:27:46 .NET Framework 4
+18:20:11.929  1 N - 数据中间件 ©2002-2019 新生命开发团队
+18:20:12.426  1 N - 自动为[SysModule]设置SQLite连接字符串：Data Source=.\SysModule.db;Migration=On
+18:20:12.529  1 N - System.Data.SQLite.dll不存在或平台版本不正确，准备联网获取 http://x.newlifex.com/
+18:20:13.951  1 N - 下载链接 http://x.newlifex.com/，目标 System.Data.SQLite64Fx40,System.Data.SQLite
+18:20:14.663  5 Y 4 WebClientX.SendAsync http://x.newlifex.com/
+18:20:18.166  1 N - 分析得到文件 System.Data.SQLite64FX40_v3.26.zip，准备下载 http://x.newlifex.com/System.Data.SQLite64FX40_v3.26.zip，保存到 D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\Plugins\System.Data.SQLite64FX40_v3.26.zip
+18:20:18.198  4 Y 12 WebClientX.SendAsync http://x.newlifex.com/System.Data.SQLite64FX40_v3.26.zip
+18:20:18.782  1 N - 下载完成，共848,121字节，耗时600毫秒
+18:20:18.782  1 N - 解压缩到 D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\Plugins
+18:20:19.907  1 N - TypeX.GetType("System.Data.SQLite.SQLiteFactory") => Plugins\System.Data.SQLite.dll
+18:20:19.907  1 N - System.Data.SQLite驱动D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\Plugins\System.Data.SQLite.dll 版本v3.26.6935.40243
+18:20:20.685  1 N - Data Source=D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysModule.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+18:20:20.735  5 Y 22 创建数据库：SysModule
+18:20:20.736  5 Y 22 创建数据库：D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysModule.db
+18:20:20.849  5 Y 22 select * from sqlite_master
+18:20:21.022  5 Y 22 创建表：ActUser(用户)
+18:20:21.038  5 Y 22 Create Table ActUser(
+	id integer Primary Key AUTOINCREMENT,
+	UserID nvarchar(50) NOT NULL COLLATE NOCASE,
+	UserName nvarchar(50) NOT NULL COLLATE NOCASE,
+	Detp nvarchar(50) NULL COLLATE NOCASE,
+	Summary nvarchar(50) NULL COLLATE NOCASE,
+	State bit NULL,
+	Email nvarchar(50) NULL COLLATE NOCASE,
+	Tel nvarchar(250) NULL COLLATE NOCASE,
+	Pwd nvarchar(50) NULL COLLATE NOCASE,
+	Detped bit NULL,
+	isStop int NULL
+)
+18:20:21.046  1 N - 开始检查连接[SysModule/SQLite]的数据库架构……
+18:20:21.140  1 N - [SysModule]的所有实体类（1个）：ActUser
+18:20:21.140  1 N - [SysModule]需要检查架构的实体类（1个）：ActUser
+18:20:21.141  1 N - 检查连接[SysModule/SQLite]的数据库架构耗时94ms
+18:20:21.143  1 N - Select * From ActUser Order By id Desc
+
+#Software: SysDF
+#ProcessID: 5136 x64
+#AppDomain: SysDF.exe
+#BaseDirectory: D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\
+#CommandLine: "D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysDF.exe" 
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, .NET Framework 4
+#OS: Microsoft Windows NT 6.1.7601 Service Pack 1, XXB-HHZ/Administrator
+#CPU: 4
+#GC: IsServerGC=False, LatencyMode=Interactive
+#Date: 2019-10-10
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:23:08.879  1 N - NewLife.Core v8.3.2019.0923 Build 2019-09-25 00:26:34 .NET Framework 4
+18:23:08.886  1 N - 新生命X组件核心库 ©2002-2019 新生命开发团队
+18:23:08.886  1 N - SysDF v1.0.0.0 Build 2000-01-01 .NET Framework 4
+18:23:08.886  1 N - SysDF Copyright ©  2019
+18:23:08.886  1 N - XCode v9.14.2019.0923 Build 2019-09-25 00:27:46 .NET Framework 4
+18:23:08.886  1 N - 数据中间件 ©2002-2019 新生命开发团队
+18:23:08.996  1 N - 自动为[SysModule]设置SQLite连接字符串：Data Source=.\SysModule.db;Migration=On
+18:23:09.035  1 N - TypeX.GetType("System.Data.SQLite.SQLiteFactory") => Plugins\System.Data.SQLite.dll
+18:23:09.036  1 N - System.Data.SQLite.SQLite驱动D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\Plugins\System.Data.SQLite.dll 版本v3.26.6935.40243
+18:23:09.062  1 N - Data Source=D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysModule.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+18:23:09.095  6 Y 1 select * from sqlite_master
+18:23:09.268  1 N - 开始检查连接[SysModule/SQLite]的数据库架构……
+18:23:09.334  1 N - [SysModule]的所有实体类（1个）：ActUser
+18:23:09.334  1 N - [SysModule]需要检查架构的实体类（1个）：ActUser
+18:23:09.334  1 N - 检查连接[SysModule/SQLite]的数据库架构耗时66ms
+18:23:09.336  1 N - Select * From ActUser Order By id Desc
+
+#Software: SysDF
+#ProcessID: 15152 x64
+#AppDomain: SysDF.exe
+#BaseDirectory: D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\
+#CommandLine: "D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysDF.exe" 
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, .NET Framework 4
+#OS: Microsoft Windows NT 6.1.7601 Service Pack 1, XXB-HHZ/Administrator
+#CPU: 4
+#GC: IsServerGC=False, LatencyMode=Interactive
+#Date: 2019-10-10
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:25:38.715  1 N - NewLife.Core v8.3.2019.0923 Build 2019-09-25 00:26:34 .NET Framework 4
+18:25:38.723  1 N - 新生命X组件核心库 ©2002-2019 新生命开发团队
+18:25:38.723  1 N - SysDF v1.0.0.0 Build 2000-01-01 .NET Framework 4
+18:25:38.723  1 N - SysDF Copyright ©  2019
+18:25:38.723  1 N - XCode v9.14.2019.0923 Build 2019-09-25 00:27:46 .NET Framework 4
+18:25:38.723  1 N - 数据中间件 ©2002-2019 新生命开发团队
+18:25:38.826  1 N - 自动为[SysModule]设置SQLite连接字符串：Data Source=.\SysModule.db;Migration=On
+18:25:38.854  1 N - TypeX.GetType("System.Data.SQLite.SQLiteFactory") => Plugins\System.Data.SQLite.dll
+18:25:38.854  1 N - System.Data.SQLite.SQLite驱动D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\Plugins\System.Data.SQLite.dll 版本v3.26.6935.40243
+18:25:38.881  1 N - Data Source=D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysModule.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+18:25:38.911  5 Y 1 select * from sqlite_master
+18:25:39.010  1 N - 开始检查连接[SysModule/SQLite]的数据库架构……
+18:25:39.061  1 N - [SysModule]的所有实体类（1个）：ActUser
+18:25:39.061  1 N - [SysModule]需要检查架构的实体类（1个）：ActUser
+18:25:39.062  1 N - 检查连接[SysModule/SQLite]的数据库架构耗时52ms
+18:25:39.064  1 N - Select * From ActUser Order By id Desc
+
+#Software: SysDF
+#ProcessID: 6816 x64
+#AppDomain: SysDF.exe
+#BaseDirectory: D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\
+#CommandLine: "D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysDF.exe" 
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, .NET Framework 4
+#OS: Microsoft Windows NT 6.1.7601 Service Pack 1, XXB-HHZ/Administrator
+#CPU: 4
+#GC: IsServerGC=False, LatencyMode=Interactive
+#Date: 2019-10-10
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:45:49.032  1 N - NewLife.Core v8.3.2019.0923 Build 2019-09-25 00:26:34 .NET Framework 4
+18:45:49.041  1 N - 新生命X组件核心库 ©2002-2019 新生命开发团队
+18:45:49.042  1 N - SysDF v1.0.0.0 Build 2000-01-01 .NET Framework 4
+18:45:49.042  1 N - SysDF Copyright ©  2019
+18:45:49.042  1 N - XCode v9.14.2019.0923 Build 2019-09-25 00:27:46 .NET Framework 4
+18:45:49.042  1 N - 数据中间件 ©2002-2019 新生命开发团队
+18:45:49.140  1 N - 自动为[SysModule]设置SQLite连接字符串：Data Source=.\SysModule.db;Migration=On
+18:45:49.169  1 N - TypeX.GetType("System.Data.SQLite.SQLiteFactory") => Plugins\System.Data.SQLite.dll
+18:45:49.170  1 N - System.Data.SQLite.SQLite驱动D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\Plugins\System.Data.SQLite.dll 版本v3.26.6935.40243
+18:45:49.195  1 N - Data Source=D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysModule.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+18:45:49.227  4 Y 1 select * from sqlite_master
+18:45:49.325  1 N - 开始检查连接[SysModule/SQLite]的数据库架构……
+18:45:49.368  1 N - [SysModule]的所有实体类（1个）：ActUser
+18:45:49.368  1 N - [SysModule]需要检查架构的实体类（1个）：ActUser
+18:45:49.368  1 N - 检查连接[SysModule/SQLite]的数据库架构耗时43ms
+18:45:49.370  1 N - Select * From ActUser Order By id Desc
+
+#Software: SysDF
+#ProcessID: 1000 x64
+#AppDomain: SysDF.exe
+#BaseDirectory: D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\
+#CommandLine: "D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysDF.exe" 
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, .NET Framework 4
+#OS: Microsoft Windows NT 6.1.7601 Service Pack 1, XXB-HHZ/Administrator
+#CPU: 4
+#GC: IsServerGC=False, LatencyMode=Interactive
+#Date: 2019-10-10
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+20:03:09.458  1 N - NewLife.Core v8.3.2019.0923 Build 2019-09-25 00:26:34 .NET Framework 4
+20:03:09.472  1 N - 新生命X组件核心库 ©2002-2019 新生命开发团队
+20:03:09.472  1 N - SysDF v1.0.0.0 Build 2000-01-01 .NET Framework 4
+20:03:09.472  1 N - SysDF Copyright ©  2019
+20:03:09.472  1 N - XCode v9.14.2019.0923 Build 2019-09-25 00:27:46 .NET Framework 4
+20:03:09.472  1 N - 数据中间件 ©2002-2019 新生命开发团队
+20:03:09.585  1 N - 自动为[SysModule]设置SQLite连接字符串：Data Source=.\SysModule.db;Migration=On
+20:03:09.614  1 N - TypeX.GetType("System.Data.SQLite.SQLiteFactory") => Plugins\System.Data.SQLite.dll
+20:03:09.614  1 N - System.Data.SQLite.SQLite驱动D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\Plugins\System.Data.SQLite.dll 版本v3.26.6935.40243
+20:03:09.639  1 N - Data Source=D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysModule.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+20:03:09.670  7 Y 1 select * from sqlite_master
+20:03:09.763  1 N - 开始检查连接[SysModule/SQLite]的数据库架构……
+20:03:09.797  1 N - [SysModule]的所有实体类（1个）：ActUser
+20:03:09.797  1 N - [SysModule]需要检查架构的实体类（1个）：ActUser
+20:03:09.802  1 N - 检查连接[SysModule/SQLite]的数据库架构耗时38ms
+20:03:09.807  1 N - Select * From ActUser Order By id Desc
+
+#Software: SysDF
+#ProcessID: 7508 x64
+#AppDomain: SysDF.exe
+#BaseDirectory: D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\
+#CommandLine: "D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysDF.exe" 
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, .NET Framework 4
+#OS: Microsoft Windows NT 6.1.7601 Service Pack 1, XXB-HHZ/Administrator
+#CPU: 4
+#GC: IsServerGC=False, LatencyMode=Interactive
+#Date: 2019-10-10
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+20:05:19.312  1 N - NewLife.Core v8.3.2019.0923 Build 2019-09-25 00:26:34 .NET Framework 4
+20:05:19.321  1 N - 新生命X组件核心库 ©2002-2019 新生命开发团队
+20:05:19.321  1 N - SysDF v1.0.0.0 Build 2000-01-01 .NET Framework 4
+20:05:19.321  1 N - SysDF Copyright ©  2019
+20:05:19.321  1 N - XCode v9.14.2019.0923 Build 2019-09-25 00:27:46 .NET Framework 4
+20:05:19.321  1 N - 数据中间件 ©2002-2019 新生命开发团队
+20:05:19.417  1 N - 自动为[SysModule]设置SQLite连接字符串：Data Source=.\SysModule.db;Migration=On
+20:05:19.446  1 N - TypeX.GetType("System.Data.SQLite.SQLiteFactory") => Plugins\System.Data.SQLite.dll
+20:05:19.447  1 N - System.Data.SQLite.SQLite驱动D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\Plugins\System.Data.SQLite.dll 版本v3.26.6935.40243
+20:05:19.474  1 N - Data Source=D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysModule.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+20:05:19.504  4 Y 1 select * from sqlite_master
+20:05:19.599  1 N - 开始检查连接[SysModule/SQLite]的数据库架构……
+20:05:19.632  1 N - [SysModule]的所有实体类（1个）：ActUser
+20:05:19.632  1 N - [SysModule]需要检查架构的实体类（1个）：ActUser
+20:05:19.637  1 N - 检查连接[SysModule/SQLite]的数据库架构耗时37ms
+20:05:19.639  1 N - Select * From ActUser Order By id Desc
+
+#Software: SysDF
+#ProcessID: 14876 x64
+#AppDomain: SysDF.exe
+#BaseDirectory: D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\
+#CommandLine: "D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysDF.exe" 
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, .NET Framework 4
+#OS: Microsoft Windows NT 6.1.7601 Service Pack 1, XXB-HHZ/Administrator
+#CPU: 4
+#GC: IsServerGC=False, LatencyMode=Interactive
+#Date: 2019-10-10
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+20:17:33.277  1 N - NewLife.Core v8.3.2019.0923 Build 2019-09-25 00:26:34 .NET Framework 4
+20:17:33.286  1 N - 新生命X组件核心库 ©2002-2019 新生命开发团队
+20:17:33.286  1 N - SysDF v1.0.0.0 Build 2000-01-01 .NET Framework 4
+20:17:33.286  1 N - SysDF Copyright ©  2019
+20:17:33.286  1 N - XCode v9.14.2019.0923 Build 2019-09-25 00:27:46 .NET Framework 4
+20:17:33.287  1 N - 数据中间件 ©2002-2019 新生命开发团队
+20:17:33.382  1 N - 自动为[SysModule]设置SQLite连接字符串：Data Source=.\SysModule.db;Migration=On
+20:17:33.410  1 N - TypeX.GetType("System.Data.SQLite.SQLiteFactory") => Plugins\System.Data.SQLite.dll
+20:17:33.411  1 N - System.Data.SQLite.SQLite驱动D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\Plugins\System.Data.SQLite.dll 版本v3.26.6935.40243
+20:17:33.436  1 N - Data Source=D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysModule.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+20:17:33.467  5 Y 1 select * from sqlite_master
+20:17:33.562  1 N - 开始检查连接[SysModule/SQLite]的数据库架构……
+20:17:33.595  1 N - [SysModule]的所有实体类（1个）：ActUser
+20:17:33.595  1 N - [SysModule]需要检查架构的实体类（1个）：ActUser
+20:17:33.600  1 N - 检查连接[SysModule/SQLite]的数据库架构耗时38ms
+20:17:33.602  1 N - Select * From ActUser Order By id Desc
+20:17:44.340  1 N - Select * From ActUser Where id=9
+20:17:58.927  1 N - Select * From ActUser Where id=23
+
+#Software: SysDF
+#ProcessID: 6800 x64
+#AppDomain: SysDF.exe
+#BaseDirectory: D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\
+#CommandLine: "D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysDF.exe" 
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, .NET Framework 4
+#OS: Microsoft Windows NT 6.1.7601 Service Pack 1, XXB-HHZ/Administrator
+#CPU: 4
+#GC: IsServerGC=False, LatencyMode=Interactive
+#Date: 2019-10-10
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+20:26:07.308  1 N - NewLife.Core v8.3.2019.0923 Build 2019-09-25 00:26:34 .NET Framework 4
+20:26:07.317  1 N - 新生命X组件核心库 ©2002-2019 新生命开发团队
+20:26:07.318  1 N - SysDF v1.0.0.0 Build 2000-01-01 .NET Framework 4
+20:26:07.318  1 N - SysDF Copyright ©  2019
+20:26:07.318  1 N - XCode v9.14.2019.0923 Build 2019-09-25 00:27:46 .NET Framework 4
+20:26:07.318  1 N - 数据中间件 ©2002-2019 新生命开发团队
+20:26:07.417  1 N - 自动为[SysModule]设置SQLite连接字符串：Data Source=.\SysModule.db;Migration=On
+20:26:07.446  1 N - TypeX.GetType("System.Data.SQLite.SQLiteFactory") => Plugins\System.Data.SQLite.dll
+20:26:07.446  1 N - System.Data.SQLite.SQLite驱动D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\Plugins\System.Data.SQLite.dll 版本v3.26.6935.40243
+20:26:07.472  1 N - Data Source=D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysModule.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+20:26:07.504  5 Y 1 select * from sqlite_master
+20:26:07.600  1 N - 开始检查连接[SysModule/SQLite]的数据库架构……
+20:26:07.633  1 N - [SysModule]的所有实体类（1个）：ActUser
+20:26:07.633  1 N - [SysModule]需要检查架构的实体类（1个）：ActUser
+20:26:07.638  1 N - 检查连接[SysModule/SQLite]的数据库架构耗时38ms
+20:26:07.639  1 N - Select * From ActUser Order By id Desc
+20:26:19.717  1 N - Select * From ActUser Where UserName='FlexCell.Cell' Order By id Desc limit 1
+
+#Software: SysDF
+#ProcessID: 9348 x64
+#AppDomain: SysDF.exe
+#BaseDirectory: D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\
+#CommandLine: "D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysDF.exe" 
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, .NET Framework 4
+#OS: Microsoft Windows NT 6.1.7601 Service Pack 1, XXB-HHZ/Administrator
+#CPU: 4
+#GC: IsServerGC=False, LatencyMode=Interactive
+#Date: 2019-10-10
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+20:31:06.745  1 N - NewLife.Core v8.3.2019.0923 Build 2019-09-25 00:26:34 .NET Framework 4
+20:31:06.754  1 N - 新生命X组件核心库 ©2002-2019 新生命开发团队
+20:31:06.755  1 N - SysDF v1.0.0.0 Build 2000-01-01 .NET Framework 4
+20:31:06.755  1 N - SysDF Copyright ©  2019
+20:31:06.755  1 N - XCode v9.14.2019.0923 Build 2019-09-25 00:27:46 .NET Framework 4
+20:31:06.755  1 N - 数据中间件 ©2002-2019 新生命开发团队
+20:31:06.851  1 N - 自动为[Hhz.SysDF.SysModule]设置SQLite连接字符串：Data Source=.\Hhz.SysDF.SysModule.db;Migration=On
+20:31:06.879  1 N - TypeX.GetType("System.Data.SQLite.SQLiteFactory") => Plugins\System.Data.SQLite.dll
+20:31:06.879  1 N - System.Data.SQLite.SQLite驱动D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\Plugins\System.Data.SQLite.dll 版本v3.26.6935.40243
+20:31:06.909  1 N - Data Source=D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\Hhz.SysDF.SysModule.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+20:31:06.924  4 Y 1 创建数据库：Hhz.SysDF.SysModule
+20:31:06.924  4 Y 1 创建数据库：D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\Hhz.SysDF.SysModule.db
+20:31:06.942  4 Y 1 select * from sqlite_master
+20:31:07.009  4 Y 1 创建表：ActUser(用户)
+20:31:07.023  4 Y 1 Create Table ActUser(
+	id integer Primary Key AUTOINCREMENT,
+	UserID nvarchar(10) NOT NULL COLLATE NOCASE,
+	UserName nvarchar(10) NULL COLLATE NOCASE,
+	Detp nvarchar(10) NULL COLLATE NOCASE,
+	Summary nvarchar(10) NULL COLLATE NOCASE,
+	State bit NULL,
+	Email nvarchar(50) NULL COLLATE NOCASE,
+	Tel nvarchar(250) NULL COLLATE NOCASE,
+	pwd nvarchar(50) NULL COLLATE NOCASE,
+	Detped bit NULL,
+	isStop smallint NULL
+)
+20:31:07.064  1 N - 开始检查连接[Hhz.SysDF.SysModule/SQLite]的数据库架构……
+20:31:07.099  1 N - [Hhz.SysDF.SysModule]的所有实体类（1个）：ActUser
+20:31:07.099  1 N - [Hhz.SysDF.SysModule]需要检查架构的实体类（1个）：ActUser
+20:31:07.100  1 N - 检查连接[Hhz.SysDF.SysModule/SQLite]的数据库架构耗时36ms
+20:31:07.102  1 N - Select * From ActUser Order By id Desc
+20:31:08.558  1 N - Select * From ActUser Where UserName='FlexCell.Cell' Order By id Desc limit 1
+20:31:11.356  1 N - Select * From ActUser Where UserName='FlexCell.Cell' Order By id Desc limit 1
+20:31:13.516  1 N - Select * From ActUser Where UserName='FlexCell.Cell' Order By id Desc limit 1
+20:31:32.201  1 N - Select * From ActUser Where UserName='FlexCell.Cell' Order By id Desc limit 1
+
+#Software: SysDF
+#ProcessID: 5176 x64
+#AppDomain: SysDF.exe
+#BaseDirectory: D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\
+#CommandLine: "D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysDF.exe" 
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, .NET Framework 4
+#OS: Microsoft Windows NT 6.1.7601 Service Pack 1, XXB-HHZ/Administrator
+#CPU: 4
+#GC: IsServerGC=False, LatencyMode=Interactive
+#Date: 2019-10-10
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+20:32:03.841  1 N - NewLife.Core v8.3.2019.0923 Build 2019-09-25 00:26:34 .NET Framework 4
+20:32:03.849  1 N - 新生命X组件核心库 ©2002-2019 新生命开发团队
+20:32:03.849  1 N - SysDF v1.0.0.0 Build 2000-01-01 .NET Framework 4
+20:32:03.850  1 N - SysDF Copyright ©  2019
+20:32:03.850  1 N - XCode v9.14.2019.0923 Build 2019-09-25 00:27:46 .NET Framework 4
+20:32:03.850  1 N - 数据中间件 ©2002-2019 新生命开发团队
+20:32:03.946  1 N - 自动为[Hhz.SysDF.SysModule]设置SQLite连接字符串：Data Source=.\Hhz.SysDF.SysModule.db;Migration=On
+20:32:03.977  1 N - TypeX.GetType("System.Data.SQLite.SQLiteFactory") => Plugins\System.Data.SQLite.dll
+20:32:03.978  1 N - System.Data.SQLite.SQLite驱动D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\Plugins\System.Data.SQLite.dll 版本v3.26.6935.40243
+20:32:04.005  1 N - Data Source=D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\Hhz.SysDF.SysModule.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+20:32:04.035  4 Y 1 select * from sqlite_master
+20:32:04.130  1 N - 开始检查连接[Hhz.SysDF.SysModule/SQLite]的数据库架构……
+20:32:04.187  1 N - [Hhz.SysDF.SysModule]的所有实体类（1个）：ActUser
+20:32:04.187  1 N - [Hhz.SysDF.SysModule]需要检查架构的实体类（1个）：ActUser
+20:32:04.188  1 N - 检查连接[Hhz.SysDF.SysModule/SQLite]的数据库架构耗时58ms
+20:32:04.189  1 N - Select * From ActUser Order By id Desc
+20:32:08.120  1 N - Select * From ActUser Where id=21
+
+#Software: SysDF
+#ProcessID: 15352 x64
+#AppDomain: SysDF.exe
+#BaseDirectory: D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\
+#CommandLine: "D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysDF.exe" 
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, .NET Framework 4
+#OS: Microsoft Windows NT 6.1.7601 Service Pack 1, XXB-HHZ/Administrator
+#CPU: 4
+#GC: IsServerGC=False, LatencyMode=Interactive
+#Date: 2019-10-10
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+21:40:42.025  1 N - NewLife.Core v8.3.2019.0923 Build 2019-09-25 00:26:34 .NET Framework 4
+21:40:42.035  1 N - 新生命X组件核心库 ©2002-2019 新生命开发团队
+21:40:42.035  1 N - SysDF v1.0.0.0 Build 2000-01-01 .NET Framework 4
+21:40:42.035  1 N - SysDF Copyright ©  2019
+21:40:42.035  1 N - XCode v9.14.2019.0923 Build 2019-09-25 00:27:46 .NET Framework 4
+21:40:42.035  1 N - 数据中间件 ©2002-2019 新生命开发团队
+21:40:42.132  1 N - 自动为[hhzinfosys]设置SQLite连接字符串：Data Source=.\hhzinfosys.db;Migration=On
+21:40:42.159  1 N - TypeX.GetType("System.Data.SQLite.SQLiteFactory") => Plugins\System.Data.SQLite.dll
+21:40:42.159  1 N - System.Data.SQLite.SQLite驱动D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\Plugins\System.Data.SQLite.dll 版本v3.26.6935.40243
+21:40:42.185  1 N - Data Source=D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\hhzinfosys.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+21:40:42.200  4 Y 1 创建数据库：hhzinfosys
+21:40:42.202  4 Y 1 创建数据库：D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\hhzinfosys.db
+21:40:42.220  4 Y 1 select * from sqlite_master
+21:40:42.288  4 Y 1 创建表：ActUser(用户)
+21:40:42.301  4 Y 1 Create Table ActUser(
+	id integer Primary Key AUTOINCREMENT,
+	UserID nvarchar(10) NOT NULL COLLATE NOCASE,
+	UserName nvarchar(10) NULL COLLATE NOCASE,
+	Detp nvarchar(10) NULL COLLATE NOCASE,
+	Summary nvarchar(10) NULL COLLATE NOCASE,
+	State bit NULL,
+	Email nvarchar(50) NULL COLLATE NOCASE,
+	Tel nvarchar(250) NULL COLLATE NOCASE,
+	pwd nvarchar(50) NULL COLLATE NOCASE,
+	Detped bit NULL,
+	isStop smallint NULL
+)
+21:40:42.309  1 N - 开始检查连接[hhzinfosys/SQLite]的数据库架构……
+21:40:42.356  1 N - [hhzinfosys]的所有实体类（1个）：ActUser
+21:40:42.356  1 N - [hhzinfosys]需要检查架构的实体类（1个）：ActUser
+21:40:42.356  1 N - 检查连接[hhzinfosys/SQLite]的数据库架构耗时47ms
+21:40:42.362  1 N - Select * From ActUser Order By id Desc
+21:40:45.706  1 N - Select * From ActUser Where id=21

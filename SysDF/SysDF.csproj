@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{98E438DC-7017-4687-8E1C-E213EB796C2A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SysDF</RootNamespace>
+    <AssemblyName>SysDF</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FlexCell, Version=4.3.7.0, Culture=neutral, PublicKeyToken=6f86587eb70ee309, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\FlexCell Technologies\FlexCell.NET4\bin\FlexCell.dll</HintPath>
+    </Reference>
+    <Reference Include="NewLife.Core, Version=8.3.7207.797, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NewLife.Core.8.3.2019.923\lib\net40\NewLife.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=3.0.6.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <HintPath>..\packages\DockPanelSuite.3.0.6\lib\net40\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking.ThemeVS2015, Version=3.0.6.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <HintPath>..\packages\DockPanelSuite.ThemeVS2015.3.0.6\lib\net40\WeifenLuo.WinFormsUI.Docking.ThemeVS2015.dll</HintPath>
+    </Reference>
+    <Reference Include="XCode, Version=9.14.7207.833, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NewLife.XCode.9.14.2019.923\lib\net40\XCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForm\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\DbHelperSQL.cs" />
+    <Compile Include="BaseForm\全局函数及变量.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SysModule\EntitySysModuleFormORM\用户.Biz.cs" />
+    <Compile Include="SysModule\EntitySysModuleFormORM\用户.cs" />
+    <Compile Include="SysModule\SysModuleForm\用户管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysModule\SysModuleForm\用户管理.Designer.cs">
+      <DependentUpon>用户管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zMainForm.Designer.cs">
+      <DependentUpon>zMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zMainFormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zMainFormMenu.Designer.cs">
+      <DependentUpon>zMainFormMenu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaseForm\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SysModule\SysModuleForm\用户管理.resx">
+      <DependentUpon>用户管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zMainForm.resx">
+      <DependentUpon>zMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zMainFormMenu.resx">
+      <DependentUpon>zMainFormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Entity\Build.log">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Build.tt</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SysModule\EntitySysModuleFormORM\Build.log">
+      <DependentUpon>Build.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entity\Build.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Build.log</LastGenOutput>
+    </Content>
+    <Content Include="Entity\Model.xml" />
+    <Content Include="ICO\27.ico" />
+    <Content Include="ICO\34.ico" />
+    <Content Include="ICO\accept.ico" />
+    <Content Include="ICO\add.ico" />
+    <Content Include="ICO\addfile.ico" />
+    <Content Include="ICO\back.ico" />
+    <Content Include="ICO\backward.ico" />
+    <Content Include="ICO\close.ico" />
+    <Content Include="ICO\configure.ico" />
+    <Content Include="ICO\delete.ico" />
+    <Content Include="ICO\deletefile.ico" />
+    <Content Include="ICO\edit.ico" />
+    <Content Include="ICO\find.ico" />
+    <Content Include="ICO\forward.ico" />
+    <Content Include="ICO\key.ico" />
+    <Content Include="ICO\lock.ico" />
+    <Content Include="ICO\mm-Fast Forward.ico" />
+    <Content Include="ICO\mm-First.ico" />
+    <Content Include="ICO\mm-Last.ico" />
+    <Content Include="ICO\mm-Rewind.ico" />
+    <Content Include="ICO\next.ico" />
+    <Content Include="ICO\printer.ico" />
+    <Content Include="ICO\printpreview.ico" />
+    <Content Include="ICO\refresh.ico" />
+    <Content Include="ICO\saveas.ico" />
+    <Content Include="Resources\27.ico" />
+    <Content Include="Resources\34.ico" />
+    <Content Include="Resources\accept.ico" />
+    <Content Include="Resources\add.ico" />
+    <Content Include="Resources\addfile.ico" />
+    <Content Include="Resources\back.ico" />
+    <Content Include="Resources\backward.ico" />
+    <Content Include="Resources\close.ico" />
+    <Content Include="Resources\configure.ico" />
+    <Content Include="Resources\delete.ico" />
+    <Content Include="Resources\deletefile.ico" />
+    <Content Include="Resources\edit.ico" />
+    <Content Include="Resources\find.ico" />
+    <Content Include="Resources\forward.ico" />
+    <Content Include="Resources\key.ico" />
+    <Content Include="Resources\lock.ico" />
+    <Content Include="Resources\next.ico" />
+    <Content Include="Resources\printer.ico" />
+    <Content Include="Resources\printpreview.ico" />
+    <Content Include="Resources\refresh.ico" />
+    <Content Include="Resources\saveas.ico" />
+    <Content Include="Resources\top.ico" />
+    <Content Include="SysModule\EntitySysModuleFormORM\Build.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Build.log</LastGenOutput>
+    </Content>
+    <Content Include="SysModule\EntitySysModuleFormORM\Model.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,487 @@
+﻿#Software: SysDF
+#ProcessID: 7112 x64
+#AppDomain: SysDF.exe
+#BaseDirectory: D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\
+#CommandLine: "D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysDF.exe" 
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, .NET Framework 4
+#OS: Microsoft Windows NT 6.1.7601 Service Pack 1, XXB-HHZ/Administrator
+#CPU: 4
+#GC: IsServerGC=False, LatencyMode=Interactive
+#Date: 2019-10-11
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:00:35.555  1 N - NewLife.Core v8.3.2019.0923 Build 2019-09-25 00:26:34 .NET Framework 4
+17:00:35.577  1 N - 新生命X组件核心库 ©2002-2019 新生命开发团队
+17:00:35.577  1 N - SysDF v1.0.0.0 Build 2000-01-01 .NET Framework 4
+17:00:35.577  1 N - SysDF Copyright ©  2019
+17:00:35.577  1 N - XCode v9.14.2019.0923 Build 2019-09-25 00:27:46 .NET Framework 4
+17:00:35.578  1 N - 数据中间件 ©2002-2019 新生命开发团队
+17:00:36.140  5 Y 1 System.Data.SqlClient驱动C:\Windows\Microsoft.Net\assembly\GAC_64\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll 版本v4.0.0.0
+17:00:36.171  5 Y 1 [hhzinfosys]GetSchema("MetaDataCollections")
+17:00:36.360  5 Y 1 [hhzinfosys]GetSchema("Databases", "Def_100_2009")
+17:00:38.718  5 Y 1 GetSchema耗时 2,357ms
+17:00:38.740  5 Y 1 select b.name n, a.value v from sys.extended_properties a inner join sysobjects b on a.major_id=b.id and a.minor_id=0 and a.name = 'MS_Description'
+17:00:39.022  1 N - 开始检查连接[hhzinfosys/SqlServer]的数据库架构……
+17:00:39.223  1 N - [hhzinfosys]的所有实体类（1个）：ActUser
+17:00:39.223  1 N - [hhzinfosys]需要检查架构的实体类（1个）：ActUser
+17:00:39.228  1 N - 检查连接[hhzinfosys/SqlServer]的数据库架构耗时206ms
+17:00:39.230  1 N - Select id,UserID,UserName,Detp,Summary,[State],Email,Tel,Pwd,Detped,isStop From ActUser Order By id Desc
+17:00:39.742  5 Y 1 SQL耗时较长，建议优化 1,001毫秒 select b.name n, a.value v from sys.extended_properties a inner join sysobjects b on a.major_id=b.id and a.minor_id=0 and a.name = 'MS_Description'
+17:00:39.742  5 Y 1 [hhzinfosys]GetSchema("Tables")
+17:00:40.647  5 Y 1 SELECT 表名=d.name,字段序号=a.colorder,字段名=a.name,标识=case when COLUMNPROPERTY( a.id,a.name,'IsIdentity')=1 then Convert(Bit,1) else Convert(Bit,0) end,主键=case when exists(SELECT 1 FROM sysobjects where xtype='PK' and name in (SELECT name FROM sysindexes WHERE id = a.id AND indid in(SELECT indid FROM sysindexkeys WHERE id = a.id AND colid=a.colid))) then Convert(Bit,1) else Convert(Bit,0) end,类型=b.name,占用字节数=a.length,长度=COLUMNPROPERTY(a.id,a.name,'PRECISION'),小数位数=isnull(COLUMNPROPERTY(a.id,a.name,'Scale'),0),允许空=case when a.isnullable=1 then Convert(Bit,1)else Convert(Bit,0) end,默认值=isnull(e.text,''),字段说明=isnull(g.[value],'')FROM syscolumns a left join systypes b on a.xtype=b.xusertype inner join sysobjects d on a.id=d.id  and d.xtype='U' left join syscomments e on a.cdefault=e.id left join sys.extended_properties g on a.id=g.major_id and a.colid=g.minor_id and g.name = 'MS_Description'  order by a.id,a.colorder
+17:00:53.783  1 N - Select * From ActUser Where id=68
+17:00:53.804  5 Y 1 SQL耗时较长，建议优化 13,104毫秒 SELECT 表名=d.name,字段序号=a.colorder,字段名=a.name,标识=case when COLUMNPROPERTY( a.id,a.name,'IsIdentity')=1 then Convert(Bit,1) else Convert(Bit,0) end,主键=case when exists(SELECT 1 FROM sysobjects where xtype='PK' and name in (SELECT name FROM sysindexes WHERE id = a.id AND indid in(SELECT indid FROM sysindexkeys WHERE id = a.id AND colid=a.colid))) then Convert(Bit,1) else Convert(Bit,0) end,类型=b.name,占用字节数=a.length,长度=COLUMNPROPERTY(a.id,a.name,'PRECISION'),小数位数=isnull(COLUMNPROPERTY(a.id,a.name,'Scale'),0),允许空=case when a.isnullable=1 then Convert(Bit,1)else Convert(Bit,0) end,默认值=isnull(e.text,''),字段说明=isnull(g.[value],'')FROM syscolumns a left join systypes b on a.xtype=b.xusertype inner join sysobjects d on a.id=d.id  and d.xtype='U' left join syscomments e on a.cdefault=e.id left join sys.extended_properties g on a.id=g.major_id and a.colid=g.minor_id and g.name = 'MS_Description'  order by a.id,a.colorder
+17:00:53.810  5 Y 1 select ind.* from sys.indexes ind inner join sys.objects obj on ind.object_id = obj.object_id where obj.type='u'
+17:01:01.725  5 Y 1 SQL耗时较长，建议优化 7,914毫秒 select ind.* from sys.indexes ind inner join sys.objects obj on ind.object_id = obj.object_id where obj.type='u'
+17:01:02.542  5 Y 1 [hhzinfosys]GetSchema("Columns")
+17:01:02.934  5 Y 1 [hhzinfosys]GetSchema("Indexes")
+17:01:03.027  5 Y 1 [hhzinfosys]GetSchema("IndexColumns")
+17:01:03.208  5 Y 1 EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'登录用户名编号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ActUser', @level2type=N'COLUMN',@level2name=N'UserID'
+17:01:03.473  5 Y 1 EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'名称。登录用户名' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ActUser', @level2type=N'COLUMN',@level2name=N'UserName'
+17:01:03.480  5 Y 1 EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'部门' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ActUser', @level2type=N'COLUMN',@level2name=N'Detp'
+17:01:03.487  5 Y 1 EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'备注' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ActUser', @level2type=N'COLUMN',@level2name=N'Summary'
+17:01:03.494  5 Y 1 EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'状态' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ActUser', @level2type=N'COLUMN',@level2name=N'State'
+17:01:03.502  5 Y 1 EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'邮件' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ActUser', @level2type=N'COLUMN',@level2name=N'Email'
+17:01:03.534  5 Y 1 EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'电话' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ActUser', @level2type=N'COLUMN',@level2name=N'Tel'
+17:01:03.542  5 Y 1 EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'密码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ActUser', @level2type=N'COLUMN',@level2name=N'Pwd'
+17:01:03.567  5 Y 1 字段ActUser.isStop类型需要由数据库的System.Int16改变为实体的System.Int32
+17:01:03.604  5 Y 1 EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'停用' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ActUser', @level2type=N'COLUMN',@level2name=N'isStop'
+17:01:03.612  5 Y 1 Create Unique Index IU_ActUser_UserName On ActUser (UserName)
+17:01:04.258  5 Y 1 只检查不对数据库进行操作,请手工使用以下语句修改表：
+Alter Table ActUser Alter Column UserID nvarchar(50) NOT NULL;
+EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'登录用户名编号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ActUser', @level2type=N'COLUMN',@level2name=N'UserID';
+Alter Table ActUser Alter Column UserName nvarchar(50) NOT NULL;
+Create Unique Index IU_ActUser_UserName On ActUser (UserName);
+EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'名称。登录用户名' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ActUser', @level2type=N'COLUMN',@level2name=N'UserName';
+Alter Table ActUser Alter Column Detp nvarchar(50) NULL;
+EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'部门' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ActUser', @level2type=N'COLUMN',@level2name=N'Detp';
+Alter Table ActUser Alter Column Summary nvarchar(50) NULL;
+EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'备注' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ActUser', @level2type=N'COLUMN',@level2name=N'Summary';
+EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'状态' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ActUser', @level2type=N'COLUMN',@level2name=N'State';
+EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'邮件' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ActUser', @level2type=N'COLUMN',@level2name=N'Email';
+EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'电话' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ActUser', @level2type=N'COLUMN',@level2name=N'Tel';
+EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'密码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ActUser', @level2type=N'COLUMN',@level2name=N'Pwd';
+EXECUTE sp_rename N'ActUser', N'Temp_ActUser_3958', 'OBJECT' ; 
+Create Table ActUser(
+	id int IDENTITY(1,1) Primary Key,
+	UserID nvarchar(50) NOT NULL,
+	UserName nvarchar(50) NOT NULL,
+	Detp nvarchar(50) NULL,
+	Summary nvarchar(50) NULL,
+	[State] bit NULL,
+	Email nvarchar(50) NULL,
+	Tel nvarchar(250) NULL,
+	Pwd nvarchar(50) NULL,
+	Detped bit NULL,
+	isStop int NULL
+); 
+SET IDENTITY_INSERT ActUser ON;Insert Into ActUser(id, UserID, UserName, Detp, Summary, [State], Email, Tel, Pwd, Detped, isStop) Select id, UserID+'', ifnull(UserName, ''), Detp, Summary, [State], Email, Tel, Pwd, Detped, isStop From Temp_ActUser_3958;SET IDENTITY_INSERT ActUser OFF; 
+Drop Table Temp_ActUser_3958;
+EXEC dbo.sp_addextendedproperty @name=N'MS_Description', @value=N'停用' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ActUser', @level2type=N'COLUMN',@level2name=N'isStop';
+
+#Software: SysDF
+#ProcessID: 5220 x64
+#AppDomain: SysDF.exe
+#BaseDirectory: D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\
+#CommandLine: "D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysDF.exe" 
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, .NET Framework 4
+#OS: Microsoft Windows NT 6.1.7601 Service Pack 1, XXB-HHZ/Administrator
+#CPU: 4
+#GC: IsServerGC=False, LatencyMode=Interactive
+#Date: 2019-10-11
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:16:20.881  1 N - NewLife.Core v8.3.2019.0923 Build 2019-09-25 00:26:34 .NET Framework 4
+18:16:20.893  1 N - 新生命X组件核心库 ©2002-2019 新生命开发团队
+18:16:20.893  1 N - SysDF v1.0.0.0 Build 2000-01-01 .NET Framework 4
+18:16:20.893  1 N - SysDF Copyright ©  2019
+18:16:20.893  1 N - XCode v9.14.2019.0923 Build 2019-09-25 00:27:46 .NET Framework 4
+18:16:20.893  1 N - 数据中间件 ©2002-2019 新生命开发团队
+18:16:21.031  5 Y 1 System.Data.SqlClient驱动C:\Windows\Microsoft.Net\assembly\GAC_64\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll 版本v4.0.0.0
+18:16:21.046  5 Y 1 [hhzinfosys]GetSchema("MetaDataCollections")
+18:16:21.060  5 Y 1 [hhzinfosys]GetSchema("Databases", "Def_100_2009")
+18:16:21.077  5 Y 1 select b.name n, a.value v from sys.extended_properties a inner join sysobjects b on a.major_id=b.id and a.minor_id=0 and a.name = 'MS_Description'
+18:16:21.087  5 Y 1 [hhzinfosys]GetSchema("Tables")
+18:16:21.095  5 Y 1 SELECT 表名=d.name,字段序号=a.colorder,字段名=a.name,标识=case when COLUMNPROPERTY( a.id,a.name,'IsIdentity')=1 then Convert(Bit,1) else Convert(Bit,0) end,主键=case when exists(SELECT 1 FROM sysobjects where xtype='PK' and name in (SELECT name FROM sysindexes WHERE id = a.id AND indid in(SELECT indid FROM sysindexkeys WHERE id = a.id AND colid=a.colid))) then Convert(Bit,1) else Convert(Bit,0) end,类型=b.name,占用字节数=a.length,长度=COLUMNPROPERTY(a.id,a.name,'PRECISION'),小数位数=isnull(COLUMNPROPERTY(a.id,a.name,'Scale'),0),允许空=case when a.isnullable=1 then Convert(Bit,1)else Convert(Bit,0) end,默认值=isnull(e.text,''),字段说明=isnull(g.[value],'')FROM syscolumns a left join systypes b on a.xtype=b.xusertype inner join sysobjects d on a.id=d.id  and d.xtype='U' left join syscomments e on a.cdefault=e.id left join sys.extended_properties g on a.id=g.major_id and a.colid=g.minor_id and g.name = 'MS_Description'  order by a.id,a.colorder
+18:16:21.376  5 Y 1 select ind.* from sys.indexes ind inner join sys.objects obj on ind.object_id = obj.object_id where obj.type='u'
+18:16:21.399  5 Y 1 [hhzinfosys]GetSchema("Columns")
+18:16:21.504  5 Y 1 [hhzinfosys]GetSchema("Indexes")
+18:16:21.513  5 Y 1 [hhzinfosys]GetSchema("IndexColumns")
+18:16:21.580  5 Y 1 字段ActUser.isStop类型需要由数据库的System.Int16改变为实体的System.Int32
+18:16:21.588  5 Y 1 只检查不对数据库进行操作,请手工使用以下语句修改表：
+Alter Table ActUser Alter Column UserID nvarchar(50) NOT NULL;
+Drop Index ActUser.IU_ActUser_UserName;
+Alter Table ActUser Alter Column UserName nvarchar(50) NOT NULL;
+Create Unique Index IU_ActUser_UserName On ActUser (UserName);
+Alter Table ActUser Alter Column Detp nvarchar(50) NULL;
+Alter Table ActUser Alter Column Summary nvarchar(50) NULL;
+EXECUTE sp_rename N'ActUser', N'Temp_ActUser_6110', 'OBJECT' ; 
+Create Table ActUser(
+	id int IDENTITY(1,1) Primary Key,
+	UserID nvarchar(50) NOT NULL,
+	UserName nvarchar(50) NOT NULL,
+	Detp nvarchar(50) NULL,
+	Summary nvarchar(50) NULL,
+	[State] bit NULL,
+	Email nvarchar(50) NULL,
+	Tel nvarchar(250) NULL,
+	Pwd nvarchar(50) NULL,
+	Detped bit NULL,
+	isStop int NULL
+); 
+SET IDENTITY_INSERT ActUser ON;Insert Into ActUser(id, UserID, UserName, Detp, Summary, [State], Email, Tel, Pwd, Detped, isStop) Select id, UserID+'', ifnull(UserName, ''), Detp, Summary, [State], Email, Tel, Pwd, Detped, isStop From Temp_ActUser_6110;SET IDENTITY_INSERT ActUser OFF; 
+Drop Table Temp_ActUser_6110;
+18:16:21.591  1 N - 开始检查连接[hhzinfosys/SqlServer]的数据库架构……
+18:16:21.642  1 N - [hhzinfosys]的所有实体类（1个）：ActUser
+18:16:21.642  1 N - [hhzinfosys]需要检查架构的实体类（1个）：ActUser
+18:16:21.643  1 N - 检查连接[hhzinfosys/SqlServer]的数据库架构耗时52ms
+18:16:21.645  1 N - Select id,UserID,UserName,Detp,Summary,[State],Email,Tel,Pwd,Detped,isStop From ActUser Order By id Desc
+18:16:25.235  1 N - Select * From ActUser Where id=65
+18:16:40.420  1 N - Select * From ActUser Where id=67
+18:16:40.780  1 N - Select * From ActUser Where id=66
+18:16:41.324  1 N - Select * From ActUser Where id=65
+18:16:42.491  1 N - Select * From ActUser Where id=64
+18:16:43.428  1 N - Select * From ActUser Where id=63
+18:16:44.044  1 N - Select * From ActUser Where id=64
+18:16:47.235  1 N - Select * From ActUser Where id=65
+18:16:47.947  1 N - Select * From ActUser Where id=66
+18:16:49.204  1 N - Select * From ActUser Where id=68
+18:16:49.867  1 N - Select * From ActUser Where id=69
+18:16:50.484  1 N - Select * From ActUser Where id=70
+18:16:51.388  1 N - Select * From ActUser Where id=70
+18:16:51.795  1 N - Select * From ActUser Where id=70
+18:16:52.739  1 N - Select * From ActUser Where id=70
+18:16:53.852  1 N - Select * From ActUser Where id=66
+18:17:01.836  1 N - Select * From ActUser Where id=67
+18:17:02.572  1 N - Select * From ActUser Where id=66
+18:17:03.524  1 N - Select * From ActUser Where id=67
+18:17:03.836  1 N - Select * From ActUser Where id=68
+
+#Software: SysDF
+#ProcessID: 11560 x64
+#AppDomain: SysDF.exe
+#BaseDirectory: D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\
+#CommandLine: "D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysDF.exe" 
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, .NET Framework 4
+#OS: Microsoft Windows NT 6.1.7601 Service Pack 1, XXB-HHZ/Administrator
+#CPU: 4
+#GC: IsServerGC=False, LatencyMode=Interactive
+#Date: 2019-10-11
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:22:26.352  1 N - NewLife.Core v8.3.2019.0923 Build 2019-09-25 00:26:34 .NET Framework 4
+18:22:26.361  1 N - 新生命X组件核心库 ©2002-2019 新生命开发团队
+18:22:26.361  1 N - SysDF v1.0.0.0 Build 2000-01-01 .NET Framework 4
+18:22:26.361  1 N - SysDF Copyright ©  2019
+18:22:26.361  1 N - XCode v9.14.2019.0923 Build 2019-09-25 00:27:46 .NET Framework 4
+18:22:26.361  1 N - 数据中间件 ©2002-2019 新生命开发团队
+18:22:26.499  5 Y 1 System.Data.SqlClient驱动C:\Windows\Microsoft.Net\assembly\GAC_64\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll 版本v4.0.0.0
+18:22:26.505  5 Y 1 [hhzinfosys]GetSchema("MetaDataCollections")
+18:22:26.519  5 Y 1 [hhzinfosys]GetSchema("Databases", "Def_100_2009")
+18:22:26.536  5 Y 1 select b.name n, a.value v from sys.extended_properties a inner join sysobjects b on a.major_id=b.id and a.minor_id=0 and a.name = 'MS_Description'
+18:22:26.554  5 Y 1 [hhzinfosys]GetSchema("Tables")
+18:22:26.585  5 Y 1 SELECT 表名=d.name,字段序号=a.colorder,字段名=a.name,标识=case when COLUMNPROPERTY( a.id,a.name,'IsIdentity')=1 then Convert(Bit,1) else Convert(Bit,0) end,主键=case when exists(SELECT 1 FROM sysobjects where xtype='PK' and name in (SELECT name FROM sysindexes WHERE id = a.id AND indid in(SELECT indid FROM sysindexkeys WHERE id = a.id AND colid=a.colid))) then Convert(Bit,1) else Convert(Bit,0) end,类型=b.name,占用字节数=a.length,长度=COLUMNPROPERTY(a.id,a.name,'PRECISION'),小数位数=isnull(COLUMNPROPERTY(a.id,a.name,'Scale'),0),允许空=case when a.isnullable=1 then Convert(Bit,1)else Convert(Bit,0) end,默认值=isnull(e.text,''),字段说明=isnull(g.[value],'')FROM syscolumns a left join systypes b on a.xtype=b.xusertype inner join sysobjects d on a.id=d.id  and d.xtype='U' left join syscomments e on a.cdefault=e.id left join sys.extended_properties g on a.id=g.major_id and a.colid=g.minor_id and g.name = 'MS_Description'  order by a.id,a.colorder
+18:22:26.869  5 Y 1 select ind.* from sys.indexes ind inner join sys.objects obj on ind.object_id = obj.object_id where obj.type='u'
+18:22:26.889  5 Y 1 [hhzinfosys]GetSchema("Columns")
+18:22:27.003  5 Y 1 [hhzinfosys]GetSchema("Indexes")
+18:22:27.013  5 Y 1 [hhzinfosys]GetSchema("IndexColumns")
+18:22:27.082  5 Y 1 字段ActUser.isStop类型需要由数据库的System.Int16改变为实体的System.Int32
+18:22:27.091  5 Y 1 只检查不对数据库进行操作,请手工使用以下语句修改表：
+Alter Table ActUser Alter Column UserID nvarchar(50) NOT NULL;
+Drop Index ActUser.IU_ActUser_UserName;
+Alter Table ActUser Alter Column UserName nvarchar(50) NOT NULL;
+Create Unique Index IU_ActUser_UserName On ActUser (UserName);
+Alter Table ActUser Alter Column Detp nvarchar(50) NULL;
+Alter Table ActUser Alter Column Summary nvarchar(50) NULL;
+EXECUTE sp_rename N'ActUser', N'Temp_ActUser_5076', 'OBJECT' ; 
+Create Table ActUser(
+	id int IDENTITY(1,1) Primary Key,
+	UserID nvarchar(50) NOT NULL,
+	UserName nvarchar(50) NOT NULL,
+	Detp nvarchar(50) NULL,
+	Summary nvarchar(50) NULL,
+	[State] bit NULL,
+	Email nvarchar(50) NULL,
+	Tel nvarchar(250) NULL,
+	Pwd nvarchar(50) NULL,
+	Detped bit NULL,
+	isStop int NULL
+); 
+SET IDENTITY_INSERT ActUser ON;Insert Into ActUser(id, UserID, UserName, Detp, Summary, [State], Email, Tel, Pwd, Detped, isStop) Select id, UserID+'', ifnull(UserName, ''), Detp, Summary, [State], Email, Tel, Pwd, Detped, isStop From Temp_ActUser_5076;SET IDENTITY_INSERT ActUser OFF; 
+Drop Table Temp_ActUser_5076;
+18:22:27.094  1 N - 开始检查连接[hhzinfosys/SqlServer]的数据库架构……
+18:22:27.129  1 N - [hhzinfosys]的所有实体类（1个）：ActUser
+18:22:27.129  1 N - [hhzinfosys]需要检查架构的实体类（1个）：ActUser
+18:22:27.136  1 N - 检查连接[hhzinfosys/SqlServer]的数据库架构耗时42ms
+18:22:27.138  1 N - Select id,UserID,UserName,Detp,Summary,[State],Email,Tel,Pwd,Detped,isStop From ActUser Order By id Desc
+18:22:28.937  1 N - Select * From ActUser Where id=65
+18:22:29.316  1 N - Select * From ActUser Where id=59
+18:22:31.108  1 N - Select * From ActUser Where id=27
+18:22:31.908  1 N - Select * From ActUser Where id=28
+18:22:32.516  1 N - Select * From ActUser Where id=32
+18:22:32.852  1 N - Select * From ActUser Where id=33
+18:22:34.188  1 N - Select * From ActUser Where id=73
+18:22:42.788  1 N - Select * From ActUser Where id=72
+18:22:43.612  1 N - Select * From ActUser Where id=73
+18:22:44.396  1 N - Select * From ActUser Where id=72
+18:22:45.188  1 N - Select * From ActUser Where id=71
+18:22:46.428  1 N - Select * From ActUser Where id=70
+18:22:47.788  1 N - Select * From ActUser Where id=68
+18:22:51.324  1 N - Select * From ActUser Where id=73
+18:22:58.236  1 N - Select * From ActUser Where id=74
+18:22:59.108  1 N - Select * From ActUser Where id=73
+
+#Software: SysDF
+#ProcessID: 12704 x64
+#AppDomain: SysDF.exe
+#BaseDirectory: D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\
+#CommandLine: "D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysDF.exe" 
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, .NET Framework 4
+#OS: Microsoft Windows NT 6.1.7601 Service Pack 1, XXB-HHZ/Administrator
+#CPU: 4
+#GC: IsServerGC=False, LatencyMode=Interactive
+#Date: 2019-10-11
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:24:50.162  1 N - NewLife.Core v8.3.2019.0923 Build 2019-09-25 00:26:34 .NET Framework 4
+18:24:50.170  1 N - 新生命X组件核心库 ©2002-2019 新生命开发团队
+18:24:50.171  1 N - SysDF v1.0.0.0 Build 2000-01-01 .NET Framework 4
+18:24:50.171  1 N - SysDF Copyright ©  2019
+18:24:50.171  1 N - XCode v9.14.2019.0923 Build 2019-09-25 00:27:46 .NET Framework 4
+18:24:50.171  1 N - 数据中间件 ©2002-2019 新生命开发团队
+18:24:50.310  4 Y 1 System.Data.SqlClient驱动C:\Windows\Microsoft.Net\assembly\GAC_64\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll 版本v4.0.0.0
+18:24:50.328  4 Y 1 [hhzinfosys]GetSchema("MetaDataCollections")
+18:24:50.341  4 Y 1 [hhzinfosys]GetSchema("Databases", "Def_100_2009")
+18:24:50.361  4 Y 1 select b.name n, a.value v from sys.extended_properties a inner join sysobjects b on a.major_id=b.id and a.minor_id=0 and a.name = 'MS_Description'
+18:24:50.372  4 Y 1 [hhzinfosys]GetSchema("Tables")
+18:24:50.402  4 Y 1 SELECT 表名=d.name,字段序号=a.colorder,字段名=a.name,标识=case when COLUMNPROPERTY( a.id,a.name,'IsIdentity')=1 then Convert(Bit,1) else Convert(Bit,0) end,主键=case when exists(SELECT 1 FROM sysobjects where xtype='PK' and name in (SELECT name FROM sysindexes WHERE id = a.id AND indid in(SELECT indid FROM sysindexkeys WHERE id = a.id AND colid=a.colid))) then Convert(Bit,1) else Convert(Bit,0) end,类型=b.name,占用字节数=a.length,长度=COLUMNPROPERTY(a.id,a.name,'PRECISION'),小数位数=isnull(COLUMNPROPERTY(a.id,a.name,'Scale'),0),允许空=case when a.isnullable=1 then Convert(Bit,1)else Convert(Bit,0) end,默认值=isnull(e.text,''),字段说明=isnull(g.[value],'')FROM syscolumns a left join systypes b on a.xtype=b.xusertype inner join sysobjects d on a.id=d.id  and d.xtype='U' left join syscomments e on a.cdefault=e.id left join sys.extended_properties g on a.id=g.major_id and a.colid=g.minor_id and g.name = 'MS_Description'  order by a.id,a.colorder
+18:24:50.685  4 Y 1 select ind.* from sys.indexes ind inner join sys.objects obj on ind.object_id = obj.object_id where obj.type='u'
+18:24:50.696  4 Y 1 [hhzinfosys]GetSchema("Columns")
+18:24:50.800  4 Y 1 [hhzinfosys]GetSchema("Indexes")
+18:24:50.810  4 Y 1 [hhzinfosys]GetSchema("IndexColumns")
+18:24:50.878  4 Y 1 字段ActUser.isStop类型需要由数据库的System.Int16改变为实体的System.Int32
+18:24:50.887  4 Y 1 只检查不对数据库进行操作,请手工使用以下语句修改表：
+Alter Table ActUser Alter Column UserID nvarchar(50) NOT NULL;
+Drop Index ActUser.IU_ActUser_UserName;
+Alter Table ActUser Alter Column UserName nvarchar(50) NOT NULL;
+Create Unique Index IU_ActUser_UserName On ActUser (UserName);
+Alter Table ActUser Alter Column Detp nvarchar(50) NULL;
+Alter Table ActUser Alter Column Summary nvarchar(50) NULL;
+EXECUTE sp_rename N'ActUser', N'Temp_ActUser_4846', 'OBJECT' ; 
+Create Table ActUser(
+	id int IDENTITY(1,1) Primary Key,
+	UserID nvarchar(50) NOT NULL,
+	UserName nvarchar(50) NOT NULL,
+	Detp nvarchar(50) NULL,
+	Summary nvarchar(50) NULL,
+	[State] bit NULL,
+	Email nvarchar(50) NULL,
+	Tel nvarchar(250) NULL,
+	Pwd nvarchar(50) NULL,
+	Detped bit NULL,
+	isStop int NULL
+); 
+SET IDENTITY_INSERT ActUser ON;Insert Into ActUser(id, UserID, UserName, Detp, Summary, [State], Email, Tel, Pwd, Detped, isStop) Select id, UserID+'', ifnull(UserName, ''), Detp, Summary, [State], Email, Tel, Pwd, Detped, isStop From Temp_ActUser_4846;SET IDENTITY_INSERT ActUser OFF; 
+Drop Table Temp_ActUser_4846;
+18:24:50.890  1 N - 开始检查连接[hhzinfosys/SqlServer]的数据库架构……
+18:24:50.920  1 N - [hhzinfosys]的所有实体类（1个）：ActUser
+18:24:50.920  1 N - [hhzinfosys]需要检查架构的实体类（1个）：ActUser
+18:24:50.920  1 N - 检查连接[hhzinfosys/SqlServer]的数据库架构耗时30ms
+18:24:50.927  1 N - Select id,UserID,UserName,Detp,Summary,[State],Email,Tel,Pwd,Detped,isStop From ActUser Order By id Desc
+18:24:52.082  1 N - Select * From ActUser Where id=62
+18:24:56.444  1 N - Select * From ActUser Where id=73
+
+#Software: SysDF
+#ProcessID: 4692 x64
+#AppDomain: SysDF.exe
+#BaseDirectory: D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\
+#CommandLine: "D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysDF.exe" 
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, .NET Framework 4
+#OS: Microsoft Windows NT 6.1.7601 Service Pack 1, XXB-HHZ/Administrator
+#CPU: 4
+#GC: IsServerGC=False, LatencyMode=Interactive
+#Date: 2019-10-11
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+18:55:18.667  1 N - NewLife.Core v8.3.2019.0923 Build 2019-09-25 00:26:34 .NET Framework 4
+18:55:18.676  1 N - 新生命X组件核心库 ©2002-2019 新生命开发团队
+18:55:18.676  1 N - SysDF v1.0.0.0 Build 2000-01-01 .NET Framework 4
+18:55:18.676  1 N - SysDF Copyright ©  2019
+18:55:18.676  1 N - XCode v9.14.2019.0923 Build 2019-09-25 00:27:46 .NET Framework 4
+18:55:18.676  1 N - 数据中间件 ©2002-2019 新生命开发团队
+18:55:18.811  5 Y 1 System.Data.SqlClient驱动C:\Windows\Microsoft.Net\assembly\GAC_64\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll 版本v4.0.0.0
+18:55:18.828  5 Y 1 [hhzinfosys]GetSchema("MetaDataCollections")
+18:55:18.837  5 Y 1 [hhzinfosys]GetSchema("Databases", "Def_100_2009")
+18:55:18.858  5 Y 1 select b.name n, a.value v from sys.extended_properties a inner join sysobjects b on a.major_id=b.id and a.minor_id=0 and a.name = 'MS_Description'
+18:55:18.875  5 Y 1 [hhzinfosys]GetSchema("Tables")
+18:55:18.901  5 Y 1 SELECT 表名=d.name,字段序号=a.colorder,字段名=a.name,标识=case when COLUMNPROPERTY( a.id,a.name,'IsIdentity')=1 then Convert(Bit,1) else Convert(Bit,0) end,主键=case when exists(SELECT 1 FROM sysobjects where xtype='PK' and name in (SELECT name FROM sysindexes WHERE id = a.id AND indid in(SELECT indid FROM sysindexkeys WHERE id = a.id AND colid=a.colid))) then Convert(Bit,1) else Convert(Bit,0) end,类型=b.name,占用字节数=a.length,长度=COLUMNPROPERTY(a.id,a.name,'PRECISION'),小数位数=isnull(COLUMNPROPERTY(a.id,a.name,'Scale'),0),允许空=case when a.isnullable=1 then Convert(Bit,1)else Convert(Bit,0) end,默认值=isnull(e.text,''),字段说明=isnull(g.[value],'')FROM syscolumns a left join systypes b on a.xtype=b.xusertype inner join sysobjects d on a.id=d.id  and d.xtype='U' left join syscomments e on a.cdefault=e.id left join sys.extended_properties g on a.id=g.major_id and a.colid=g.minor_id and g.name = 'MS_Description'  order by a.id,a.colorder
+18:55:19.178  5 Y 1 select ind.* from sys.indexes ind inner join sys.objects obj on ind.object_id = obj.object_id where obj.type='u'
+18:55:19.197  5 Y 1 [hhzinfosys]GetSchema("Columns")
+18:55:19.302  5 Y 1 [hhzinfosys]GetSchema("Indexes")
+18:55:19.324  5 Y 1 [hhzinfosys]GetSchema("IndexColumns")
+18:55:19.393  5 Y 1 字段ActUser.isStop类型需要由数据库的System.Int16改变为实体的System.Int32
+18:55:19.402  5 Y 1 只检查不对数据库进行操作,请手工使用以下语句修改表：
+Alter Table ActUser Alter Column UserID nvarchar(50) NOT NULL;
+Drop Index ActUser.IU_ActUser_UserName;
+Alter Table ActUser Alter Column UserName nvarchar(50) NOT NULL;
+Create Unique Index IU_ActUser_UserName On ActUser (UserName);
+Alter Table ActUser Alter Column Detp nvarchar(50) NULL;
+Alter Table ActUser Alter Column Summary nvarchar(50) NULL;
+EXECUTE sp_rename N'ActUser', N'Temp_ActUser_1608', 'OBJECT' ; 
+Create Table ActUser(
+	id int IDENTITY(1,1) Primary Key,
+	UserID nvarchar(50) NOT NULL,
+	UserName nvarchar(50) NOT NULL,
+	Detp nvarchar(50) NULL,
+	Summary nvarchar(50) NULL,
+	[State] bit NULL,
+	Email nvarchar(50) NULL,
+	Tel nvarchar(250) NULL,
+	Pwd nvarchar(50) NULL,
+	Detped bit NULL,
+	isStop int NULL
+); 
+SET IDENTITY_INSERT ActUser ON;Insert Into ActUser(id, UserID, UserName, Detp, Summary, [State], Email, Tel, Pwd, Detped, isStop) Select id, UserID+'', ifnull(UserName, ''), Detp, Summary, [State], Email, Tel, Pwd, Detped, isStop From Temp_ActUser_1608;SET IDENTITY_INSERT ActUser OFF; 
+Drop Table Temp_ActUser_1608;
+18:55:19.406  1 N - 开始检查连接[hhzinfosys/SqlServer]的数据库架构……
+18:55:19.469  1 N - [hhzinfosys]的所有实体类（1个）：ActUser
+18:55:19.469  1 N - [hhzinfosys]需要检查架构的实体类（1个）：ActUser
+18:55:19.470  1 N - 检查连接[hhzinfosys/SqlServer]的数据库架构耗时64ms
+18:55:19.472  1 N - Select id,UserID,UserName,Detp,Summary,[State],Email,Tel,Pwd,Detped,isStop From ActUser Order By id Desc
+
+#Software: SysDF
+#ProcessID: 14200 x64
+#AppDomain: SysDF.exe
+#BaseDirectory: D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\
+#CommandLine: "D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysDF.exe" 
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, .NET Framework 4
+#OS: Microsoft Windows NT 6.1.7601 Service Pack 1, XXB-HHZ/Administrator
+#CPU: 4
+#GC: IsServerGC=False, LatencyMode=Interactive
+#Date: 2019-10-11
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+19:02:47.766  1 N - NewLife.Core v8.3.2019.0923 Build 2019-09-25 00:26:34 .NET Framework 4
+19:02:47.774  1 N - 新生命X组件核心库 ©2002-2019 新生命开发团队
+19:02:47.775  1 N - SysDF v1.0.0.0 Build 2000-01-01 .NET Framework 4
+19:02:47.775  1 N - SysDF Copyright ©  2019
+19:02:47.775  1 N - XCode v9.14.2019.0923 Build 2019-09-25 00:27:46 .NET Framework 4
+19:02:47.775  1 N - 数据中间件 ©2002-2019 新生命开发团队
+19:02:47.906  5 Y 1 System.Data.SqlClient驱动C:\Windows\Microsoft.Net\assembly\GAC_64\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll 版本v4.0.0.0
+19:02:47.927  5 Y 1 [hhzinfosys]GetSchema("MetaDataCollections")
+19:02:47.940  5 Y 1 [hhzinfosys]GetSchema("Databases", "Def_100_2009")
+19:02:47.958  5 Y 1 select b.name n, a.value v from sys.extended_properties a inner join sysobjects b on a.major_id=b.id and a.minor_id=0 and a.name = 'MS_Description'
+19:02:47.968  5 Y 1 [hhzinfosys]GetSchema("Tables")
+19:02:47.977  5 Y 1 SELECT 表名=d.name,字段序号=a.colorder,字段名=a.name,标识=case when COLUMNPROPERTY( a.id,a.name,'IsIdentity')=1 then Convert(Bit,1) else Convert(Bit,0) end,主键=case when exists(SELECT 1 FROM sysobjects where xtype='PK' and name in (SELECT name FROM sysindexes WHERE id = a.id AND indid in(SELECT indid FROM sysindexkeys WHERE id = a.id AND colid=a.colid))) then Convert(Bit,1) else Convert(Bit,0) end,类型=b.name,占用字节数=a.length,长度=COLUMNPROPERTY(a.id,a.name,'PRECISION'),小数位数=isnull(COLUMNPROPERTY(a.id,a.name,'Scale'),0),允许空=case when a.isnullable=1 then Convert(Bit,1)else Convert(Bit,0) end,默认值=isnull(e.text,''),字段说明=isnull(g.[value],'')FROM syscolumns a left join systypes b on a.xtype=b.xusertype inner join sysobjects d on a.id=d.id  and d.xtype='U' left join syscomments e on a.cdefault=e.id left join sys.extended_properties g on a.id=g.major_id and a.colid=g.minor_id and g.name = 'MS_Description'  order by a.id,a.colorder
+19:02:48.254  5 Y 1 select ind.* from sys.indexes ind inner join sys.objects obj on ind.object_id = obj.object_id where obj.type='u'
+19:02:48.267  5 Y 1 [hhzinfosys]GetSchema("Columns")
+19:02:48.369  5 Y 1 [hhzinfosys]GetSchema("Indexes")
+19:02:48.380  5 Y 1 [hhzinfosys]GetSchema("IndexColumns")
+19:02:48.450  5 Y 1 字段ActUser.isStop类型需要由数据库的System.Int16改变为实体的System.Int32
+19:02:48.459  5 Y 1 只检查不对数据库进行操作,请手工使用以下语句修改表：
+Alter Table ActUser Alter Column UserID nvarchar(50) NOT NULL;
+Drop Index ActUser.IU_ActUser_UserName;
+Alter Table ActUser Alter Column UserName nvarchar(50) NOT NULL;
+Create Unique Index IU_ActUser_UserName On ActUser (UserName);
+Alter Table ActUser Alter Column Detp nvarchar(50) NULL;
+Alter Table ActUser Alter Column Summary nvarchar(50) NULL;
+EXECUTE sp_rename N'ActUser', N'Temp_ActUser_5964', 'OBJECT' ; 
+Create Table ActUser(
+	id int IDENTITY(1,1) Primary Key,
+	UserID nvarchar(50) NOT NULL,
+	UserName nvarchar(50) NOT NULL,
+	Detp nvarchar(50) NULL,
+	Summary nvarchar(50) NULL,
+	[State] bit NULL,
+	Email nvarchar(50) NULL,
+	Tel nvarchar(250) NULL,
+	Pwd nvarchar(50) NULL,
+	Detped bit NULL,
+	isStop int NULL
+); 
+SET IDENTITY_INSERT ActUser ON;Insert Into ActUser(id, UserID, UserName, Detp, Summary, [State], Email, Tel, Pwd, Detped, isStop) Select id, UserID+'', ifnull(UserName, ''), Detp, Summary, [State], Email, Tel, Pwd, Detped, isStop From Temp_ActUser_5964;SET IDENTITY_INSERT ActUser OFF; 
+Drop Table Temp_ActUser_5964;
+19:02:48.462  1 N - 开始检查连接[hhzinfosys/SqlServer]的数据库架构……
+19:02:48.503  1 N - [hhzinfosys]的所有实体类（1个）：ActUser
+19:02:48.503  1 N - [hhzinfosys]需要检查架构的实体类（1个）：ActUser
+19:02:48.504  1 N - 检查连接[hhzinfosys/SqlServer]的数据库架构耗时42ms
+19:02:48.506  1 N - Select id,UserID,UserName,Detp,Summary,[State],Email,Tel,Pwd,Detped,isStop From ActUser Order By id Desc
+19:02:50.419  1 N - Select * From ActUser Where id=72
+19:02:51.860  1 N - Select * From ActUser Where id=71
+
+#Software: SysDF
+#ProcessID: 15296 x64
+#AppDomain: SysDF.exe
+#BaseDirectory: D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\
+#CommandLine: "D:\学习框架\SysDF\SysDF\SysDF\bin\Debug\SysDF.exe" 
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, .NET Framework 4
+#OS: Microsoft Windows NT 6.1.7601 Service Pack 1, XXB-HHZ/Administrator
+#CPU: 4
+#GC: IsServerGC=False, LatencyMode=Interactive
+#Date: 2019-10-11
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+19:03:54.434  1 N - NewLife.Core v8.3.2019.0923 Build 2019-09-25 00:26:34 .NET Framework 4
+19:03:54.442  1 N - 新生命X组件核心库 ©2002-2019 新生命开发团队
+19:03:54.443  1 N - SysDF v1.0.0.0 Build 2000-01-01 .NET Framework 4
+19:03:54.443  1 N - SysDF Copyright ©  2019
+19:03:54.443  1 N - XCode v9.14.2019.0923 Build 2019-09-25 00:27:46 .NET Framework 4
+19:03:54.443  1 N - 数据中间件 ©2002-2019 新生命开发团队
+19:03:54.625  4 Y 1 System.Data.SqlClient驱动C:\Windows\Microsoft.Net\assembly\GAC_64\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll 版本v4.0.0.0
+19:03:54.647  4 Y 1 [hhzinfosys]GetSchema("MetaDataCollections")
+19:03:54.654  4 Y 1 [hhzinfosys]GetSchema("Databases", "Def_100_2009")
+19:03:54.672  4 Y 1 select b.name n, a.value v from sys.extended_properties a inner join sysobjects b on a.major_id=b.id and a.minor_id=0 and a.name = 'MS_Description'
+19:03:54.682  4 Y 1 [hhzinfosys]GetSchema("Tables")
+19:03:54.691  4 Y 1 SELECT 表名=d.name,字段序号=a.colorder,字段名=a.name,标识=case when COLUMNPROPERTY( a.id,a.name,'IsIdentity')=1 then Convert(Bit,1) else Convert(Bit,0) end,主键=case when exists(SELECT 1 FROM sysobjects where xtype='PK' and name in (SELECT name FROM sysindexes WHERE id = a.id AND indid in(SELECT indid FROM sysindexkeys WHERE id = a.id AND colid=a.colid))) then Convert(Bit,1) else Convert(Bit,0) end,类型=b.name,占用字节数=a.length,长度=COLUMNPROPERTY(a.id,a.name,'PRECISION'),小数位数=isnull(COLUMNPROPERTY(a.id,a.name,'Scale'),0),允许空=case when a.isnullable=1 then Convert(Bit,1)else Convert(Bit,0) end,默认值=isnull(e.text,''),字段说明=isnull(g.[value],'')FROM syscolumns a left join systypes b on a.xtype=b.xusertype inner join sysobjects d on a.id=d.id  and d.xtype='U' left join syscomments e on a.cdefault=e.id left join sys.extended_properties g on a.id=g.major_id and a.colid=g.minor_id and g.name = 'MS_Description'  order by a.id,a.colorder
+19:03:54.971  4 Y 1 select ind.* from sys.indexes ind inner join sys.objects obj on ind.object_id = obj.object_id where obj.type='u'
+19:03:55.033  4 Y 1 [hhzinfosys]GetSchema("Columns")
+19:03:55.147  4 Y 1 [hhzinfosys]GetSchema("Indexes")
+19:03:55.170  4 Y 1 [hhzinfosys]GetSchema("IndexColumns")
+19:03:55.237  4 Y 1 字段ActUser.isStop类型需要由数据库的System.Int16改变为实体的System.Int32
+19:03:55.246  4 Y 1 只检查不对数据库进行操作,请手工使用以下语句修改表：
+Alter Table ActUser Alter Column UserID nvarchar(50) NOT NULL;
+Drop Index ActUser.IU_ActUser_UserName;
+Alter Table ActUser Alter Column UserName nvarchar(50) NOT NULL;
+Create Unique Index IU_ActUser_UserName On ActUser (UserName);
+Alter Table ActUser Alter Column Detp nvarchar(50) NULL;
+Alter Table ActUser Alter Column Summary nvarchar(50) NULL;
+EXECUTE sp_rename N'ActUser', N'Temp_ActUser_8126', 'OBJECT' ; 
+Create Table ActUser(
+	id int IDENTITY(1,1) Primary Key,
+	UserID nvarchar(50) NOT NULL,
+	UserName nvarchar(50) NOT NULL,
+	Detp nvarchar(50) NULL,
+	Summary nvarchar(50) NULL,
+	[State] bit NULL,
+	Email nvarchar(50) NULL,
+	Tel nvarchar(250) NULL,
+	Pwd nvarchar(50) NULL,
+	Detped bit NULL,
+	isStop int NULL
+); 
+SET IDENTITY_INSERT ActUser ON;Insert Into ActUser(id, UserID, UserName, Detp, Summary, [State], Email, Tel, Pwd, Detped, isStop) Select id, UserID+'', ifnull(UserName, ''), Detp, Summary, [State], Email, Tel, Pwd, Detped, isStop From Temp_ActUser_8126;SET IDENTITY_INSERT ActUser OFF; 
+Drop Table Temp_ActUser_8126;
+19:03:55.249  1 N - 开始检查连接[hhzinfosys/SqlServer]的数据库架构……
+19:03:55.294  1 N - [hhzinfosys]的所有实体类（1个）：ActUser
+19:03:55.294  1 N - [hhzinfosys]需要检查架构的实体类（1个）：ActUser
+19:03:55.294  1 N - 检查连接[hhzinfosys/SqlServer]的数据库架构耗时46ms
+19:03:55.297  1 N - Select id,UserID,UserName,Detp,Summary,[State],Email,Tel,Pwd,Detped,isStop From ActUser Order By id Desc
+19:03:57.050  1 N - Select * From ActUser Where id=70
+19:04:02.609  1 N - Update ActUser Set UserID='202       ',UserName='吴海珊    ',Detp='121       ',Pwd='M1Ee1B8nmuo=' Where id=70
+19:04:03.588  1 N - Select * From ActUser Where id=71
+19:04:06.540  1 N - Select * From ActUser Where id=70
+19:04:08.284  1 N - Select * From ActUser Where id=69
+19:04:08.676  1 N - Select * From ActUser Where id=67
+19:04:08.974  1 N - Select * From ActUser Where id=65
+19:04:09.195  1 N - Select * From ActUser Where id=70
+19:04:09.412  1 N - Select * From ActUser Where id=71
+19:04:09.660  1 N - Select * From ActUser Where id=68
+19:04:10.204  1 N - Select * From ActUser Where id=69
+19:04:10.412  1 N - Select * From ActUser Where id=71

@@ -1,0 +1,21 @@
+﻿#Software: devenv
+#ProcessID: 13024
+#AppDomain: throwawayDomaincee9798e-6cba-4b17-87ac-23c5a033ddb7
+#BaseDirectory: D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\
+#CurrentDirectory: D:\学习框架\SysDF\SysDF
+#CommandLine: "D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe" "D:\学习框架\SysDF\SysDF\SysDF.sln"
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, 
+#OS: Microsoft Windows NT 6.1.7601 Service Pack 1, XXB-HHZ/Administrator
+#CPU: 4
+#GC: IsServerGC=False, LatencyMode=Interactive
+#Date: 2019-10-11
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+16:59:05.881  1 N - NewLife.Core v8.3.2019.0923 Build 2019-09-25 00:26:34 .NET Framework 4
+16:59:05.882  1 N - 新生命X组件核心库 ©2002-2019 新生命开发团队
+16:59:05.882  1 N - 未指定模型文件，准备从目录中查找第一个xml文件 D:\学习框架\SysDF\SysDF\SysDF\SysModule\EntitySysModuleFormORM
+16:59:05.935  1 N - XCode v9.14.2019.0923 Build 2019-09-25 00:27:46 .NET Framework 4
+16:59:05.935  1 N - 数据中间件 ©2002-2019 新生命开发团队
+16:59:11.325  1 N - 代码生成源：D:\学习框架\SysDF\SysDF\SysDF\SysModule\EntitySysModuleFormORM\Model.xml
+16:59:11.326  1 N - 代码生成：1 输出：D:\学习框架\SysDF\SysDF\SysDF\SysModule\EntitySysModuleFormORM 命名空间：Hhz.SysDF.SysModule 连接名：hhzinfosys 基类：Entity

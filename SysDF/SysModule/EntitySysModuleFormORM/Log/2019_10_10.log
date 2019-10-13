@@ -1,0 +1,36 @@
+﻿#Software: devenv
+#ProcessID: 7748
+#AppDomain: throwawayDomain8000cf42-8d26-4efe-81db-570790b02936
+#BaseDirectory: D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\
+#CurrentDirectory: D:\学习框架\SysDF\SysDF
+#CommandLine: "D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe" "D:\学习框架\SysDF\SysDF\SysDF.sln"
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, 
+#OS: Microsoft Windows NT 6.1.7601 Service Pack 1, XXB-HHZ/Administrator
+#CPU: 4
+#GC: IsServerGC=False, LatencyMode=Interactive
+#Date: 2019-10-10
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+14:06:03.689  1 N - NewLife.Core v8.3.2019.0923 Build 2019-09-25 00:26:34 .NET Framework 4
+14:06:03.690  1 N - 新生命X组件核心库 ©2002-2019 新生命开发团队
+14:06:03.690  1 N - Setting的配置文件Config\Core.config 不存在，准备用默认配置覆盖！
+14:06:03.771  1 N - 未指定模型文件，准备从目录中查找第一个xml文件 D:\学习框架\SysDF\SysDF\SysDF\SysModule\EntitySysModuleFormORM
+14:06:03.785  1 N - Setting的配置文件Config\XCode.config 不存在，准备用默认配置覆盖！
+14:06:03.788  1 N - XCode v9.14.2019.0923 Build 2019-09-25 00:27:46 .NET Framework 4
+14:06:03.788  1 N - 数据中间件 ©2002-2019 新生命开发团队
+14:06:07.368  1 N - 代码生成源：D:\学习框架\SysDF\SysDF\SysDF\SysModule\EntitySysModuleFormORM\Model.xml
+14:06:07.369  1 N - 代码生成：1 输出：D:\学习框架\SysDF\SysDF\SysDF\SysModule\EntitySysModuleFormORM 命名空间：XCode.Membership 连接名：Membership 基类：Entity
+14:06:45.839  1 N - NewLife.Setting的配置文件D:\学习框架\SysDF\SysDF\SysDF\SysModule\EntitySysModuleFormORM\Config\Core.config有更新，重新加载配置！
+14:06:45.839  1 N - 未指定模型文件，准备从目录中查找第一个xml文件 D:\学习框架\SysDF\SysDF\SysDF\SysModule\EntitySysModuleFormORM
+14:06:45.840  1 N - 代码生成源：D:\学习框架\SysDF\SysDF\SysDF\SysModule\EntitySysModuleFormORM\Model.xml
+14:06:45.840  1 N - 代码生成：1 输出：D:\学习框架\SysDF\SysDF\SysDF\SysModule\EntitySysModuleFormORM 命名空间：XCode.Membership 连接名：Membership 基类：Entity
+14:30:10.725  1 N - 未指定模型文件，准备从目录中查找第一个xml文件 D:\学习框架\SysDF\SysDF\SysDF\SysModule\EntitySysModuleFormORM
+14:30:10.726  1 N - 代码生成源：D:\学习框架\SysDF\SysDF\SysDF\SysModule\EntitySysModuleFormORM\Model.xml
+14:30:10.726  1 N - 代码生成：1 输出：D:\学习框架\SysDF\SysDF\SysDF\SysModule\EntitySysModuleFormORM 命名空间：Hhz.SysDF 连接名：SysModule 基类：Entity
+14:31:18.502  1 N - 未指定模型文件，准备从目录中查找第一个xml文件 D:\学习框架\SysDF\SysDF\SysDF\SysModule\EntitySysModuleFormORM
+14:31:18.503  1 N - 代码生成源：D:\学习框架\SysDF\SysDF\SysDF\SysModule\EntitySysModuleFormORM\Model.xml
+14:31:18.503  1 N - 代码生成：1 输出：D:\学习框架\SysDF\SysDF\SysDF\SysModule\EntitySysModuleFormORM 命名空间：Hhz.SysDF.SysModule 连接名：SysModule 基类：Entity
+14:32:31.406  1 N - 未指定模型文件，准备从目录中查找第一个xml文件 D:\学习框架\SysDF\SysDF\SysDF\SysModule\EntitySysModuleFormORM
+14:32:31.407  1 N - 代码生成源：D:\学习框架\SysDF\SysDF\SysDF\SysModule\EntitySysModuleFormORM\Model.xml
+14:32:31.407  1 N - 代码生成：1 输出：D:\学习框架\SysDF\SysDF\SysDF\SysModule\EntitySysModuleFormORM 命名空间：Hhz.SysDF.SysModule 连接名：SysModule 基类：Entity
