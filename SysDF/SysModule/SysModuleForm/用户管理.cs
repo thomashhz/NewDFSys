@@ -169,5 +169,39 @@ namespace SysDF.SysModule.SysModuleForm
             }
             catch { }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            string sUserName = txtUserName.Text.ToString();
+            int ir = 2;
+            var au = ActUser.FindByUserName(sUserName);
+             grid1.Rows = ir;
+
+                    try
+                    {
+                        grid1.Cell(ir - 1, 1).Text = au.id.ToString();
+                        grid1.Cell(ir - 1, 2).Text = au.UserID.ToString();
+                        grid1.Cell(ir - 1, 3).Text = au.UserName.ToString();
+                        grid1.Cell(ir - 1, 4).Text = au.Detp.ToString();
+                        grid1.Cell(ir - 1, 5).Text = au.isStop.ToString();
+
+                    }
+                    catch { }
+
+                
+
+            
+        }
+
+        private void grid1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolRef_Click(object sender, EventArgs e)
+        {
+            IniGrid1();
+        }
     }
 }

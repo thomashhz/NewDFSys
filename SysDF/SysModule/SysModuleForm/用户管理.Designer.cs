@@ -41,6 +41,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtUserName = new System.Windows.Forms.TextBox();
             this.grid1 = new FlexCell.Grid();
             this.tools = new System.Windows.Forms.ToolStrip();
             this.toolExit = new System.Windows.Forms.ToolStripButton();
@@ -179,6 +182,9 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.txtUserName);
             this.groupBox1.Controls.Add(this.grid1);
             this.groupBox1.ForeColor = System.Drawing.Color.Blue;
             this.groupBox1.Location = new System.Drawing.Point(2, 28);
@@ -187,6 +193,32 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "用户列表";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(313, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(78, 27);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "查询";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(24, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 14);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "用户名：";
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Location = new System.Drawing.Point(93, 22);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(168, 23);
+            this.txtUserName.TabIndex = 1;
             // 
             // grid1
             // 
@@ -205,6 +237,7 @@
             this.grid1.TabIndex = 0;
             this.grid1.UncheckedImage = null;
             this.grid1.RowColChange += new FlexCell.Grid.RowColChangeEventHandler(this.grid1_RowColChange);
+            this.grid1.Load += new System.EventHandler(this.grid1_Load);
             // 
             // tools
             // 
@@ -230,7 +263,7 @@
             this.toolExit.Image = global::SysDF.Properties.Resources.top;
             this.toolExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolExit.Name = "toolExit";
-            this.toolExit.Size = new System.Drawing.Size(49, 22);
+            this.toolExit.Size = new System.Drawing.Size(52, 22);
             this.toolExit.Text = "退出";
             this.toolExit.Click += new System.EventHandler(this.toolExit_Click);
             // 
@@ -244,7 +277,7 @@
             this.toolAdd.Image = global::SysDF.Properties.Resources.add;
             this.toolAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolAdd.Name = "toolAdd";
-            this.toolAdd.Size = new System.Drawing.Size(49, 22);
+            this.toolAdd.Size = new System.Drawing.Size(52, 22);
             this.toolAdd.Text = "新增";
             this.toolAdd.Click += new System.EventHandler(this.toolAdd_Click);
             // 
@@ -253,7 +286,7 @@
             this.toolEdit.Image = global::SysDF.Properties.Resources.edit;
             this.toolEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolEdit.Name = "toolEdit";
-            this.toolEdit.Size = new System.Drawing.Size(49, 22);
+            this.toolEdit.Size = new System.Drawing.Size(52, 22);
             this.toolEdit.Text = "修改";
             this.toolEdit.Click += new System.EventHandler(this.toolEdit_Click);
             // 
@@ -262,7 +295,7 @@
             this.toolDel.Image = global::SysDF.Properties.Resources.delete;
             this.toolDel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolDel.Name = "toolDel";
-            this.toolDel.Size = new System.Drawing.Size(49, 22);
+            this.toolDel.Size = new System.Drawing.Size(52, 22);
             this.toolDel.Text = "删除";
             this.toolDel.Click += new System.EventHandler(this.toolDel_Click);
             // 
@@ -277,7 +310,7 @@
             this.toolSave.Image = global::SysDF.Properties.Resources.saveas;
             this.toolSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolSave.Name = "toolSave";
-            this.toolSave.Size = new System.Drawing.Size(49, 22);
+            this.toolSave.Size = new System.Drawing.Size(52, 22);
             this.toolSave.Text = "保存";
             this.toolSave.Click += new System.EventHandler(this.toolSave_Click);
             // 
@@ -287,7 +320,7 @@
             this.toolCancel.Image = global::SysDF.Properties.Resources.deletefile;
             this.toolCancel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolCancel.Name = "toolCancel";
-            this.toolCancel.Size = new System.Drawing.Size(49, 22);
+            this.toolCancel.Size = new System.Drawing.Size(52, 22);
             this.toolCancel.Text = "取消";
             this.toolCancel.Click += new System.EventHandler(this.toolCancel_Click);
             // 
@@ -298,11 +331,12 @@
             // 
             // toolRef
             // 
-            this.toolRef.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolRef.Image = global::SysDF.Properties.Resources.refresh;
             this.toolRef.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolRef.Name = "toolRef";
-            this.toolRef.Size = new System.Drawing.Size(23, 22);
-            this.toolRef.Text = "toolStripButton1";
+            this.toolRef.Size = new System.Drawing.Size(52, 22);
+            this.toolRef.Text = "刷新";
+            this.toolRef.Click += new System.EventHandler(this.toolRef_Click);
             // 
             // 用户管理
             // 
@@ -317,6 +351,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tools.ResumeLayout(false);
             this.tools.PerformLayout();
             this.ResumeLayout(false);
@@ -351,5 +386,8 @@
         private System.Windows.Forms.ToolStripButton toolCancel;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton toolRef;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtUserName;
     }
 }
