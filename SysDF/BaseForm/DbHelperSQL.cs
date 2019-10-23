@@ -18,7 +18,9 @@ namespace Hhz.dbdata //可以修改成实际项目的命名空间名称
     {
         //数据库连接字符串(web.config来配置)
         //<add key="ConnectionString" value="server=168.100.100.170;database=HRKQ;uid=sa;pwd=zgzy123" />  
-        protected static string connectionString = "server=.;database=Def_100_2009;uid=sa;pwd=7034.";
+        protected static string connectionString = "server=.;database=Def_100_2009;uid=dfadmin;pwd=Dfadmin.";
+
+        //protected static string connectionString = "server=.;database=Def_100_2009;uid=sa;pwd=7034.";
         //protected static string connectionString = "server=168.100.100.170;database=HRKQ;uid=sa;pwd=zgzy123";
             //"user id=sa;password=zgzy123;initial catalog=HRKQ;datasource=168.100.100.170;connect Timeout=20";
             //ConfigurationManager.AppSettings["ConnectionString"];

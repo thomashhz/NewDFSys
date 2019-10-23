@@ -120,8 +120,8 @@ namespace Hhz.SysDF.SysModule
         /// <returns>实体对象</returns>
         public static ActUser FindByUserName(String username)
         {
-            // 实体缓存
-            if (Meta.Session.Count < 1000) return Meta.Cache.Find(e => e.UserName == username);
+            // 实体缓存:  还没搞清楚实体缓存，所以把数字调小，调用find 过程
+            if (Meta.Session.Count < 30) return Meta.Cache.Find(e => e.UserName == username);
 
             return Find(_.UserName == username);
         }
