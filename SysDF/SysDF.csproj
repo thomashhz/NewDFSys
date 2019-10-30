@@ -73,6 +73,8 @@
     <Compile Include="BaseForm\全局函数及变量.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SysModule\EntitySysModuleFormORM\ActFormTree.Biz.cs" />
+    <Compile Include="SysModule\EntitySysModuleFormORM\ActFormTree.cs" />
     <Compile Include="SysModule\EntitySysModuleFormORM\用户.Biz.cs" />
     <Compile Include="SysModule\EntitySysModuleFormORM\用户.cs" />
     <Compile Include="SysModule\SysModuleForm\用户管理.cs">
@@ -80,6 +82,12 @@
     </Compile>
     <Compile Include="SysModule\SysModuleForm\用户管理.Designer.cs">
       <DependentUpon>用户管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysModule\SysModuleForm\系统功能维护.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysModule\SysModuleForm\系统功能维护.Designer.cs">
+      <DependentUpon>系统功能维护.cs</DependentUpon>
     </Compile>
     <Compile Include="zMainForm.cs">
       <SubType>Form</SubType>
@@ -108,6 +116,9 @@
     </Compile>
     <EmbeddedResource Include="SysModule\SysModuleForm\用户管理.resx">
       <DependentUpon>用户管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysModule\SysModuleForm\系统功能维护.resx">
+      <DependentUpon>系统功能维护.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="zMainForm.resx">
       <DependentUpon>zMainForm.cs</DependentUpon>
