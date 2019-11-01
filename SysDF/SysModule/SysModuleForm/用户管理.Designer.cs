@@ -257,13 +257,14 @@
             this.tools.Size = new System.Drawing.Size(1014, 25);
             this.tools.TabIndex = 7;
             this.tools.Text = "toolStrip1";
+            //this.tools.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tools_ItemClicked);
             // 
             // toolExit
             // 
             this.toolExit.Image = global::SysDF.Properties.Resources.top;
             this.toolExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolExit.Name = "toolExit";
-            this.toolExit.Size = new System.Drawing.Size(52, 22);
+            this.toolExit.Size = new System.Drawing.Size(49, 22);
             this.toolExit.Text = "退出";
             this.toolExit.Click += new System.EventHandler(this.toolExit_Click);
             // 
@@ -277,7 +278,7 @@
             this.toolAdd.Image = global::SysDF.Properties.Resources.add;
             this.toolAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolAdd.Name = "toolAdd";
-            this.toolAdd.Size = new System.Drawing.Size(52, 22);
+            this.toolAdd.Size = new System.Drawing.Size(49, 22);
             this.toolAdd.Text = "新增";
             this.toolAdd.Click += new System.EventHandler(this.toolAdd_Click);
             // 
@@ -286,7 +287,7 @@
             this.toolEdit.Image = global::SysDF.Properties.Resources.edit;
             this.toolEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolEdit.Name = "toolEdit";
-            this.toolEdit.Size = new System.Drawing.Size(52, 22);
+            this.toolEdit.Size = new System.Drawing.Size(49, 22);
             this.toolEdit.Text = "修改";
             this.toolEdit.Click += new System.EventHandler(this.toolEdit_Click);
             // 
@@ -295,7 +296,7 @@
             this.toolDel.Image = global::SysDF.Properties.Resources.delete;
             this.toolDel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolDel.Name = "toolDel";
-            this.toolDel.Size = new System.Drawing.Size(52, 22);
+            this.toolDel.Size = new System.Drawing.Size(49, 22);
             this.toolDel.Text = "删除";
             this.toolDel.Click += new System.EventHandler(this.toolDel_Click);
             // 
@@ -310,7 +311,7 @@
             this.toolSave.Image = global::SysDF.Properties.Resources.saveas;
             this.toolSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolSave.Name = "toolSave";
-            this.toolSave.Size = new System.Drawing.Size(52, 22);
+            this.toolSave.Size = new System.Drawing.Size(49, 22);
             this.toolSave.Text = "保存";
             this.toolSave.Click += new System.EventHandler(this.toolSave_Click);
             // 
@@ -320,7 +321,7 @@
             this.toolCancel.Image = global::SysDF.Properties.Resources.deletefile;
             this.toolCancel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolCancel.Name = "toolCancel";
-            this.toolCancel.Size = new System.Drawing.Size(52, 22);
+            this.toolCancel.Size = new System.Drawing.Size(49, 22);
             this.toolCancel.Text = "取消";
             this.toolCancel.Click += new System.EventHandler(this.toolCancel_Click);
             // 
@@ -334,7 +335,7 @@
             this.toolRef.Image = global::SysDF.Properties.Resources.refresh;
             this.toolRef.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolRef.Name = "toolRef";
-            this.toolRef.Size = new System.Drawing.Size(52, 22);
+            this.toolRef.Size = new System.Drawing.Size(49, 22);
             this.toolRef.Text = "刷新";
             this.toolRef.Click += new System.EventHandler(this.toolRef_Click);
             // 

@@ -67,3 +67,5 @@ D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.csproj.CoreCompileInp
 D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.csproj.CopyComplete
 D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.exe
 D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.pdb
+D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.csprojAssemblyReference.cache
+D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.SysModule.SysModuleForm.权限设置.resources

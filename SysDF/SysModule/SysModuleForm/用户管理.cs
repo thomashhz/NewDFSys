@@ -150,6 +150,7 @@ namespace SysDF.SysModule.SysModuleForm
         {
             //取消
             toolSetTrue(true);
+            IsSaved = false;
         }
 
         private void grid1_RowColChange(object Sender, FlexCell.Grid.RowColChangeEventArgs e)
@@ -203,5 +204,6 @@ namespace SysDF.SysModule.SysModuleForm
         {
             IniGrid1();
         }
+
     }
 }
