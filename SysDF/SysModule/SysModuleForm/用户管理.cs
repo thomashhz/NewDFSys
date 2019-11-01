@@ -4,9 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+
 
 namespace SysDF.SysModule.SysModuleForm
 {
@@ -175,24 +177,51 @@ namespace SysDF.SysModule.SysModuleForm
         {
 
             string sUserName = txtUserName.Text.ToString();
-            int ir = 2;
-            var au = ActUser.FindByUserName(sUserName);
-             grid1.Rows = ir;
+            int ir = 1;
+            string strSql = "select * from ActUser where 1=1 ";
 
-                    try
-                    {
-                        grid1.Cell(ir - 1, 1).Text = au.id.ToString();
-                        grid1.Cell(ir - 1, 2).Text = au.UserID.ToString();
-                        grid1.Cell(ir - 1, 3).Text = au.UserName.ToString();
-                        grid1.Cell(ir - 1, 4).Text = au.Detp.ToString();
-                        grid1.Cell(ir - 1, 5).Text = au.isStop.ToString();
+            if(sUserName !="")
+            {
+                strSql += " and username like '%" + sUserName + "%'";
+      
+            }
 
-                    }
-                    catch { }
+            if(checkBox2.Visible )
+            {
+                strSql += " and isStop='1' ";
+            }
 
-                
+            SqlDataReader rd = DbHelperSQL.ExecuteReader(strSql);
+            grid1.Rows = ir;
+            while (rd.Read())
+            {
+                ir += 1;
+                grid1.Rows = ir ;
+                grid1.Cell(ir - 1, 1).Text = rd["id"].ToString();
+                grid1.Cell(ir - 1, 2).Text = rd["UserID"].ToString() ;
+                grid1.Cell(ir - 1, 3).Text = rd["UserName"].ToString()  ;
+                grid1.Cell(ir - 1, 4).Text = rd["Detp"].ToString()   ;
+                grid1.Cell(ir - 1, 5).Text = rd["isStop"].ToString()   ;
 
-            
+            }
+
+            //var au = ActUser.FindByUserName(sUserName);
+            // grid1.Rows = ir+1;
+
+            //        try
+            //        {
+            //            grid1.Cell(ir - 1, 1).Text = au.id.ToString();
+            //            grid1.Cell(ir - 1, 2).Text = au.UserID.ToString();
+            //            grid1.Cell(ir - 1, 3).Text = au.UserName.ToString();
+            //            grid1.Cell(ir - 1, 4).Text = au.Detp.ToString();
+            //            grid1.Cell(ir - 1, 5).Text = au.isStop.ToString();
+
+            //        }
+            //        catch { }
+
+
+
+
         }
 
         private void grid1_Load(object sender, EventArgs e)

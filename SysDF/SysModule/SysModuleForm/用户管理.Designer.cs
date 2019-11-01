@@ -56,6 +56,7 @@
             this.toolCancel = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolRef = new System.Windows.Forms.ToolStripButton();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tools.SuspendLayout();
@@ -182,6 +183,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtUserName);
@@ -196,7 +198,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(313, 22);
+            this.button1.Location = new System.Drawing.Point(444, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(78, 27);
             this.button1.TabIndex = 3;
@@ -339,6 +341,16 @@
             this.toolRef.Text = "刷新";
             this.toolRef.Click += new System.EventHandler(this.toolRef_Click);
             // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(284, 23);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(82, 18);
+            this.checkBox2.TabIndex = 4;
+            this.checkBox2.Text = "停用用户";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
             // 用户管理
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -390,5 +402,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
