@@ -104,7 +104,7 @@ namespace SysDF
             }
             catch (Exception ex)
             {
-                MessageBox.Show("打开窗体信息:" + ex);
+                //MessageBox.Show("打开窗体信息:" + ex);
             }
             //    try
             //    {
@@ -137,6 +137,11 @@ namespace SysDF
             //    //来源：CSDN
             //    //原文：https://blog.csdn.net/zzzzzzzert/article/details/87875374 
             //    //版权声明：本文为博主原创文章，转载请附上博文链接！
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
         }
     }
 }
