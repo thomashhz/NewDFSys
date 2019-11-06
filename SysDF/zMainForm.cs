@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hhz.dbdata;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -143,18 +144,45 @@ namespace SysDF
 
         private void zMainForm_Load(object sender, EventArgs e)
         {
-            //加载定义的左靠菜单窗体form
 
-            frmMenu.P_fm = this;
+            //初始化登录用户
 
-            //frmMenu.Show(this.dockPanel1);
+            zLoginForm logfrm = new zLoginForm();
+            //logfrm.Show();
+            logfrm.Show(this.dockPanel1);
+            //PubFunVar.LoginUserID = "admin";   // "admin";  // "231";   //
+            //PubFunVar.LoginUserName = "admin"; // "admin";  // "梁飞源"; //
 
-            frmMenu.Show(this.dockPanel1, DockState.DockLeft);
+            ////加载定义的左靠菜单窗体form
+            if (PubFunVar.LoginTrue)
+            {
+                //登录成功
+                logfrm.Close();
+
+                this.toolStripStatusLabel1.Text = PubFunVar.LoginUserID.ToString();
+                this.toolStripStatusLabel2.Text = PubFunVar.LoginUserName.ToString();
+
+                frmMenu.P_fm = this;
+
+                //frmMenu.Show(this.dockPanel1);
+
+                frmMenu.Show(this.dockPanel1, DockState.DockLeft);
+            }
+            else
+            {
+                //this.Close();
+            }
+            
         }
 
         private void dockPanel1_ActiveContentChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void zMainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
         }
     }
 }

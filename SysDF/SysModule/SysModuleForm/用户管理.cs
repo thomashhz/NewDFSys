@@ -16,7 +16,8 @@ namespace SysDF.SysModule.SysModuleForm
         {
             InitializeComponent();
         }
-        private Boolean IsSaved = false;
+        private   Boolean IsSaved = false;
+        
         private void toolSetTrue(Boolean t)
         {
             toolAdd.Enabled = t;
@@ -110,7 +111,7 @@ namespace SysDF.SysModule.SysModuleForm
             toolSetTrue(false);
             groupBox2.Text = "修改";
             groupBox2.Tag = textBox1.Text.ToString();
-            IsSaved = true; //
+            this.IsSaved = true; //
         }
 
         private void toolDel_Click(object sender, EventArgs e)
@@ -121,27 +122,41 @@ namespace SysDF.SysModule.SysModuleForm
         private void toolSave_Click(object sender, EventArgs e)
         {
             //保存
-            var itrue = Convert.ToInt16(checkBox1.Checked);
-            string strpwd = "";
-            strpwd = DESHelper.DesEncrypt(textBox5.Text.ToString());
-            var au = new ActUser
+            if(textBox2.Text .ToString().Trim()!="admin" || PubFunVar.LoginUserName =="admin")
             {
+                var itrue = Convert.ToInt16(checkBox1.Checked);
+                string strpwd = "";
+                strpwd = DESHelper.DesEncrypt(textBox5.Text.ToString());
+                var au = new ActUser
+                {
 
-                id = textBox1.Text.ToInt(),
+                    id = textBox1.Text.ToInt(),
 
-                UserID = textBox2.Text.ToString(),
-                UserName = textBox3.Text.ToString(),
-                Detp = textBox4.Text.ToString(),
-                Pwd = strpwd.ToString(),
-                isStop = itrue
-            };
+                    UserID = textBox2.Text.ToString(),
+                    UserName = textBox3.Text.ToString(),
+                    Detp = textBox4.Text.ToString(),
+                    Pwd = strpwd.ToString(),
+                    isStop = itrue
+                };
 
-            au.Save();   //保存
+                au.Save();   //保存
 
-            toolSetTrue(true);
-            groupBox2.Text = "";
-            groupBox2.Tag = "";
-            IsSaved = false;
+                toolSetTrue(true);
+                groupBox2.Text = "";
+                groupBox2.Tag = "";
+                this.IsSaved = false;
+            }
+            else
+            {
+                //无权修改此用户密码
+                MessageBox.Show("无权修改此用户密码！");
+                toolSetTrue(true);
+                groupBox2.Text = "";
+                groupBox2.Tag = "";
+                this.IsSaved = false;
+            }
+            
+            
 
             
         }
@@ -150,7 +165,7 @@ namespace SysDF.SysModule.SysModuleForm
         {
             //取消
             toolSetTrue(true);
-            IsSaved = false;
+            this.IsSaved = false;
         }
 
         private void grid1_RowColChange(object Sender, FlexCell.Grid.RowColChangeEventArgs e)

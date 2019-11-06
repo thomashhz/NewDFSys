@@ -12,8 +12,9 @@ namespace Hhz.dbdata //可以修改成实际项目的命名空间名称
 
     public partial class PubFunVar
     {
-        public static Int32 UserID = 0;
-        public static string UserName = "";
+        public static string LoginUserID = "";  //用户编号
+        public static string LoginUserName = "";    //用户名称
+        public static Boolean LoginTrue = false;  //是否登录成功
 
     }
     /// <summary>
