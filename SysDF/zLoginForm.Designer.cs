@@ -63,7 +63,7 @@
             this.txtLoginUserID.Location = new System.Drawing.Point(174, 180);
             this.txtLoginUserID.Name = "txtLoginUserID";
             this.txtLoginUserID.Size = new System.Drawing.Size(313, 34);
-            this.txtLoginUserID.TabIndex = 2;
+            this.txtLoginUserID.TabIndex = 5;
             this.txtLoginUserID.Text = "admin";
             // 
             // txtPassWords
@@ -73,7 +73,7 @@
             this.txtPassWords.Name = "txtPassWords";
             this.txtPassWords.PasswordChar = '⚪';
             this.txtPassWords.Size = new System.Drawing.Size(313, 36);
-            this.txtPassWords.TabIndex = 3;
+            this.txtPassWords.TabIndex = 2;
             this.txtPassWords.UseSystemPasswordChar = true;
             // 
             // butLogin
@@ -81,7 +81,7 @@
             this.butLogin.Location = new System.Drawing.Point(526, 173);
             this.butLogin.Name = "butLogin";
             this.butLogin.Size = new System.Drawing.Size(133, 43);
-            this.butLogin.TabIndex = 4;
+            this.butLogin.TabIndex = 3;
             this.butLogin.Text = "登录";
             this.butLogin.UseVisualStyleBackColor = true;
             this.butLogin.Click += new System.EventHandler(this.butLogin_Click);
@@ -91,7 +91,7 @@
             this.butCancel.Location = new System.Drawing.Point(526, 262);
             this.butCancel.Name = "butCancel";
             this.butCancel.Size = new System.Drawing.Size(133, 43);
-            this.butCancel.TabIndex = 5;
+            this.butCancel.TabIndex = 4;
             this.butCancel.Text = "取消";
             this.butCancel.UseVisualStyleBackColor = true;
             // 

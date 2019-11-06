@@ -116,7 +116,7 @@ namespace SysDF
 
                 if (this.treeView1.SelectedNode.Text != null)
                 {
-                    if (this.treeView1.SelectedNode.Tag != null)
+                    if (this.treeView1.SelectedNode.Tag.ToString().Trim() != "")
                     {
                         string formname = this.treeView1.SelectedNode.Tag.ToString();
                         if (!fm.CheckFormIsOpen(formname))
