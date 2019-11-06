@@ -71,3 +71,4 @@ E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.csproj.CoreCompileInputs.cac
 E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.csproj.CopyComplete
 E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.exe
 E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.pdb
+E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.csprojAssemblyReference.cache
