@@ -349,8 +349,8 @@ namespace SysDF.SysModule.SysModuleForm
                     ViewUserQXIni(tnSub);
                 }
 
-                UserID.Text = grid1.Cell(ir, 2).Text.ToString();
-                UserName.Text = grid1.Cell(ir, 3).Text.ToString();
+                UserID.Text = grid1.Cell(ir, 2).Text.ToString().Trim();
+                UserName.Text = grid1.Cell(ir, 3).Text.ToString().Trim();
 
                 string SQL = "select * from ActRel where UserID='" + UserID.Text.ToString().Trim() + "' and Browsed=1";
 
@@ -394,11 +394,18 @@ namespace SysDF.SysModule.SysModuleForm
             if(UserID.Text.ToString().Trim()!="")
             {
                 string strUserID = UserID.Text.ToString().Trim();
-                
-                    //遍历treeview 然后保存
+                string strnode1 = "";
+                string strnode2 = "";
+                //遍历treeview 然后保存
                 foreach (TreeNode tnSub in TreeView1.Nodes)
                 {
-                    SaveViewUserQX(tnSub, strUserID);
+                    strnode1=tnSub.Text.ToString().Trim();
+                    strnode2 = tnSub.Nodes[0].Text.ToString().Trim();
+                    if (tnSub.Checked==true )//找到最后一级的功能权限
+                    {
+                        SaveViewUserQX(tnSub, strUserID);
+                    }
+                        
                 }
 
             }
@@ -413,62 +420,205 @@ namespace SysDF.SysModule.SysModuleForm
         {
             //递归循环  Boolean[] bqx,
             //1.nName菜单功能名称 bqx数组保存的是nName的权限
-           
-            if (tn.Nodes[0].Text.ToString().Trim() == "查询" && tn.Checked==true )//找到最后一级的功能权限
-            {
-                //找到授权用户的菜单末级，//最后一级菜单
+            string StrNode = tn.Text.ToString().Trim();
+            Int32 IntNodesC = tn.Nodes.Count;
+            string StrParentname = "";//节点名称，看不到的
+            string StrParenttext = "";//节点文本，就是看到的
+            Boolean blnSaveQX = false;                
 
-                //mID = TreeView1.Nodes[i].Name.ToInt();   //菜单ID
-                Boolean[] bqx = new Boolean[] { false, false, false, false, false, false };
-                string sSql = "";
-                try
+            if (tn.Parent != null)
+            {
+                 StrParentname = tn.Parent.Name;//节点名称，看不到的
+                 StrParenttext = tn.Parent.Text;//节点文本，就是看到的
+                blnSaveQX = tn.Checked;
+            }            
+
+                if (IntNodesC == 0 && blnSaveQX == true)//找到最后一级的功能权限
                 {
-                    for (int j = 0; j < tn.Nodes.Count; j++)
+                    //找到授权用户的菜单末级，//最后一级菜单
+                    
+                    //mID = TreeView1.Nodes[i].Name.ToInt();   //菜单ID
+                    //Boolean[] bqx = new Boolean[] { false, false, false, false, false, false };
+                    string sSql = "";
+                    string blnBqx = "0";
+                    if (tn.Checked)  //判断权限
                     {
-                        if (j < 6)  //{ "查询", "新增", "修改", "删除", "审核", "打印" };
+                        blnBqx = "1";
+                    }
+                    else
+                    {
+                        blnBqx = "0";
+                    }
+
+                    try
+                    {
+                    //{ "查询", "新增", "修改", "删除", "审核", "打印" }; ,browsed,added,moded,deled,verify,printed
+
+                    //保存权限
+
+                    if (StrNode == "查询") 
+                    {
+                        //{ "查询", "新增", "修改", "删除", "审核", "打印" }; ,browsed,added,moded,deled,verify,printed
+                        sSql = " update ActRel set browsed='"+ blnBqx.ToString().Trim()+ "' ";
+                        sSql += " where userid='"+sUserID.ToString().Trim()+ "' and formname='" + StrParenttext.ToString().Trim() + "'";
+                        if(Hhz.dbdata.DbHelperSQL.ExecuteSql(sSql)<=0)
                         {
-                            //超过6个选项修改 j<6 及 selqx   qxSet  数组
-                            //if (TreeView1.Nodes[i].Nodes[j].Checked)
-                            //{
-                            //selqx[j] = TreeView1.Nodes[i].Nodes[j].Checked;
-                            bqx[j] = tn.Nodes[j].Checked;
-                            //}
+                            //执行更新语句返回0或小于0 ，则作插入操作
+                            sSql = "insert into ActRel (userid,formname,accid,accyear,browsed) value (";
+                            sSql += "'" + sUserID.ToString().Trim() + "' ";  //用户ＩＤ
+                            sSql += ",'" + StrParenttext.ToString().Trim() + "'";  //菜单名称
+                            sSql += ",'100','2009' ";
+                            sSql += ",'" + blnBqx.ToString().Trim() + "'";   //查询
+                            //sSql += ",'" + bqx[1] + "'";   //新增
+                            //sSql += ",'" + bqx[2] + "'";   //修改
+                            //sSql += ",'" + bqx[3] + "'";   //删除
+                            //sSql += ",'" + bqx[4] + "'";   //审核
+                            //sSql += ",'" + bqx[5] + "'";   //打印
+
+                            sSql += " )";
+                            Hhz.dbdata.DbHelperSQL.ExecuteSql(sSql);
 
                         }
                     }
-                    //保存权限
-                    sSql = "delete from ActRel where userid='" + sUserID.ToString().Trim() + "' and formname='" + tn.Text.ToString().Trim() + "'";
-                    Hhz.dbdata.DbHelperSQL.ExecuteSql(sSql);
+                    if (StrNode == "新增") 
+                    {
+                        //{ "查询", "新增", "修改", "删除", "审核", "打印" }; ,browsed,added,moded,deled,verify,printed
+                        sSql = " update ActRel set added='" + blnBqx.ToString().Trim() + "' ";
+                        sSql += " where userid='" + sUserID.ToString().Trim() + "' and formname='" + StrParenttext.ToString().Trim() + "'";
+                        if (Hhz.dbdata.DbHelperSQL.ExecuteSql(sSql) <= 0)
+                        {
+                            //执行更新语句返回0或小于0 ，则作插入操作
+                            sSql = "insert into ActRel (userid,formname,accid,accyear,added) value (";
+                            sSql += "'" + sUserID.ToString().Trim() + "' ";  //用户ＩＤ
+                            sSql += ",'" + StrParenttext.ToString().Trim() + "'";  //菜单名称
+                            sSql += ",'100','2009' ";
+                            sSql += ",'" + blnBqx.ToString().Trim() + "'";   //查询
+                            //sSql += ",'" + bqx[1] + "'";   //新增
+                            //sSql += ",'" + bqx[2] + "'";   //修改
+                            //sSql += ",'" + bqx[3] + "'";   //删除
+                            //sSql += ",'" + bqx[4] + "'";   //审核
+                            //sSql += ",'" + bqx[5] + "'";   //打印
 
-                    sSql = "insert into ActRel (userid,formname,accid,accyear,browsed,added,moded,deled,verify,printed) value (";
-                    sSql += "'" + sUserID.ToString().Trim() + "' ";  //用户ＩＤ
-                    sSql += ",'" + tn.Text.ToString().Trim() + "'";  //菜单名称
-                    sSql += ",'100','2009' ";
-                    sSql += ",'" + bqx[0] + "'";   //查询
-                    sSql += ",'" + bqx[1] + "'";   //新增
-                    sSql += ",'" + bqx[2] + "'";   //修改
-                    sSql += ",'" + bqx[3] + "'";   //删除
-                    sSql += ",'" + bqx[4] + "'";   //审核
-                    sSql += ",'" + bqx[5] + "'";   //打印
+                            sSql += " )";
+                            Hhz.dbdata.DbHelperSQL.ExecuteSql(sSql);
 
-                    sSql += " )";
-                    Hhz.dbdata.DbHelperSQL.ExecuteSql(sSql);
+                        }
+                    }
+                    if (StrNode == "修改")
+                    {
+                        //{ "查询", "新增", "修改", "删除", "审核", "打印" }; ,browsed,added,moded,deled,verify,printed
+                        sSql = " update ActRel set moded='" + blnBqx.ToString().Trim() + "' ";
+                        sSql += " where userid='" + sUserID.ToString().Trim() + "' and formname='" + StrParenttext.ToString().Trim() + "'";
+                        if (Hhz.dbdata.DbHelperSQL.ExecuteSql(sSql) <= 0)
+                        {
+                            //执行更新语句返回0或小于0 ，则作插入操作
+                            sSql = "insert into ActRel (userid,formname,accid,accyear,moded) value (";
+                            sSql += "'" + sUserID.ToString().Trim() + "' ";  //用户ＩＤ
+                            sSql += ",'" + StrParenttext.ToString().Trim() + "'";  //菜单名称
+                            sSql += ",'100','2009' ";
+                            sSql += ",'" + blnBqx.ToString().Trim() + "'";   //查询
+                            //sSql += ",'" + bqx[1] + "'";   //新增
+                            //sSql += ",'" + bqx[2] + "'";   //修改
+                            //sSql += ",'" + bqx[3] + "'";   //删除
+                            //sSql += ",'" + bqx[4] + "'";   //审核
+                            //sSql += ",'" + bqx[5] + "'";   //打印
+
+                            sSql += " )";
+                            Hhz.dbdata.DbHelperSQL.ExecuteSql(sSql);
+
+                        }
+                    }
+                    if (StrNode == "删除")
+                    {
+                        //{ "查询", "新增", "修改", "删除", "审核", "打印" }; ,browsed,added,moded,deled,verify,printed
+                        sSql = " update ActRel set deled='" + blnBqx.ToString().Trim() + "' ";
+                        sSql += " where userid='" + sUserID.ToString().Trim() + "' and formname='" + StrParenttext.ToString().Trim() + "'";
+                        if (Hhz.dbdata.DbHelperSQL.ExecuteSql(sSql) <= 0)
+                        {
+                            //执行更新语句返回0或小于0 ，则作插入操作
+                            sSql = "insert into ActRel (userid,formname,accid,accyear,deled) value (";
+                            sSql += "'" + sUserID.ToString().Trim() + "' ";  //用户ＩＤ
+                            sSql += ",'" + StrParenttext.ToString().Trim() + "'";  //菜单名称
+                            sSql += ",'100','2009' ";
+                            sSql += ",'" + blnBqx.ToString().Trim() + "'";   //查询
+                            //sSql += ",'" + bqx[1] + "'";   //新增
+                            //sSql += ",'" + bqx[2] + "'";   //修改
+                            //sSql += ",'" + bqx[3] + "'";   //删除
+                            //sSql += ",'" + bqx[4] + "'";   //审核
+                            //sSql += ",'" + bqx[5] + "'";   //打印
+
+                            sSql += " )";
+                            Hhz.dbdata.DbHelperSQL.ExecuteSql(sSql);
+
+                        }
+                    }
+                    if (StrNode == "审核")
+                    {
+                        //{ "查询", "新增", "修改", "删除", "审核", "打印" }; ,browsed,added,moded,deled,verify,printed
+                        sSql = " update ActRel set verify='" + blnBqx.ToString().Trim() + "' ";
+                        sSql += " where userid='" + sUserID.ToString().Trim() + "' and formname='" + StrParenttext.ToString().Trim() + "'";
+                        if (Hhz.dbdata.DbHelperSQL.ExecuteSql(sSql) <= 0)
+                        {
+                            //执行更新语句返回0或小于0 ，则作插入操作
+                            sSql = "insert into ActRel (userid,formname,accid,accyear,verify) value (";
+                            sSql += "'" + sUserID.ToString().Trim() + "' ";  //用户ＩＤ
+                            sSql += ",'" + StrParenttext.ToString().Trim() + "'";  //菜单名称
+                            sSql += ",'100','2009' ";
+                            sSql += ",'" + blnBqx.ToString().Trim() + "'";   //查询
+                            //sSql += ",'" + bqx[1] + "'";   //新增
+                            //sSql += ",'" + bqx[2] + "'";   //修改
+                            //sSql += ",'" + bqx[3] + "'";   //删除
+                            //sSql += ",'" + bqx[4] + "'";   //审核
+                            //sSql += ",'" + bqx[5] + "'";   //打印
+
+                            sSql += " )";
+                            Hhz.dbdata.DbHelperSQL.ExecuteSql(sSql);
+
+                        }
+                    }
+                    if (StrNode == "打印")
+                    {
+                        //{ "查询", "新增", "修改", "删除", "审核", "打印" }; ,browsed,added,moded,deled,verify,printed
+                        sSql = " update ActRel set printed='" + blnBqx.ToString().Trim() + "' ";
+                        sSql += " where userid='" + sUserID.ToString().Trim() + "' and formname='" + StrParenttext.ToString().Trim() + "'";
+                        if (Hhz.dbdata.DbHelperSQL.ExecuteSql(sSql) <= 0)
+                        {
+                            //执行更新语句返回0或小于0 ，则作插入操作
+                            sSql = "insert into ActRel (userid,formname,accid,accyear,printed) value (";
+                            sSql += "'" + sUserID.ToString().Trim() + "' ";  //用户ＩＤ
+                            sSql += ",'" + StrParenttext.ToString().Trim() + "'";  //菜单名称
+                            sSql += ",'100','2009' ";
+                            sSql += ",'" + blnBqx.ToString().Trim() + "'";   //查询
+                            //sSql += ",'" + bqx[1] + "'";   //新增
+                            //sSql += ",'" + bqx[2] + "'";   //修改
+                            //sSql += ",'" + bqx[3] + "'";   //删除
+                            //sSql += ",'" + bqx[4] + "'";   //审核
+                            //sSql += ",'" + bqx[5] + "'";   //打印
+
+                            sSql += " )";
+                            Hhz.dbdata.DbHelperSQL.ExecuteSql(sSql);
+
+                        }
+                    }
+
                 }
-                catch(Exception ex)
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("提示！:" + ex);
+                    }
+
+
+                }
+                else
                 {
-                    MessageBox.Show("提示！:" + ex);
+                    //没找到用户授权的菜单，继续查找
+                    foreach (TreeNode tnSub in tn.Nodes)
+                    {
+                        SaveViewUserQX(tnSub, sUserID);
+                    }
                 }
-
-
-            }
-            else
-            {
-                //没找到用户授权的菜单，继续查找
-                foreach (TreeNode tnSub in tn.Nodes)
-                {
-                    SaveViewUserQX(tnSub,  sUserID);
-                }
-            }
+            
+            
 
 
         }

@@ -48,7 +48,33 @@ namespace SysDF
         private void CreateTreeView(TreeNodeCollection nodes, string parentID)
         {
             string sSql = " ";
-            sSql = " select id,formid,urlmodle  from ActFormTree t where isnull(t.parenid,'')='" + parentID + "' order by t.pxnum ";
+            //判断--如果是管理员权限，则加载所有功能
+            if(PubFunVar.LoginUserName.ToString().Trim()=="admin")
+            {
+                sSql = " select id,formid,urlmodle,t.parenid  from ActFormTree t where isnull(t.parenid,'')='" + parentID + "' order by t.pxnum ";
+            }
+            else
+            {
+                //sSql = " select id,formid,urlmodle,t.parenid  from ActFormTree t where isnull(t.parenid,'')='" + parentID + "' order by t.pxnum ";
+
+                sSql = " select t.id,t.formid,t.urlmodle,t.parenid ";
+                sSql += " from ( ";
+                sSql += " select t.id, t.formid, t.urlmodle, t.parenID, t.pxnum ";
+                sSql += " , r.UserID, r.FormName, r.Browsed, r.Added, r.Moded, r.Deled, r.Printed, r.Verify, r.Mastered ";
+                sSql += " from ActFormTree t left join ActRel r on t.FormID = r.FormName ";
+                sSql += " where isnull(t.parenid, '') = '0' ";
+                sSql += " and exists(select 1 from ActRel r1 left join ActFormTree t1 on r1.FormName = t1.FormName ";
+                sSql += "            where r1.UserID = '" + PubFunVar.LoginUserID.ToString().Trim() + "' and r1.Browsed = '1' and t1.parenID = t.ID) ";
+                sSql += " union all ";
+                sSql += " select t.ID, t.FormID, t.UrlModle, t.parenID, t.pxnum ";
+                sSql += " , r.UserID, r.FormName, r.Browsed, r.Added, r.Moded, r.Deled, r.Printed, r.Verify, r.Mastered ";
+                sSql += " from ActRel r left join ActFormTree t on r.FormName = t.FormName ";
+                sSql += " where r.UserID = '" + PubFunVar.LoginUserID.ToString().Trim() + "' and r.Browsed = '1' ";
+                sSql += " ) t ";
+                sSql += " where isnull(t.parenid,'')= '" + parentID + "' order by t.pxnum ";
+
+            }
+            
             DataSet ds = DbHelperSQL.Query(sSql);
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -58,9 +84,9 @@ namespace SysDF
                     {
                         TreeNode tn = new TreeNode();
 
-                        tn.Name = ds.Tables[0].Rows[i].ItemArray[0].ToString();   //rd["ID"].ToString();
-                        tn.Text = ds.Tables[0].Rows[i].ItemArray[1].ToString();   //   rd["formid"].ToString();
-                        tn.Tag = ds.Tables[0].Rows[i].ItemArray[2].ToString();    //rd["urlmodle"].ToString();
+                        tn.Name = ds.Tables[0].Rows[i].ItemArray[0].ToString().Trim();   //rd["ID"].ToString();
+                        tn.Text = ds.Tables[0].Rows[i].ItemArray[1].ToString().Trim();   //   rd["formid"].ToString();
+                        tn.Tag = ds.Tables[0].Rows[i].ItemArray[2].ToString().Trim();    //rd["urlmodle"].ToString();
                         nodes.Add(tn);
 
                         //tn.Expand();
@@ -90,7 +116,7 @@ namespace SysDF
 
                 if (this.treeView1.SelectedNode.Text != null)
                 {
-                    if (this.treeView1.SelectedNode.Tag != null)
+                    if (this.treeView1.SelectedNode.Tag.ToString().Trim() != "")
                     {
                         string formname = this.treeView1.SelectedNode.Tag.ToString();
                         if (!fm.CheckFormIsOpen(formname))

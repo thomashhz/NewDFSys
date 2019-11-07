@@ -15,7 +15,7 @@ namespace SysDF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new zMainForm());
-        }
+            Application.Run(new zMainForm());  //zLoginForm    zMainForm
+        } 
     }
 }

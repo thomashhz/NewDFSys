@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hhz.dbdata;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,20 +60,21 @@ namespace SysDF
 
         }
 
-        private void ShowNewForm(object sender, EventArgs e)
-        {
-            frmMenu.Show();
-        }
+      
 
         private void OpenFile(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            openFileDialog.Filter = "文本文件(*.txt)|*.txt|所有文件(*.*)|*.*";
-            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = openFileDialog.FileName;
-            }
+            frmMenu.Show();
+
+            //frmMenu.Show(this.dockPanel1, DockState.DockLeft);
+
+            //OpenFileDialog openFileDialog = new OpenFileDialog();
+            //openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            //openFileDialog.Filter = "文本文件(*.txt)|*.txt|所有文件(*.*)|*.*";
+            //if (openFileDialog.ShowDialog(this) == DialogResult.OK)
+            //{
+            //    string FileName = openFileDialog.FileName;
+            //}
         }
 
         private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -143,18 +145,47 @@ namespace SysDF
 
         private void zMainForm_Load(object sender, EventArgs e)
         {
-            //加载定义的左靠菜单窗体form
 
-            frmMenu.P_fm = this;
+            //初始化登录用户
 
-            //frmMenu.Show(this.dockPanel1);
+            zLoginForm logfrm = new zLoginForm();
+            //logfrm.Show();
+            logfrm.Show(this.dockPanel1);
+            //PubFunVar.LoginUserID = "admin";   // "admin";  // "231";   //
+            //PubFunVar.LoginUserName = "admin"; // "admin";  // "梁飞源"; //
 
-            frmMenu.Show(this.dockPanel1, DockState.DockLeft);
+            ////加载定义的左靠菜单窗体form
+            if (PubFunVar.LoginTrue)
+            {
+                //登录成功
+                logfrm.Close();
+
+                this.toolStripStatusLabel1.Text = PubFunVar.LoginUserID.ToString();
+                this.toolStripStatusLabel2.Text = PubFunVar.LoginUserName.ToString();
+
+                frmMenu.P_fm = this;
+
+                //frmMenu.Show(this.dockPanel1);
+
+                frmMenu.Show(this.dockPanel1, DockState.DockLeft);
+            }
+            else
+            {
+                //this.Close();
+            }
+            
         }
 
         private void dockPanel1_ActiveContentChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void zMainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
+
+       
     }
 }

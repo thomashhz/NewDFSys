@@ -95,6 +95,12 @@
     <Compile Include="SysModule\SysModuleForm\系统功能维护.Designer.cs">
       <DependentUpon>系统功能维护.cs</DependentUpon>
     </Compile>
+    <Compile Include="zLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zLoginForm.Designer.cs">
+      <DependentUpon>zLoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="zMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SysModule\SysModuleForm\系统功能维护.resx">
       <DependentUpon>系统功能维护.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zLoginForm.resx">
+      <DependentUpon>zLoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="zMainForm.resx">
       <DependentUpon>zMainForm.cs</DependentUpon>
