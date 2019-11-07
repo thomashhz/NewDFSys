@@ -51,6 +51,9 @@
             this.ClientSize = new System.Drawing.Size(608, 622);
             this.Controls.Add(this.treeView1);
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.HideOnClose = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "zMainFormMenu";
             this.Text = "功能菜单";
             this.Load += new System.EventHandler(this.zMainFormMenu_Load);
