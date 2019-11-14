@@ -18,6 +18,29 @@ namespace Hhz.dbdata //可以修改成实际项目的命名空间名称
         public static Boolean LoginTrue = false;  //是否登录成功
 
     }
+    public partial class PubFun
+    {
+        /// <summary>
+        /// 空字符判断：null
+        /// </summary>
+        /// <param name="str1"></param>
+        /// <returns></returns>
+        /// 
+        public static string Nz(object str1,object str2)
+        {
+            
+            string retstring = str2.ToString();
+            if(str1==null)
+            {
+                return retstring;
+            
+            }else
+            {
+                retstring = str1.ToString().Trim();
+                return retstring;
+            }
+        }
+    }
     /// <summary>
     /// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /// </summary>
@@ -87,6 +110,9 @@ namespace Hhz.dbdata //可以修改成实际项目的命名空间名称
             }
             
         }
+
+
+
     }
 
 //--------------------- 

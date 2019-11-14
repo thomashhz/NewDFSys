@@ -180,5 +180,15 @@ namespace SysDF
         {
 
         }
+
+        private void treeView1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+          
+                //if (e.KeyChar == (char)Keys.Enter)
+                //{
+                //    SendKeys.Send("{tab}");
+                //}
+            
+        }
     }
 }
