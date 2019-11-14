@@ -78,7 +78,4 @@ E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.exe
 E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.pdb
 E:\soft\github\DFSys\NewDFSys\SysDF\bin\Debug\Newtonsoft.Json.dll
 E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.csprojAssemblyReference.cache
-D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\bin\Debug\Newtonsoft.Json.dll
-D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF._12物流模块.物流配送生成.resources
-D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF._12物流模块.物流配送确认.resources
-D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF._00基础模块.行政区域帮助.resources
+E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF._00基础模块.行政区域帮助.resources

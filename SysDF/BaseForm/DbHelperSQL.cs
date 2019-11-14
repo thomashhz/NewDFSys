@@ -19,13 +19,63 @@ namespace Hhz.dbdata //可以修改成实际项目的命名空间名称
         //数据库连接字符串(web.config来配置)
         //<add key="ConnectionString" value="server=168.100.100.170;database=HRKQ;uid=sa;pwd=zgzy123" />  
         
+           // string str= ConfigurationManager.ConnectionStrings["hhzinfosys"].ToString();
 
-        protected static string connectionString = "server=.;database=Def_100_2009;uid=dfadmin;pwd=Dfadmin.";
+        protected static string connectionString = ConfigurationManager.ConnectionStrings["hhzinfosys"].ToString();
+        
+        //protected static string connectionString = "server=.;database=Def_100_2009;uid=dfadmin;pwd=Dfadmin.";
 
         //protected static string connectionString = "server=.;database=Def_100_2009;uid=sa;pwd=7034.";
         //protected static string connectionString = "server=168.100.100.170;database=HRKQ;uid=sa;pwd=zgzy123";
         //"user id=sa;password=zgzy123;initial catalog=HRKQ;datasource=168.100.100.170;connect Timeout=20";
         //ConfigurationManager.AppSettings["ConnectionString"];
+
+        //依据连接串名字connectionName返回数据连接字符串  
+        public static string GetConnectionStringsConfig(string connectionName)
+        {
+            //指定config文件读取
+            string file = System.Windows.Forms.Application.ExecutablePath;
+            System.Configuration.Configuration config = ConfigurationManager.OpenExeConfiguration(file);
+            string connectionString =
+                config.ConnectionStrings.ConnectionStrings[connectionName].ConnectionString.ToString();
+            return connectionString;
+        }
+        ///<summary> 
+        ///更新连接字符串  
+        ///</summary> 
+        ///<param name="newName">连接字符串名称</param> 
+        ///<param name="newConString">连接字符串内容</param> 
+        ///<param name="newProviderName">数据提供程序名称</param> 
+        public static void UpdateConnectionStringsConfig(string newName, string newConString, string newProviderName)
+        {
+            //指定config文件读取
+            string file = System.Windows.Forms.Application.ExecutablePath;
+            Configuration config = ConfigurationManager.OpenExeConfiguration(file);
+
+            bool exist = false; //记录该连接串是否已经存在  
+            //如果要更改的连接串已经存在  
+            if (config.ConnectionStrings.ConnectionStrings[newName] != null)
+            {
+                exist = true;
+            }
+            // 如果连接串已存在，首先删除它  
+            if (exist)
+            {
+                config.ConnectionStrings.ConnectionStrings.Remove(newName);
+            }
+            //新建一个连接字符串实例  
+            ConnectionStringSettings mySettings =
+                new ConnectionStringSettings(newName, newConString, newProviderName);
+            // 将新的连接串添加到配置文件中.  
+            config.ConnectionStrings.ConnectionStrings.Add(mySettings);
+            // 保存对配置文件所作的更改  
+            config.Save(ConfigurationSaveMode.Modified);
+            // 强制重新载入配置文件的ConnectionStrings配置节  
+            ConfigurationManager.RefreshSection("connectionStrings");
+        }
+
+
+
         public DbHelperSQL()
         {
         }

@@ -1,4 +1,5 @@
 ﻿using Hhz.dbdata;
+using SysDF._00基础模块;
 using SysDF.SysModule.SysModuleForm;
 using System;
 using System.Collections.Generic;
@@ -215,6 +216,20 @@ namespace SysDF
                     frmMenu.Show(this.dockPanel1, DockState.DockLeft);
                 
             }
+        }
+
+        private void newToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            行政区域帮助 frmArea = new 行政区域帮助();
+
+            frmArea.ShowDialog();
+
+
         }
     }
 }

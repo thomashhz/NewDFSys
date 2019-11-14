@@ -44,6 +44,7 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Web" />
@@ -189,6 +190,7 @@
       <DependentUpon>zMainFormMenu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="cell\快递确认.flx" />
     <None Include="Entity\Build.log">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
