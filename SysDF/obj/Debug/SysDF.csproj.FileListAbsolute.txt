@@ -35,8 +35,11 @@ D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\bin\Debug\XCode.pdb
 D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\bin\Debug\XCode.xml
 D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.BaseForm.BaseForm.resources
 D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.Properties.Resources.resources
+D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.SysModule.SysModuleForm.修改密码.resources
+D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.SysModule.SysModuleForm.权限设置.resources
 D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.SysModule.SysModuleForm.用户管理.resources
 D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.SysModule.SysModuleForm.系统功能维护.resources
+D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.zLoginForm.resources
 D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.zMainForm.resources
 D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.zMainFormMenu.resources
 D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.csproj.GenerateResource.cache
@@ -45,7 +48,6 @@ D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.csproj.CopyComplete
 D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.exe
 D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.pdb
 D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.csprojAssemblyReference.cache
-D:\学习框架\SysDF\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.SysModule.SysModuleForm.权限设置.resources
 E:\soft\github\DFSys\NewDFSys\SysDF\bin\Debug\SysDF.exe.config
 E:\soft\github\DFSys\NewDFSys\SysDF\bin\Debug\SysDF.exe
 E:\soft\github\DFSys\NewDFSys\SysDF\bin\Debug\SysDF.pdb
@@ -58,8 +60,11 @@ E:\soft\github\DFSys\NewDFSys\SysDF\bin\Debug\NewLife.Core.pdb
 E:\soft\github\DFSys\NewDFSys\SysDF\bin\Debug\NewLife.Core.xml
 E:\soft\github\DFSys\NewDFSys\SysDF\bin\Debug\XCode.pdb
 E:\soft\github\DFSys\NewDFSys\SysDF\bin\Debug\XCode.xml
+E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF._12物流模块.物流配送生成.resources
+E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF._12物流模块.物流配送确认.resources
 E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.BaseForm.BaseForm.resources
 E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.Properties.Resources.resources
+E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.SysModule.SysModuleForm.修改密码.resources
 E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.SysModule.SysModuleForm.权限设置.resources
 E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.SysModule.SysModuleForm.用户管理.resources
 E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.SysModule.SysModuleForm.系统功能维护.resources
@@ -71,4 +76,5 @@ E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.csproj.CoreCompileInputs.cac
 E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.csproj.CopyComplete
 E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.exe
 E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.pdb
+E:\soft\github\DFSys\NewDFSys\SysDF\bin\Debug\Newtonsoft.Json.dll
 E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.csprojAssemblyReference.cache

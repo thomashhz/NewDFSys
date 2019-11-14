@@ -23,7 +23,18 @@ namespace SysDF
         public zMainFormMenu()
         {
             InitializeComponent();
+            //this.ControlBox = false;   // 设置不出现关闭按钮
         }
+        //private const int CP_NOCLOSE_BUTTON = 0x200;
+        //protected override CreateParams CreateParams
+        //{
+        //    get
+        //    {
+        //        CreateParams myCp = base.CreateParams;
+        //        myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+        //        return myCp;
+        //    }
+        //}
 
         private void zMainFormMenu_Load(object sender, EventArgs e)
         {
@@ -130,7 +141,7 @@ namespace SysDF
             }
             catch (Exception ex)
             {
-                //MessageBox.Show("打开窗体信息:" + ex);
+                MessageBox.Show("打开窗体信息:" + ex);
             }
             //    try
             //    {
@@ -168,6 +179,16 @@ namespace SysDF
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
 
+        }
+
+        private void treeView1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+          
+                //if (e.KeyChar == (char)Keys.Enter)
+                //{
+                //    SendKeys.Send("{tab}");
+                //}
+            
         }
     }
 }

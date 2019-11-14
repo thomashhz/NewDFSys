@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ICO\Icone_Aim_32px_508945_easyicon.net.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="FlexCell, Version=4.3.7.0, Culture=neutral, PublicKeyToken=6f86587eb70ee309, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -39,6 +42,7 @@
     <Reference Include="NewLife.Core, Version=8.3.7207.797, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\NewLife.Core.8.3.2019.923\lib\net40\NewLife.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceProcess" />
@@ -63,6 +67,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="12物流模块\ZTClass\HttpUtil.cs" />
+    <Compile Include="12物流模块\ZTClass\ZopClient.cs" />
+    <Compile Include="12物流模块\ZTClass\ZopProperties.cs" />
+    <Compile Include="12物流模块\ZTClass\ZopRequest.cs" />
+    <Compile Include="12物流模块\物流配送生成.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12物流模块\物流配送生成.Designer.cs">
+      <DependentUpon>物流配送生成.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12物流模块\物流配送确认.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12物流模块\物流配送确认.Designer.cs">
+      <DependentUpon>物流配送确认.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaseForm\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +97,12 @@
     <Compile Include="SysModule\EntitySysModuleFormORM\ActFormTree.cs" />
     <Compile Include="SysModule\EntitySysModuleFormORM\用户.Biz.cs" />
     <Compile Include="SysModule\EntitySysModuleFormORM\用户.cs" />
+    <Compile Include="SysModule\SysModuleForm\修改密码.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysModule\SysModuleForm\修改密码.Designer.cs">
+      <DependentUpon>修改密码.cs</DependentUpon>
+    </Compile>
     <Compile Include="SysModule\SysModuleForm\权限设置.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +139,12 @@
     <Compile Include="zMainFormMenu.Designer.cs">
       <DependentUpon>zMainFormMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="12物流模块\物流配送生成.resx">
+      <DependentUpon>物流配送生成.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12物流模块\物流配送确认.resx">
+      <DependentUpon>物流配送确认.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseForm\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +158,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SysModule\SysModuleForm\修改密码.resx">
+      <DependentUpon>修改密码.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SysModule\SysModuleForm\权限设置.resx">
       <DependentUpon>权限设置.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +207,8 @@
       <LastGenOutput>Build.log</LastGenOutput>
     </Content>
     <Content Include="Entity\Model.xml" />
+    <Content Include="ICO\Icone_Aim_32px_508945_easyicon.net.ico" />
+    <Content Include="ICO\Icone_Aim_48px_508945_easyicon.net.ico" />
     <Content Include="ICO\27.ico" />
     <Content Include="ICO\34.ico" />
     <Content Include="ICO\accept.ico" />
@@ -197,6 +234,7 @@
     <Content Include="ICO\printpreview.ico" />
     <Content Include="ICO\refresh.ico" />
     <Content Include="ICO\saveas.ico" />
+    <Content Include="ICO\Packet_add_icon_32px_1081672_easyicon.net.ico" />
     <Content Include="Resources\27.ico" />
     <Content Include="Resources\34.ico" />
     <Content Include="Resources\accept.ico" />

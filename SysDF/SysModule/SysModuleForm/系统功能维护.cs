@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Hhz.dbdata;
 
 namespace SysDF.SysModule.SysModuleForm
 {
@@ -146,6 +147,7 @@ namespace SysDF.SysModule.SysModuleForm
         private void TreeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             string fID = e.Node.Name.ToString();
+            //bool bnlnull = false;
             //ActFormTree aft = ActFormTree.FindAll(ActFormTree._.ID, fID);
             var aft = ActFormTree.FindAll(ActFormTree._.ID, fID);
             foreach (ActFormTree s in aft)
@@ -162,14 +164,38 @@ namespace SysDF.SysModule.SysModuleForm
                         {
                             textBox1.Text = s.ID.ToString();
                             textBox2.Text = s.FormID.ToString();
-                            textBox3.Text = s.parenID.ToString() + "|" + e.Node.Parent.Text.ToString();
+                            //bnlnull = e.Node.Parent.Text.ToString().IsNullOrEmpty();
+                            if (e.Node.Parent==null)
+                            {
+                                textBox3.Text = "0";
+                            }else
+                            {
+                                textBox3.Text = s.parenID.ToString() + "|" + e.Node.Parent.Text.ToString();
+                            }
                             textBox3.Tag = s.parenID.ToString();
                             textBox4.Text = s.Pxnum.ToString();
-                            textBox5.Text = s.UrlModle.ToString();
-                            textBox6.Text = s.Sumarry.ToString();
-
+                            //bool aa = s.UrlModle.IsNullOrEmpty();
+                            if(s.UrlModle==null)
+                            {
+                                textBox5.Text ="";
+                            }
+                            else
+                            {
+                                textBox5.Text = s.UrlModle.ToString();
+                            }
+                            if(s.Sumarry==null)
+                            {
+                                textBox6.Text ="";
+                            }
+                            else
+                            {
+                                textBox6.Text = s.Sumarry.ToString();
+                            }
+                            
+    
                         }
-                        catch { }
+                        catch(Exception ex)
+                        { MessageBox.Show("提示！" + ex); }  //(Exception ex) MessageBox.Show("提示！"+ex); 
 
                     }
                     else  //新增（==0） 修改（==ID） 给上级赋值
@@ -217,6 +243,16 @@ namespace SysDF.SysModule.SysModuleForm
         private void TreeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
 
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolRef_Click(object sender, EventArgs e)
+        {
+            InitTreeView();
         }
     }
 }

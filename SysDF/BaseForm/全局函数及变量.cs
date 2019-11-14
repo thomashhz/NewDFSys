@@ -12,10 +12,34 @@ namespace Hhz.dbdata //可以修改成实际项目的命名空间名称
 
     public partial class PubFunVar
     {
+        public static Int32 LoginID = 0;
         public static string LoginUserID = "";  //用户编号
         public static string LoginUserName = "";    //用户名称
         public static Boolean LoginTrue = false;  //是否登录成功
 
+    }
+    public partial class PubFun
+    {
+        /// <summary>
+        /// 空字符判断：null
+        /// </summary>
+        /// <param name="str1"></param>
+        /// <returns></returns>
+        /// 
+        public static string Nz(object str1,object str2)
+        {
+            
+            string retstring = str2.ToString();
+            if(str1==null)
+            {
+                return retstring;
+            
+            }else
+            {
+                retstring = str1.ToString().Trim();
+                return retstring;
+            }
+        }
     }
     /// <summary>
     /// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -61,23 +85,34 @@ namespace Hhz.dbdata //可以修改成实际项目的命名空间名称
         {
             //byte[] byKey = System.Text.ASCIIEncoding.ASCII.GetBytes(_KEY);
             //byte[] byIV = System.Text.ASCIIEncoding.ASCII.GetBytes(_IV);
-            byte[] byEnc;
-            try
-            {
-                securityTxt.Replace("_%_", "/");
-                securityTxt.Replace("-%-", "#");
-                byEnc = Convert.FromBase64String(securityTxt);
-            }
-            catch
+            if(securityTxt.ToString().Trim()=="")
             {
                 return null;
             }
-            DESCryptoServiceProvider cryptoProvider = new DESCryptoServiceProvider();
-            MemoryStream ms = new MemoryStream(byEnc);
-            CryptoStream cst = new CryptoStream(ms, cryptoProvider.CreateDecryptor(_KEY, _IV), CryptoStreamMode.Read);
-            StreamReader sr = new StreamReader(cst);
-            return sr.ReadToEnd();
+            else
+            {
+                byte[] byEnc;
+                try
+                {
+                    securityTxt.Replace("_%_", "/");
+                    securityTxt.Replace("-%-", "#");
+                    byEnc = Convert.FromBase64String(securityTxt);
+                }
+                catch
+                {
+                    return null;
+                }
+                DESCryptoServiceProvider cryptoProvider = new DESCryptoServiceProvider();
+                MemoryStream ms = new MemoryStream(byEnc);
+                CryptoStream cst = new CryptoStream(ms, cryptoProvider.CreateDecryptor(_KEY, _IV), CryptoStreamMode.Read);
+                StreamReader sr = new StreamReader(cst);
+                return sr.ReadToEnd();
+            }
+            
         }
+
+
+
     }
 
 //--------------------- 
