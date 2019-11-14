@@ -87,14 +87,6 @@ namespace Hhz.SysDF.SysModule
         [BindColumn("Pwd", "密码", "")]
         public String Pwd { get { return _Pwd; } set { if (OnPropertyChanging(__.Pwd, value)) { _Pwd = value; OnPropertyChanged(__.Pwd); } } }
 
-        private String _PassWords;
-        /// <summary>密码</summary>
-        [DisplayName("密码")]
-        [Description("密码")]
-        [DataObjectField(false, false, true, 50)]
-        [BindColumn("PassWords", "密码", "")]
-        public String PassWords { get { return _PassWords; } set { if (OnPropertyChanging(__.PassWords, value)) { _PassWords = value; OnPropertyChanged(__.PassWords); } } }
-
         private Boolean _Detped;
         /// <summary>部门控制</summary>
         [DisplayName("部门控制")]
@@ -131,7 +123,6 @@ namespace Hhz.SysDF.SysModule
                     case __.Email : return _Email;
                     case __.Tel : return _Tel;
                     case __.Pwd : return _Pwd;
-                    case __.PassWords : return _PassWords;
                     case __.Detped : return _Detped;
                     case __.isStop : return _isStop;
                     default: return base[name];
@@ -150,7 +141,6 @@ namespace Hhz.SysDF.SysModule
                     case __.Email : _Email = Convert.ToString(value); break;
                     case __.Tel : _Tel = Convert.ToString(value); break;
                     case __.Pwd : _Pwd = Convert.ToString(value); break;
-                    case __.PassWords : _PassWords = Convert.ToString(value); break;
                     case __.Detped : _Detped = value.ToBoolean(); break;
                     case __.isStop : _isStop = value.ToInt(); break;
                     default: base[name] = value; break;
@@ -189,9 +179,6 @@ namespace Hhz.SysDF.SysModule
 
             /// <summary>密码</summary>
             public static readonly Field Pwd = FindByName(__.Pwd);
-
-            /// <summary>密码</summary>
-            public static readonly Field PassWords = FindByName(__.PassWords);
 
             /// <summary>部门控制</summary>
             public static readonly Field Detped = FindByName(__.Detped);
@@ -232,9 +219,6 @@ namespace Hhz.SysDF.SysModule
             /// <summary>密码</summary>
             public const String Pwd = "Pwd";
 
-            /// <summary>密码</summary>
-            public const String PassWords = "PassWords";
-
             /// <summary>部门控制</summary>
             public const String Detped = "Detped";
 
@@ -274,9 +258,6 @@ namespace Hhz.SysDF.SysModule
 
         /// <summary>密码</summary>
         String Pwd { get; set; }
-
-        /// <summary>密码</summary>
-        String PassWords { get; set; }
 
         /// <summary>部门控制</summary>
         Boolean Detped { get; set; }

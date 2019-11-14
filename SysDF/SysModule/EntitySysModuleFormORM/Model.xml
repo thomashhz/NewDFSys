@@ -11,7 +11,6 @@
       <Column Name="Email" DataType="String" Description="邮件" />
       <Column Name="Tel" DataType="String" Length="250" Description="电话" />
       <Column Name="Pwd" DataType="String" Description="密码" />
-      <Column Name="PassWords" DataType="String" Description="密码" />
       <Column Name="Detped" DataType="Boolean" Nullable="True" Description="部门控制" />
       <Column Name="isStop" DataType="Int32" Nullable="True" Description="停用" />
     </Columns>

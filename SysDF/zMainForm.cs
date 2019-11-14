@@ -1,5 +1,4 @@
 ﻿using Hhz.dbdata;
-using SysDF.SysModule.SysModuleForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -150,33 +149,31 @@ namespace SysDF
             //初始化登录用户
 
             zLoginForm logfrm = new zLoginForm();
-            logfrm.ShowDialog(this.dockPanel1);
-
-            //logfrm.Show(this.dockPanel1);
+            //logfrm.Show();
+            logfrm.Show(this.dockPanel1);
             //PubFunVar.LoginUserID = "admin";   // "admin";  // "231";   //
             //PubFunVar.LoginUserName = "admin"; // "admin";  // "梁飞源"; //
 
-            //如果登陆成功，通过定时器加载导航窗体：by 2019.1107 hhz
             ////加载定义的左靠菜单窗体form
-            //if (PubFunVar.LoginTrue)
-            //{
-            //    //登录成功
+            if (PubFunVar.LoginTrue)
+            {
+                //登录成功
+                logfrm.Close();
 
+                this.toolStripStatusLabel1.Text = PubFunVar.LoginUserID.ToString();
+                this.toolStripStatusLabel2.Text = PubFunVar.LoginUserName.ToString();
 
-            //    this.toolStripStatusLabel1.Text = PubFunVar.LoginUserID.ToString();
-            //    this.toolStripStatusLabel2.Text = PubFunVar.LoginUserName.ToString();
+                frmMenu.P_fm = this;
 
-            //    frmMenu.P_fm = this;
+                //frmMenu.Show(this.dockPanel1);
 
-            //    //frmMenu.Show(this.dockPanel1);
-
-            //    frmMenu.Show(this.dockPanel1, DockState.DockLeft);
-            //}
-            //else
-            //{
-            //    //this.Close();
-            //}
-
+                frmMenu.Show(this.dockPanel1, DockState.DockLeft);
+            }
+            else
+            {
+                //this.Close();
+            }
+            
         }
 
         private void dockPanel1_ActiveContentChanged(object sender, EventArgs e)
@@ -189,32 +186,6 @@ namespace SysDF
             
         }
 
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            修改密码 frmpw = new 修改密码();
-            frmpw.Show(dockPanel1);
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if(PubFunVar.LoginTrue)
-            {
-                timer1.Enabled = false;
-                    ////加载定义的左靠菜单窗体form
-                
-                    //登录成功
-
-                    this.toolStripStatusLabel1.Text = PubFunVar.LoginUserID.ToString();
-                    this.toolStripStatusLabel2.Text = PubFunVar.LoginUserName.ToString();
-
-                    frmMenu.P_fm = this;
-
-                    //frmMenu.Show(this.dockPanel1);
-
-                    frmMenu.Show(this.dockPanel1, DockState.DockLeft);
-                
-            }
-        }
+       
     }
 }

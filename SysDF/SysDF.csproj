@@ -77,12 +77,6 @@
     <Compile Include="SysModule\EntitySysModuleFormORM\ActFormTree.cs" />
     <Compile Include="SysModule\EntitySysModuleFormORM\用户.Biz.cs" />
     <Compile Include="SysModule\EntitySysModuleFormORM\用户.cs" />
-    <Compile Include="SysModule\SysModuleForm\修改密码.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SysModule\SysModuleForm\修改密码.Designer.cs">
-      <DependentUpon>修改密码.cs</DependentUpon>
-    </Compile>
     <Compile Include="SysModule\SysModuleForm\权限设置.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,9 +126,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SysModule\SysModuleForm\修改密码.resx">
-      <DependentUpon>修改密码.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SysModule\SysModuleForm\权限设置.resx">
       <DependentUpon>权限设置.cs</DependentUpon>
     </EmbeddedResource>

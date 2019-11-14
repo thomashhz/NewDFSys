@@ -135,7 +135,7 @@ namespace SysDF.SysModule.SysModuleForm
                     UserID = textBox2.Text.ToString(),
                     UserName = textBox3.Text.ToString(),
                     Detp = textBox4.Text.ToString(),
-                    PassWords = strpwd.ToString(),
+                    Pwd = strpwd.ToString(),
                     isStop = itrue
                 };
 

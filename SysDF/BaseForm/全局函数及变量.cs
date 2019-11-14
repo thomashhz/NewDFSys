@@ -12,7 +12,6 @@ namespace Hhz.dbdata //可以修改成实际项目的命名空间名称
 
     public partial class PubFunVar
     {
-        public static Int32 LoginID = 0;
         public static string LoginUserID = "";  //用户编号
         public static string LoginUserName = "";    //用户名称
         public static Boolean LoginTrue = false;  //是否登录成功
@@ -62,30 +61,22 @@ namespace Hhz.dbdata //可以修改成实际项目的命名空间名称
         {
             //byte[] byKey = System.Text.ASCIIEncoding.ASCII.GetBytes(_KEY);
             //byte[] byIV = System.Text.ASCIIEncoding.ASCII.GetBytes(_IV);
-            if(securityTxt.ToString().Trim()=="")
+            byte[] byEnc;
+            try
+            {
+                securityTxt.Replace("_%_", "/");
+                securityTxt.Replace("-%-", "#");
+                byEnc = Convert.FromBase64String(securityTxt);
+            }
+            catch
             {
                 return null;
             }
-            else
-            {
-                byte[] byEnc;
-                try
-                {
-                    securityTxt.Replace("_%_", "/");
-                    securityTxt.Replace("-%-", "#");
-                    byEnc = Convert.FromBase64String(securityTxt);
-                }
-                catch
-                {
-                    return null;
-                }
-                DESCryptoServiceProvider cryptoProvider = new DESCryptoServiceProvider();
-                MemoryStream ms = new MemoryStream(byEnc);
-                CryptoStream cst = new CryptoStream(ms, cryptoProvider.CreateDecryptor(_KEY, _IV), CryptoStreamMode.Read);
-                StreamReader sr = new StreamReader(cst);
-                return sr.ReadToEnd();
-            }
-            
+            DESCryptoServiceProvider cryptoProvider = new DESCryptoServiceProvider();
+            MemoryStream ms = new MemoryStream(byEnc);
+            CryptoStream cst = new CryptoStream(ms, cryptoProvider.CreateDecryptor(_KEY, _IV), CryptoStreamMode.Read);
+            StreamReader sr = new StreamReader(cst);
+            return sr.ReadToEnd();
         }
     }
 
