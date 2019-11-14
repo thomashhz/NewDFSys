@@ -78,3 +78,4 @@ E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.exe
 E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.pdb
 E:\soft\github\DFSys\NewDFSys\SysDF\bin\Debug\Newtonsoft.Json.dll
 E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF.csprojAssemblyReference.cache
+E:\soft\github\DFSys\NewDFSys\SysDF\obj\Debug\SysDF._00基础模块.行政区域帮助.resources

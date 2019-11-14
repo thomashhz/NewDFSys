@@ -127,13 +127,16 @@ namespace SysDF
 
                 if (this.treeView1.SelectedNode.Text != null)
                 {
-                    if (this.treeView1.SelectedNode.Tag.ToString().Trim() != "")
+                    if (this.treeView1.SelectedNode.Tag.ToString().Trim() != "")  //窗体所属模块
                     {
                         string formname = this.treeView1.SelectedNode.Tag.ToString();
                         if (!fm.CheckFormIsOpen(formname))
                         {
                             fm.OpenChildForm(formname);
                         }
+
+                    }else
+                    {
 
                     }
                 }
