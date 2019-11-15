@@ -190,7 +190,8 @@
       <DependentUpon>zMainFormMenu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
-    <None Include="cell\快递确认.flx" />
+    <None Include="bin\Debug\cell\快递确认.flx" />
+    <None Include="bin\Debug\cell\添加格式文件" />
     <None Include="Entity\Build.log">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
