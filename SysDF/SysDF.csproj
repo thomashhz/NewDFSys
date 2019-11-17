@@ -34,6 +34,27 @@
   <PropertyGroup>
     <ApplicationIcon>ICO\Icone_Aim_32px_508945_easyicon.net.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SysDF.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="FlexCell, Version=4.3.7.0, Culture=neutral, PublicKeyToken=6f86587eb70ee309, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -68,11 +89,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="00基础模块\BaseClass\管理区域维护.Biz.cs" />
+    <Compile Include="00基础模块\BaseClass\管理区域维护.cs" />
+    <Compile Include="00基础模块\BaseClass\行政区域维护.Biz.cs" />
+    <Compile Include="00基础模块\BaseClass\行政区域维护.cs" />
+    <Compile Include="00基础模块\管理区域维护.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="00基础模块\管理区域维护.Designer.cs">
+      <DependentUpon>管理区域维护.cs</DependentUpon>
+    </Compile>
     <Compile Include="00基础模块\行政区域帮助.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="00基础模块\行政区域帮助.Designer.cs">
       <DependentUpon>行政区域帮助.cs</DependentUpon>
+    </Compile>
+    <Compile Include="00基础模块\行政区域维护.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="00基础模块\行政区域维护.Designer.cs">
+      <DependentUpon>行政区域维护.cs</DependentUpon>
     </Compile>
     <Compile Include="12物流模块\ZTClass\HttpUtil.cs" />
     <Compile Include="12物流模块\ZTClass\ZopClient.cs" />
@@ -146,8 +183,14 @@
     <Compile Include="zMainFormMenu.Designer.cs">
       <DependentUpon>zMainFormMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="00基础模块\管理区域维护.resx">
+      <DependentUpon>管理区域维护.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="00基础模块\行政区域帮助.resx">
       <DependentUpon>行政区域帮助.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="00基础模块\行政区域维护.resx">
+      <DependentUpon>行政区域维护.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="12物流模块\物流配送生成.resx">
       <DependentUpon>物流配送生成.cs</DependentUpon>
@@ -189,9 +232,15 @@
     <EmbeddedResource Include="zMainFormMenu.resx">
       <DependentUpon>zMainFormMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.config" />
-    <None Include="bin\Debug\cell\快递确认.flx" />
-    <None Include="bin\Debug\cell\添加格式文件" />
+    <None Include="00基础模块\BaseClass\Build.log">
+      <DependentUpon>Build.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bin\Debug\CellFormat\快递确认c.flx" />
     <None Include="Entity\Build.log">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -214,6 +263,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="00基础模块\BaseClass\Build.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Build.log</LastGenOutput>
+    </Content>
+    <Content Include="00基础模块\BaseClass\Model.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Entity\Build.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Build.log</LastGenOutput>

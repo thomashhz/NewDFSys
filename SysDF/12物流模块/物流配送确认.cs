@@ -29,7 +29,7 @@ namespace SysDF._12物流模块
 
         private void iniGiidFormat()
         {
-            string sPath1 = System.IO.Directory.GetCurrentDirectory() + "\\cell\\快递确认.flx";
+            string sPath1 = System.IO.Directory.GetCurrentDirectory() + "\\CellFormat\\快递确认c.flx";
 
             gdFindList.OpenFile(sPath1);
 

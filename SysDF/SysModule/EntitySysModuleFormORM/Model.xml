@@ -13,7 +13,15 @@
       <Column Name="Pwd" DataType="String" Description="密码" />
       <Column Name="PassWords" DataType="String" Description="密码" />
       <Column Name="Detped" DataType="Boolean" Nullable="True" Description="部门控制" />
-      <Column Name="isStop" DataType="Int32" Nullable="True" Description="停用" />
+      <Column Name="isStop" DataType="Int32" Nullable="True" Description="停用" />      
+      <Column Name="CreateUserID" DataType="Int32" Description="创建用户" />
+      <Column Name="CreateIP" DataType="String" Description="创建地址" />
+      <Column Name="CreateTime" DataType="DateTime" Description="创建时间" />
+      <Column Name="UpdateUserID" DataType="Int32" Description="更新用户" />
+      <Column Name="UpdateIP" DataType="String" Description="更新地址" />
+      <Column Name="UpdateTime" DataType="DateTime" Description="更新时间" />
+
+
     </Columns>
     <Indexes>
       <Index Columns="UserName" Unique="True" />

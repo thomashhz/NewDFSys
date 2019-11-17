@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tables Version="9.14.7207.833" NameSpace="Hhz.SysDF.SysModule" ConnName="hhzinfosys" Output="" BaseClass="Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.newlifex.com https://raw.githubusercontent.com/NewLifeX/X/master/XCode/ModelSchema.xsd" ChineseFileName="True" xmlns="http://www.newlifex.com/ModelSchema.xsd">
+  <Table Name="Area_District_New" Description="行政区域" DbType="SqlServer">
+    <Columns>
+      <Column Name="ID" DataType="Int32" PrimaryKey="True" Description="自动编号" />
+      <Column Name="Did" DataType="String" RawType="char(12)" PrimaryKey="True" Length="12" Nullable="False" Description="行政区域编号" />
+      <Column Name="Dname" DataType="String" RawType="varchar(100)" Length="100" Description="行政区域全称" />
+      <Column Name="PrevID" DataType="String" RawType="char(20)" Length="20" Description="行政区域上级" />
+      <Column Name="Layer" DataType="Int16" Nullable="True" Description="行政区域层级" />
+      <Column Name="Pxno" DataType="String" RawType="nchar(10)" Length="10" />
+      <Column Name="Dname2" DataType="String" RawType="varchar(100)" Length="100" Description="行政区域简称" />
+      <Column Name="CreateUserID" DataType="Int32" Description="创建用户" />
+      <Column Name="CreateIP" DataType="String" Description="创建地址" />
+      <Column Name="CreateTime" DataType="DateTime" Description="创建时间" />
+      <Column Name="UpdateUserID" DataType="Int32" Description="更新用户" />
+      <Column Name="UpdateIP" DataType="String" Description="更新地址" />
+      <Column Name="UpdateTime" DataType="DateTime" Description="更新时间" />
+    </Columns>
+    <Indexes>
+      <Index Name="Did" Columns="Did" Unique="True" PrimaryKey="True" />
+      <Index Name="PK_Area_District" Columns="Did" Unique="True" PrimaryKey="True" />
+    </Indexes>
+  </Table>
+</Tables>
