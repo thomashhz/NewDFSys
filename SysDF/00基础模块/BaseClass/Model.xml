@@ -1,24 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Tables Version="9.14.7207.833" NameSpace="Hhz.SysDF.SysModule" ConnName="hhzinfosys" Output="" BaseClass="Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.newlifex.com https://raw.githubusercontent.com/NewLifeX/X/master/XCode/ModelSchema.xsd" ChineseFileName="True" xmlns="http://www.newlifex.com/ModelSchema.xsd">
-  <Table Name="Area_District_New" Description="行政区域" DbType="SqlServer">
+  <Table Name="Person" Description="人员档案" DbType="SqlServer">
     <Columns>
-      <Column Name="ID" DataType="Int32" PrimaryKey="True" Description="自动编号" />
-      <Column Name="Did" DataType="String" RawType="char(12)" PrimaryKey="True" Length="12" Nullable="False" Description="行政区域编号" />
-      <Column Name="Dname" DataType="String" RawType="varchar(100)" Length="100" Description="行政区域全称" />
-      <Column Name="PrevID" DataType="String" RawType="char(20)" Length="20" Description="行政区域上级" />
-      <Column Name="Layer" DataType="Int16" Nullable="True" Description="行政区域层级" />
-      <Column Name="Pxno" DataType="String" RawType="nchar(10)" Length="10" />
-      <Column Name="Dname2" DataType="String" RawType="varchar(100)" Length="100" Description="行政区域简称" />
-      <Column Name="CreateUserID" DataType="Int32" Description="创建用户" />
+      <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" />
+      <Column Name="Pname" DataType="String" RawType="varchar(50)" PrimaryKey="True" Nullable="False" Description="人员姓名" />
+      <Column Name="Sex" DataType="String" RawType="char(10)" Length="10" Description="人员性别" />
+      <Column Name="Job" DataType="String" RawType="varchar(50)" Description="岗位名称" />
+      <Column Name="Paper" DataType="String" RawType="varchar(50)" Description="证件类型" />
+      <Column Name="PaperNum" DataType="String" RawType="varchar(50)" Description="证件号码" />
+      <Column Name="InDate" DataType="DateTime" Description="入职时间" />
+      <Column Name="OutDate" DataType="DateTime" Description="离职时间" />
+      <Column Name="AreaID" DataType="String" RawType="varchar(50)" Description="管理区域" />
+      <Column Name="Status" DataType="String" RawType="char(10)" Length="10" Description="在职1离职0" />
+      <Column Name="DeptID" DataType="String" RawType="char(10)" Length="10" Description="部门ID" />
+      <Column Name="Qsrq" DataType="DateTime" RawType="smalldatetime" Description="起算日期" />
+      <Column Name="Zzjs" DataType="Int32" Nullable="True" Description="开发客户增长基数" />
+      <Column Name="Zzbl" DataType="Decimal" RawType="decimal(18, 2)" Nullable="True" Description="优质客户增长比例" />
+      <Column Name="Psbz" DataType="Decimal" RawType="decimal(18, 2)" Nullable="True" Description="配送件数标准" />
+      <Column Name="Psdzbz" DataType="Decimal" RawType="decimal(18, 2)" Nullable="True" Description="配送单数标准" />
+      <Column Name="Zwpdbh" DataType="String" RawType="varchar(10)" Length="10" Description="评定编号" />
+      <Column Name="Zwpdmc" DataType="String" RawType="varchar(20)" Length="20" Description="评定名称" />
+      <Column Name="Pdpxbh" DataType="String" Length="10" Description="评定排序号" />
+      <Column Name="Driverfz" DataType="String" Length="10" Description="司机分组" />
+      <Column Name="CreateUserID" DataType="String" Description="创建用户" />
       <Column Name="CreateIP" DataType="String" Description="创建地址" />
       <Column Name="CreateTime" DataType="DateTime" Description="创建时间" />
-      <Column Name="UpdateUserID" DataType="Int32" Description="更新用户" />
+      <Column Name="UpdateUserID" DataType="String" Description="更新用户" />
       <Column Name="UpdateIP" DataType="String" Description="更新地址" />
       <Column Name="UpdateTime" DataType="DateTime" Description="更新时间" />
     </Columns>
     <Indexes>
-      <Index Name="Did" Columns="Did" Unique="True" PrimaryKey="True" />
-      <Index Name="PK_Area_District" Columns="Did" Unique="True" PrimaryKey="True" />
+      <Index Name="PK_Person" Columns="Pname,ID" Unique="True" PrimaryKey="True" />
+    </Indexes>
+  </Table>
+  <Table Name="Dept" Description="部门档案" DbType="SqlServer">
+    <Columns>
+      <Column Name="id" DataType="Int32" Identity="True" PrimaryKey="True" Description="No" />
+      <Column Name="DeptID" DataType="String" RawType="varchar(50)" Nullable="False" Description="部门编号" />
+      <Column Name="DeptName" DataType="String" RawType="varchar(50)" Description="部门名称" />
+      <Column Name="Depter" DataType="String" RawType="varchar(50)" Description="部门负责人" />
+      <Column Name="PrevID" DataType="String" RawType="varchar(50)" Description="上级部门" />
+      <Column Name="BZ" DataType="String" RawType="varchar(50)" Description="备注" />
+      <Column Name="CreateUserID" DataType="String" Description="创建用户" />
+      <Column Name="CreateIP" DataType="String" Description="创建地址" />
+      <Column Name="CreateTime" DataType="DateTime" Description="创建时间" />
+      <Column Name="UpdateUserID" DataType="String" Description="更新用户" />
+      <Column Name="UpdateIP" DataType="String" Description="更新地址" />
+      <Column Name="UpdateTime" DataType="DateTime" Description="更新时间" />
+    </Columns>
+    <Indexes>
+      <Index Name="PK_Dept" Columns="DeptID,ID" Unique="True" PrimaryKey="True" />
     </Indexes>
   </Table>
 </Tables>

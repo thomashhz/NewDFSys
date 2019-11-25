@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tables Version="9.6.6663.16294" NameSpace="XCode.Membership" ConnName="Membership" Output="" BaseClass="Entity"
+         xmlns="http://www.newlifex.com/ModelSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.newlifex.com https://raw.githubusercontent.com/NewLifeX/X/master/XCode/ModelSchema.xsd" >
+  <Table Name="User" Description="用户" DbType="SqlServer" >
+    <Columns>
+      <Column Name="ID" DataType="Int32"  Identity="True" PrimaryKey="True" Description="编号" />
+      <Column Name="Name" DataType="String" Master="True" Nullable="False" Description="名称。登录用户名" />
+      <Column Name="Password" DataType="String" Description="密码" />
+      <Column Name="DisplayName" DataType="String" Description="昵称" />
+      <Column Name="Sex" DataType="Int32" Description="性别。未知、男、女" Type="SexKinds" />
+      <Column Name="Mail" DataType="String" Description="邮件" />
+      <Column Name="Mobile" DataType="String" Description="手机" />
+      <Column Name="Code" DataType="String" Description="代码。身份证、员工编号等" />
+      <Column Name="Avatar" DataType="String" Length="200" Description="头像" />
+      <Column Name="RoleID" DataType="Int32" Description="角色。主要角色" />
+      <Column Name="RoleIDs" DataType="String" Length="200" Description="角色组。次要角色集合" />
+      <Column Name="Online" DataType="Boolean" Description="在线" />
+      <Column Name="Enable" DataType="Boolean" Description="启用" />
+      <Column Name="Logins" DataType="Int32" Description="登录次数" />
+      <Column Name="LastLogin" DataType="DateTime" Description="最后登录" />
+      <Column Name="LastLoginIP" DataType="String" Description="最后登录IP" />
+      <Column Name="RegisterTime" DataType="DateTime" Description="注册时间" />
+      <Column Name="RegisterIP" DataType="String" Description="注册IP" />
+    </Columns>
+    <Indexes>
+      <Index Columns="Name" Unique="True" />
+      <Index Columns="RoleID" />
+    </Indexes>
+  </Table>
+  
+</Tables>

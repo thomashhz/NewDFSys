@@ -303,5 +303,38 @@ namespace SysDF._12物流模块
 
             this.textBox5.Text = ConvertJsonString(retstringinfo.ToString()).ToString();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //创建订单
+            //定义：x-companyId -》合作商编码 （在个人中心查看） 和  x-dataDigest -》数据签名
+            string str_companyid = "kfpttestCode";
+            string str_key = "kfpttestkey==";   //"kfpttestkey==";   //
+            ZopProperties ZTps = new ZopProperties(str_companyid, str_key);
+
+
+            ZopRequest ztreq = new ZopRequest();
+
+            //总队总-下单返回寄件码，测试地址： http://58.40.16.122:8080/plateOrder
+            //总队总-下单返回寄件码，正式地址： http://japi.zto.cn/plateOrder
+
+            ztreq.url = "http://58.40.16.122:8080/plateOrder";
+
+            //参数1
+            string strK = "systemParameter";
+            string strV = textBox3.Text.ToString();  // "{\"serviceCode\":\"StoreDeliverGoods\"}";
+            //@"d:\root\subdir"; 转义
+            ztreq.addParam(strK, strV);//参数1
+            //参数2
+            strK = "orderInfo";
+            strV = textBox4.Text.ToString(); //"{\"bagSize\":\"20,10,30\",\"partnerCode\":\"3608036589234\",\"companyCode\":\"GP1551922487\",\"billCode\":null,\"hallCode\":\"S2044\",\"startTime\":null,\"endTime\":null,\"siteCode\":\"\",\"weight\":1.23,\"freight\":0,\"orderSum\":230.12,\"otherCharges\":0,\"packCharges\":0,\"premium\":0,\"price\":0,\"quantity\":\"1\",\"remark\":\"\",\"receiver\":{\"address\":\"外街道00号\",\"city\":\"苏州市\",\"company\":\"中通快递\",\"county\":\"朝阳区\",\"id\":\"\",\"mobile\":\"13262709999\",\"name\":\"黄某\",\"phone\":\"\",\"prov\":\"江苏省\",\"zipCode\":\"\"},\"sender\":{\"address\":\"华志路1685号\",\"city\":\"蚌埠市\",\"company\":\"中通快递股份有限公司\",\"county\":\"怀远县\",\"id\":\"15097756\",\"mobile\":\"15216800000\",\"name\":\"测试\",\"phone\":\"\",\"prov\":\"安徽省\",\"zipCode\":\"\"}}";
+            ztreq.addParam(strK, strV);//参数2
+
+            ZopClient zc = new ZopClient(ZTps);
+
+            string retstringinfo = zc.execute(ztreq).ToString();
+
+            this.textBox5.Text = ConvertJsonString(retstringinfo.ToString()).ToString();
+        }
     }
 }

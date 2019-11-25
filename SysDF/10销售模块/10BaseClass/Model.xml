@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tables Version="9.14.7207.833" NameSpace="XCode.Membership" ConnName="Membership" Output="" BaseClass="Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.newlifex.com https://raw.githubusercontent.com/NewLifeX/X/master/XCode/ModelSchema.xsd" ChineseFileName="True" xmlns="http://www.newlifex.com/ModelSchema.xsd">
+  <Table Name="Inv_Evi" Description="销售订单表头" DbType="SqlServer">
+    <Columns>
+      <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="自增ID" />
+      <Column Name="Lsbh" DataType="Int32" Nullable="True" Description="可编辑流失编号" />
+      <Column Name="EviNO" DataType="String" RawType="varchar(50)" Nullable="False" Description="单据编号" />
+      <Column Name="EviDate" DataType="DateTime" Description="单据日期" />
+      <Column Name="PlanPayDate" DataType="DateTime" Description="计划收款日期" />
+      <Column Name="SumQty" DataType="Double" RawType="float" Nullable="True" Description="单据合计数量" />
+      <Column Name="SumNQty" DataType="Double" RawType="float" Nullable="True" Description="单据合计件数" />
+      <Column Name="SumWeight" DataType="Double" RawType="float" Nullable="True" Description="单据合计重量" />
+      <Column Name="SumAmount" DataType="Double" RawType="float" Nullable="True" Description="单据合计金额" />
+      <Column Name="Verifier" DataType="String" RawType="varchar(50)" Description="审核人" />
+      <Column Name="Verified" DataType="Byte" Nullable="True" Description="审核标志" />
+      <Column Name="Verifierdate" DataType="DateTime" Description="审核日期" />
+      <Column Name="CustID" DataType="String" RawType="varchar(50)" Description="客户编号" />
+      <Column Name="Person" DataType="String" RawType="varchar(50)" Description="责任业务" />
+      <Column Name="Driver" DataType="String" RawType="varchar(50)" Description="配送司机" />
+      <Column Name="Poster" DataType="String" RawType="varchar(50)" />
+      <Column Name="Payed" DataType="Byte" Nullable="True" Description="收款标志" />
+      <Column Name="PayNO" DataType="String" RawType="varchar(50)" Description="收款单号" />
+      <Column Name="CreatDate" DataType="DateTime" Description="创建时间" />
+      <Column Name="Creater" DataType="String" RawType="varchar(50)" Description="创建人" />
+      <Column Name="LastDate" DataType="DateTime" Description="最后修改时间" />
+      <Column Name="Laster" DataType="String" RawType="varchar(50)" Description="最后修改人" />
+      <Column Name="PayType" DataType="Boolean" Nullable="True" Description="付款类型" />
+      <Column Name="Summary" DataType="String" RawType="varchar(100)" Length="100" Description="单据备注" />
+      <Column Name="Payer" DataType="String" RawType="varchar(50)" Description="收款人" />
+      <Column Name="Invoiced" DataType="Byte" Nullable="True" Description="开票标志" />
+      <Column Name="Invoicer" DataType="String" RawType="varchar(50)" Description="开票人" />
+      <Column Name="InvoiceNo" DataType="String" RawType="varchar(50)" Description="开票单号" />
+      <Column Name="AreaID" DataType="String" RawType="varchar(50)" Description="管理区域编号" />
+      <Column Name="PrevArea" DataType="String" RawType="varchar(50)" Description="上级管理区域编号" />
+      <Column Name="EviType" DataType="Boolean" Nullable="True" Description="单据类型" />
+      <Column Name="FreightWay" DataType="Int16" Nullable="True" Description="送货方式" />
+      <Column Name="Helper" DataType="String" RawType="varchar(50)" Description="协运人" />
+      <Column Name="Verifiertime" DataType="DateTime" Description="审核时间" />
+      <Column Name="blnOutStock" DataType="Int16" Nullable="True" Description="出库标志" />
+      <Column Name="StockNo" DataType="String" RawType="char(20)" Length="20" Description="出库单号" />
+      <Column Name="Stocker" DataType="String" RawType="char(20)" Length="20" />
+      <Column Name="EviBSC" DataType="String" RawType="nchar(10)" Length="10" Description="办事处区域" />
+      <Column Name="Shrq" DataType="DateTime" RawType="smalldatetime" Description="送货日期" />
+      <Column Name="Shbz" DataType="Int16" Nullable="True" Description="送货标志" />
+      <Column Name="Shsm" DataType="String" RawType="varchar(100)" Length="100" Description="销售单送货说明" />
+      <Column Name="Shqrsj" DataType="DateTime" Description="送货确认时间" />
+      <Column Name="Shqrrq" DataType="DateTime" RawType="smalldatetime" Description="送货确认日期" />
+      <Column Name="Shqrer" DataType="String" RawType="varchar(50)" Description="送货确认人" />
+      <Column Name="iMonth" DataType="Int32" Nullable="True" Description="单据所属月份" />
+      <Column Name="DrvName" DataType="String" RawType="varchar(50)" Description="跟单人员" />
+      <Column Name="YFKid" DataType="Int32" Nullable="True" Description="预付款ID" />
+      <Column Name="Xdr" DataType="String" RawType="varchar(50)" Description="下单人" />
+      <Column Name="Ddsx" DataType="String" RawType="nchar(10)" Length="10" />
+      <Column Name="Fhqrbz" DataType="Int16" Nullable="True" Description="发货货确认标志" />
+      <Column Name="Fhqrer" DataType="String" RawType="varchar(50)" Description="发货货确认人" />
+      <Column Name="Fhqrdate" DataType="DateTime" RawType="smalldatetime" Description="发货货确认日期" />
+      <Column Name="Skqrbz" DataType="Int16" Nullable="True" />
+      <Column Name="Skqrer" DataType="String" RawType="varchar(50)" />
+      <Column Name="Skqrdate" DataType="DateTime" RawType="smalldatetime" />
+      <Column Name="Sjskr" DataType="String" RawType="varchar(50)" />
+      <Column Name="Ygbz" DataType="Int16" Nullable="True" Description="预估标志" />
+      <Column Name="Ygrq" DataType="DateTime" RawType="smalldatetime" Description="预估日期" />
+      <Column Name="Ygr" DataType="String" RawType="varchar(20)" Length="20" Description="预估人" />
+      <Column Name="Pcbz" DataType="Int16" Nullable="True" Description="排产标志" />
+      <Column Name="Pcrq" DataType="DateTime" RawType="smalldatetime" Description="排产日期" />
+      <Column Name="Pcr" DataType="String" RawType="varchar(20)" Length="20" Description="排产人" />
+      <Column Name="Jhxsbz" DataType="Int16" Nullable="True" />
+      <Column Name="Sjshqrbz" DataType="Int16" Nullable="True" />
+      <Column Name="Sjshqrrq" DataType="DateTime" RawType="smalldatetime" />
+      <Column Name="Sjshqrer" DataType="String" RawType="varchar(20)" Length="20" />
+      <Column Name="Kpqrbz" DataType="Int16" Nullable="True" />
+      <Column Name="CarNo" DataType="String" RawType="varchar(20)" Length="20" Description="车牌号" />
+      <Column Name="Fhqrdateys" DataType="DateTime" RawType="smalldatetime" />
+      <Column Name="KCblnOutStock" DataType="Int16" Nullable="True" />
+      <Column Name="KcBlnoutstock" ColumnName="KC_blnOutStock" DataType="Int16" Nullable="True" />
+      <Column Name="KcStocker" ColumnName="KC_Stocker" DataType="String" RawType="varchar(20)" Length="20" />
+      <Column Name="KcStockno" ColumnName="KC_StockNo" DataType="String" RawType="varchar(120)" Length="120" />
+      <Column Name="Custname" DataType="String" Length="500" Description="客户名称" />
+      <Column Name="Tel" DataType="String" Description="客户电话" />
+      <Column Name="Caddress" DataType="String" Length="500" Description="客户地址" />
+      <Column Name="Apid" DataType="Int64" Nullable="True" Description="线路安排ID" />
+      <Column Name="Pcid" DataType="Int64" Nullable="True" Description="排产ID" />
+      <Column Name="Rlid" DataType="Int64" Nullable="True" Description="线路ID" />
+      <Column Name="SHType" DataType="Int16" Nullable="True" />
+      <Column Name="PcdScno" ColumnName="PCD_scno" DataType="String" />
+      <Column Name="Pdsdr" DataType="String" Length="20" />
+      <Column Name="Pdsdrq" DataType="DateTime" />
+      <Column Name="Pdsdzdr" DataType="String" Length="20" />
+      <Column Name="Pdsdrqtime" DataType="DateTime" />
+      <Column Name="iYear" DataType="Int32" Nullable="True" Description="单据所属年份" />
+    </Columns>
+    <Indexes>
+      <Index Name="custid" Columns="CustID" />
+      <Index Name="lsbh" Columns="LSBH" />
+      <Index Name="rq" Columns="EviDate" />
+      <Index Name="rq2" Columns="Verifierdate" />
+    </Indexes>
+  </Table>
+  <Table Name="Inv_Evi_Detail" Description="销售订单表体" DbType="SqlServer">
+    <Columns>
+      <Column Name="Lsbh" DataType="Int32" PrimaryKey="True" Description="销售订单表头流水编号" />
+      <Column Name="EviNO" DataType="String" RawType="varchar(50)" PrimaryKey="True" Nullable="False" Description="销售订单号" />
+      <Column Name="InvID" DataType="String" RawType="varchar(50)" PrimaryKey="True" Nullable="False" Description="产品编号" />
+      <Column Name="Qty" DataType="Double" RawType="float" Nullable="True" Description="数量" />
+      <Column Name="NQty" DataType="Double" RawType="float" Nullable="True" Description="件数" />
+      <Column Name="Price" DataType="Double" RawType="float" Nullable="True" Description="单价" />
+      <Column Name="Weight" DataType="Double" RawType="float" Nullable="True" Description="重量" />
+      <Column Name="Amount" DataType="Double" RawType="float" Nullable="True" Description="金额" />
+      <Column Name="Summary" DataType="String" RawType="varchar(100)" Length="100" Description="备注" />
+    </Columns>
+    <Indexes>
+      <Index Name="lsbh" Columns="LSBH" />
+      <Index Name="PK_Evi_Detail" Columns="LSBH,EviNO,InvID" Unique="True" PrimaryKey="True" />
+    </Indexes>
+  </Table>
+</Tables>

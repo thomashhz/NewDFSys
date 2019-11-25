@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -53,7 +68,8 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>SysDF.Program</StartupObject>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FlexCell, Version=4.3.7.0, Culture=neutral, PublicKeyToken=6f86587eb70ee309, processorArchitecture=MSIL">
@@ -89,10 +105,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="00基础模块\BaseClass\人员档案.Biz.cs" />
+    <Compile Include="00基础模块\BaseClass\人员档案.cs" />
     <Compile Include="00基础模块\BaseClass\管理区域维护.Biz.cs" />
     <Compile Include="00基础模块\BaseClass\管理区域维护.cs" />
     <Compile Include="00基础模块\BaseClass\行政区域维护.Biz.cs" />
     <Compile Include="00基础模块\BaseClass\行政区域维护.cs" />
+    <Compile Include="00基础模块\BaseClass\部门档案.Biz.cs" />
+    <Compile Include="00基础模块\BaseClass\部门档案.cs" />
+    <Compile Include="00基础模块\人员档案.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="00基础模块\人员档案.Designer.cs">
+      <DependentUpon>人员档案.cs</DependentUpon>
+    </Compile>
     <Compile Include="00基础模块\管理区域维护.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +137,16 @@
     <Compile Include="00基础模块\行政区域维护.Designer.cs">
       <DependentUpon>行政区域维护.cs</DependentUpon>
     </Compile>
+    <Compile Include="00基础模块\部门档案.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="00基础模块\部门档案.Designer.cs">
+      <DependentUpon>部门档案.cs</DependentUpon>
+    </Compile>
+    <Compile Include="10销售模块\10BaseClass\销售订单表体.Biz.cs" />
+    <Compile Include="10销售模块\10BaseClass\销售订单表体.cs" />
+    <Compile Include="10销售模块\10BaseClass\销售订单表头.Biz.cs" />
+    <Compile Include="10销售模块\10BaseClass\销售订单表头.cs" />
     <Compile Include="12物流模块\ZTClass\HttpUtil.cs" />
     <Compile Include="12物流模块\ZTClass\ZopClient.cs" />
     <Compile Include="12物流模块\ZTClass\ZopProperties.cs" />
@@ -183,6 +219,9 @@
     <Compile Include="zMainFormMenu.Designer.cs">
       <DependentUpon>zMainFormMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="00基础模块\人员档案.resx">
+      <DependentUpon>人员档案.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="00基础模块\管理区域维护.resx">
       <DependentUpon>管理区域维护.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="00基础模块\行政区域维护.resx">
       <DependentUpon>行政区域维护.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="00基础模块\部门档案.resx">
+      <DependentUpon>部门档案.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="12物流模块\物流配送生成.resx">
       <DependentUpon>物流配送生成.cs</DependentUpon>
@@ -237,6 +279,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </None>
+    <None Include="10销售模块\10BaseClass\Build.log">
+      <DependentUpon>Build.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </None>
+    <None Include="12物流模块\12BaseClass\Build.log">
+      <DependentUpon>Build.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </None>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
@@ -268,6 +320,20 @@
       <LastGenOutput>Build.log</LastGenOutput>
     </Content>
     <Content Include="00基础模块\BaseClass\Model.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="10销售模块\10BaseClass\Build.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Build.log</LastGenOutput>
+    </Content>
+    <Content Include="10销售模块\10BaseClass\Model.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="12物流模块\12BaseClass\Build.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Build.log</LastGenOutput>
+    </Content>
+    <Content Include="12物流模块\12BaseClass\Model.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Entity\Build.tt">
@@ -333,7 +399,13 @@
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

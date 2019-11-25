@@ -16,7 +16,7 @@ namespace SysDF.SysModule.SysModuleForm
         {
             InitializeComponent();
         }
-        private   Boolean IsSaved = false;
+        private   Boolean IsSaveds ;
         
         private void toolSetTrue(Boolean t)
         {
@@ -95,7 +95,7 @@ namespace SysDF.SysModule.SysModuleForm
             toolSetTrue(false);
             groupBox2.Text = "新增";
             groupBox2.Tag = "0";
-            IsSaved = true;
+            IsSaveds = true;
             foreach (Control control in this.groupBox2.Controls)
             {
                 if (control is TextBox)
@@ -111,7 +111,7 @@ namespace SysDF.SysModule.SysModuleForm
             toolSetTrue(false);
             groupBox2.Text = "修改";
             groupBox2.Tag = textBox1.Text.ToString();
-            this.IsSaved = true; //
+            this.IsSaveds = true; //
         }
 
         private void toolDel_Click(object sender, EventArgs e)
@@ -144,7 +144,7 @@ namespace SysDF.SysModule.SysModuleForm
                 toolSetTrue(true);
                 groupBox2.Text = "";
                 groupBox2.Tag = "";
-                this.IsSaved = false;
+                this.IsSaveds = false;
             }
             else
             {
@@ -153,7 +153,7 @@ namespace SysDF.SysModule.SysModuleForm
                 toolSetTrue(true);
                 groupBox2.Text = "";
                 groupBox2.Tag = "";
-                this.IsSaved = false;
+                this.IsSaveds = false;
             }
             
             
@@ -165,7 +165,7 @@ namespace SysDF.SysModule.SysModuleForm
         {
             //取消
             toolSetTrue(true);
-            this.IsSaved = false;
+            this.IsSaveds = false;
         }
 
         private void grid1_RowColChange(object Sender, FlexCell.Grid.RowColChangeEventArgs e)

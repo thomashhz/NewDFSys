@@ -40,6 +40,29 @@ namespace Hhz.dbdata //可以修改成实际项目的命名空间名称
                 return retstring;
             }
         }
+
+        public static string GetSplit(object str1,int i)
+        {
+            string StrRet = "";
+            if(str1==null)
+            {
+                return StrRet;
+            }
+            else
+            {
+                string[] sArray = str1.ToString().Split("|");
+                try
+                {
+                    StrRet= sArray[i].ToString();
+                }
+                finally
+                {
+                    StrRet= "";
+                }
+                return StrRet.ToString();
+            }
+            
+        }
     }
     /// <summary>
     /// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
