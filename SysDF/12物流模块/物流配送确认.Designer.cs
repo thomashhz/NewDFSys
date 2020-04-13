@@ -51,6 +51,7 @@
             this.tabPList = new System.Windows.Forms.TabPage();
             this.gdFindList = new FlexCell.Grid();
             this.tabPMX = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -65,7 +66,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.tools.SuspendLayout();
             this.gBFindWhere.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -143,6 +143,7 @@
             this.toolEdit.Name = "toolEdit";
             this.toolEdit.Size = new System.Drawing.Size(56, 24);
             this.toolEdit.Text = "修改";
+            this.toolEdit.Click += new System.EventHandler(this.toolEdit_Click);
             // 
             // toolDel
             // 
@@ -302,6 +303,16 @@
             this.tabPMX.Text = "快递下单明细";
             this.tabPMX.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(383, 13);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(256, 23);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "下单测试-总对总-创建订单";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(99, 13);
@@ -454,16 +465,6 @@
             this.label1.Size = new System.Drawing.Size(95, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "x-companyId";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(383, 13);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(256, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "下单测试-总对总-创建订单";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // 物流配送确认
             // 

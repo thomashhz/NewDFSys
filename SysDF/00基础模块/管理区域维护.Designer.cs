@@ -89,6 +89,7 @@
             this.toolExit.Name = "toolExit";
             this.toolExit.Size = new System.Drawing.Size(52, 22);
             this.toolExit.Text = "退出";
+            this.toolExit.Click += new System.EventHandler(this.toolExit_Click);
             // 
             // toolStripSeparator1
             // 

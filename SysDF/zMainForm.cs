@@ -67,6 +67,7 @@ namespace SysDF
         private void OpenFile(object sender, EventArgs e)
         {
             frmMenu.Show();
+            frmMenu.InitTreeView();
 
             //frmMenu.Show(this.dockPanel1, DockState.DockLeft);
 

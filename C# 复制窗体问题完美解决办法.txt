@@ -1,0 +1,22 @@
+
+gzmxuyl
+Bbs1
+结帖率 80%	
+在VS2008、2010、2012等版本中均存在一个问题：
+        根据其它编程工具的设计经验，在一个项目中多个窗体内容相似，只需做好一个基础窗体，其它窗体直接复制粘贴修改类名后就完成设计了。然而想想是美好的，事实是残酷的！一旦你这样做了，编译却总是通不过，.会提示N多错误。
+       经过多次折腾尝试摸索，得到正确完美的解决办法为：
+        1、在解决方案资源管理器中选择要复制的窗体右击，复制；
+        2、找到解决方案资源管理器中需要粘贴的位置右击，粘贴；
+        3、鼠标指定刚粘贴的窗体右击，重命名（假设原为XXXX改为YYYY），按提示完成；
+        4、打开窗体代码，修改public partial class XXXX : Form中的XXXX为新窗体类名YYYY。
+              重要：窗体初始化模块中的XXXX也相应修改为YYYY
+             public XXXX()
+             {
+                    InitializeComponent();
+              }
+        5、异常重要：
+             打开窗体设计器代码YYYY.Designer.cs，修改partial class XXXX : Form 中的XXXX为新窗体类名YYYY。
+            更重要而不易找到的问题：
+            修改private void InitializeComponent() 中System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XXXX))一行中的XXXX为YYYY；
+         6、最后，右击解决方案资源管理器中的本项目，清理！！！运行，OK，大功告成！
+         注：也可以根据需要修改命名空间啊，哈哈！

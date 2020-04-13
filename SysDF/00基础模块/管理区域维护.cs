@@ -274,5 +274,11 @@ namespace SysDF._00基础模块
 
             
         }
+
+        private void toolExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }

@@ -58,6 +58,7 @@ namespace SysDF
         private void butLogin_Click(object sender, EventArgs e)
         {
             string StrUid = txtLoginUserID.Text.ToString().Trim();
+            
             string Strpw = txtPassWords.Text.ToString().Trim();
             string sSql = " select u.id,u.UserID,u.UserName,u.PassWords,u.isStop from ActUser u  ";
             sSql += " where u.isstop='0' and u.userid='" + StrUid.ToString().Trim() + "'";

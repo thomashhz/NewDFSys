@@ -55,6 +55,8 @@ namespace SysDF._00基础模块
         private void toolEdit_Click(object sender, EventArgs e)
         {
             //修改
+            
+
             toolSetTrue(false);
             groupBox2.Text = "修改";
             groupBox2.Tag = textBox1.Text.ToString();

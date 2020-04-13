@@ -254,5 +254,10 @@ namespace SysDF.SysModule.SysModuleForm
         {
             InitTreeView();
         }
+
+        private void toolExit_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

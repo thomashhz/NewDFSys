@@ -79,7 +79,9 @@
     <Reference Include="NewLife.Core, Version=8.3.7207.797, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\NewLife.Core.8.3.2019.923\lib\net40\NewLife.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -147,6 +149,18 @@
     <Compile Include="10销售模块\10BaseClass\销售订单表体.cs" />
     <Compile Include="10销售模块\10BaseClass\销售订单表头.Biz.cs" />
     <Compile Include="10销售模块\10BaseClass\销售订单表头.cs" />
+    <Compile Include="10销售模块\销售发票管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="10销售模块\销售发票管理.Designer.cs">
+      <DependentUpon>销售发票管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="10销售模块\销售订单管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="10销售模块\销售订单管理.Designer.cs">
+      <DependentUpon>销售订单管理.cs</DependentUpon>
+    </Compile>
     <Compile Include="12物流模块\ZTClass\HttpUtil.cs" />
     <Compile Include="12物流模块\ZTClass\ZopClient.cs" />
     <Compile Include="12物流模块\ZTClass\ZopProperties.cs" />
@@ -163,11 +177,23 @@
     <Compile Include="12物流模块\物流配送确认.Designer.cs">
       <DependentUpon>物流配送确认.cs</DependentUpon>
     </Compile>
+    <Compile Include="99Other\解析Json.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="99Other\解析Json.Designer.cs">
+      <DependentUpon>解析Json.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaseForm\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BaseForm\BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\BsdrFormDJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\BsdrFormDJ.Designer.cs">
+      <DependentUpon>BsdrFormDJ.cs</DependentUpon>
     </Compile>
     <Compile Include="BaseForm\DbHelperSQL.cs" />
     <Compile Include="BaseForm\全局函数及变量.cs" />
@@ -234,14 +260,26 @@
     <EmbeddedResource Include="00基础模块\部门档案.resx">
       <DependentUpon>部门档案.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="10销售模块\销售发票管理.resx">
+      <DependentUpon>销售发票管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="10销售模块\销售订单管理.resx">
+      <DependentUpon>销售订单管理.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="12物流模块\物流配送生成.resx">
       <DependentUpon>物流配送生成.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="12物流模块\物流配送确认.resx">
       <DependentUpon>物流配送确认.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="99Other\解析Json.resx">
+      <DependentUpon>解析Json.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseForm\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\BsdrFormDJ.resx">
+      <DependentUpon>BsdrFormDJ.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -408,6 +446,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="11微信模块\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

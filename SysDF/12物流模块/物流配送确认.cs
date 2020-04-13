@@ -336,5 +336,10 @@ namespace SysDF._12物流模块
 
             this.textBox5.Text = ConvertJsonString(retstringinfo.ToString()).ToString();
         }
+
+        private void toolEdit_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
