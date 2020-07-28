@@ -118,6 +118,7 @@
             this.toolDel.Name = "toolDel";
             this.toolDel.Size = new System.Drawing.Size(56, 24);
             this.toolDel.Text = "删除";
+            this.toolDel.Click += new System.EventHandler(this.toolDel_Click_1);
             // 
             // toolStripSeparator2
             // 

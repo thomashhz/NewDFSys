@@ -1,0 +1,51 @@
+﻿正在打开存储库:
+E:\soft\github\DFSys\NewDFSys
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+发布到远程存储库时遇到错误: Git failed with a fatal error.
+HttpRequestException encountered.
+   ��������ʱ�����
+cannot spawn /d/program files (x86)/microsoft visual studio/2017/community/common7/ide/commonextensions/microsoft/teamfoundation/team explorer/Git/mingw32/libexec/git-core/git-askpass.exe: No such file or directory
+could not read Username for 'https://github.com': terminal prompts disabled
+Pushing to https://github.com/thomashhz/NewDFSys
+
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+发布到远程存储库时遇到错误: Git failed with a fatal error.
+HttpRequestException encountered.
+   ��������ʱ�����
+cannot spawn /d/program files (x86)/microsoft visual studio/2017/community/common7/ide/commonextensions/microsoft/teamfoundation/team explorer/Git/mingw32/libexec/git-core/git-askpass.exe: No such file or directory
+could not read Username for 'https://github.com': terminal prompts disabled
+Pushing to https://github.com/thomashhz/NewDFSys
+
+已在存储库 E:\soft\github\DFSys\NewDFSys 中本地创建提交 0e07e29a
+正在推送 master
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+Warning: 'C:\ProgramData/Git/config' has a dubious owner: '(unknown)'.
+发布到远程存储库时遇到错误: Git failed with a fatal error.
+HttpRequestException encountered.
+   ��������ʱ�����
+cannot spawn /d/program files (x86)/microsoft visual studio/2017/community/common7/ide/commonextensions/microsoft/teamfoundation/team explorer/Git/mingw32/libexec/git-core/git-askpass.exe: No such file or directory
+could not read Username for 'https://github.com': terminal prompts disabled
+Pushing to https://github.com/thomashhz/NewDFSys
+

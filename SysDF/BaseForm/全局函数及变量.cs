@@ -21,7 +21,7 @@ namespace Hhz.dbdata //可以修改成实际项目的命名空间名称
     public partial class PubFun
     {
         /// <summary>
-        /// 空字符判断：null
+        /// 空字符判断：nullZore
         /// </summary>
         /// <param name="str1"></param>
         /// <returns></returns>

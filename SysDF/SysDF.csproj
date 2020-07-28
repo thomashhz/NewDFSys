@@ -177,6 +177,18 @@
     <Compile Include="12物流模块\物流配送确认.Designer.cs">
       <DependentUpon>物流配送确认.cs</DependentUpon>
     </Compile>
+    <Compile Include="13客服模块\客服电话回访.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="13客服模块\客服电话回访.Designer.cs">
+      <DependentUpon>客服电话回访.cs</DependentUpon>
+    </Compile>
+    <Compile Include="99Other\云呼叫测试.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="99Other\云呼叫测试.Designer.cs">
+      <DependentUpon>云呼叫测试.cs</DependentUpon>
+    </Compile>
     <Compile Include="99Other\解析Json.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +283,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="12物流模块\物流配送确认.resx">
       <DependentUpon>物流配送确认.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="13客服模块\客服电话回访.resx">
+      <DependentUpon>客服电话回访.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="99Other\云呼叫测试.resx">
+      <DependentUpon>云呼叫测试.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="99Other\解析Json.resx">
       <DependentUpon>解析Json.cs</DependentUpon>

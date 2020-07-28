@@ -158,49 +158,50 @@ namespace SysDF.SysModule.SysModuleForm
 
                     if (!IsSaved)   //查询状态，显示菜单信息
                     {
-                        
-                        
+
+
                         try
                         {
                             textBox1.Text = s.ID.ToString();
                             textBox2.Text = s.FormID.ToString();
                             //bnlnull = e.Node.Parent.Text.ToString().IsNullOrEmpty();
-                            if (e.Node.Parent==null)
+                            if (e.Node.Parent == null)
                             {
                                 textBox3.Text = "0";
-                            }else
+                            }
+                            else
                             {
                                 textBox3.Text = s.parenID.ToString() + "|" + e.Node.Parent.Text.ToString();
                             }
                             textBox3.Tag = s.parenID.ToString();
                             textBox4.Text = s.Pxnum.ToString();
                             //bool aa = s.UrlModle.IsNullOrEmpty();
-                            if(s.UrlModle==null)
+                            if (s.UrlModle == null)
                             {
-                                textBox5.Text ="";
+                                textBox5.Text = "";
                             }
                             else
                             {
                                 textBox5.Text = s.UrlModle.ToString();
                             }
-                            if(s.Sumarry==null)
+                            if (s.Sumarry == null)
                             {
-                                textBox6.Text ="";
+                                textBox6.Text = "";
                             }
                             else
                             {
                                 textBox6.Text = s.Sumarry.ToString();
                             }
-                            
-    
+
+
                         }
-                        catch(Exception ex)
+                        catch (Exception ex)
                         { MessageBox.Show("提示！" + ex); }  //(Exception ex) MessageBox.Show("提示！"+ex); 
 
                     }
                     else  //新增（==0） 修改（==ID） 给上级赋值
                     {
-                        textBox3.Text = s.ID.ToString() + "|"+ e.Node.Text.ToString ();
+                        textBox3.Text = s.ID.ToString() + "|" + e.Node.Text.ToString();
                         textBox3.Tag = s.ID.ToString();
                     }
                 }
@@ -258,6 +259,48 @@ namespace SysDF.SysModule.SysModuleForm
         private void toolExit_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void toolDel_Click_1(object sender, EventArgs e)
+        {
+            //删除订单
+            if (textBox1.ToString().Trim() == "")
+            {
+                //请选定要删除的菜单
+                MessageBox.Show("请选定要删除的菜单！", "提示！");
+            }
+            else
+            {
+                //判断是否有下级菜单
+
+                Int32 parentID = textBox1.Text.ToInt();
+
+                var acTree = ActFormTree.SearchPara(parentID);
+                //int iYes = ActFormTree.FindMax(ActFormTree._.ID, ActFormTree._.parenID == parentID);
+
+                if (acTree.Count > 0)
+                //if (iYes==1)
+                {
+                    MessageBox.Show("此菜单有下级菜单，不允许删除！", "提示！");
+
+                }
+                else
+                {
+                    //删除菜单
+                    if ((int)MessageBox.Show("确定删除此菜单，请按确定，否则取消", "提示!", MessageBoxButtons.OKCancel) == 1)
+                    {
+                        //删除
+                        var iID = textBox1.Text.ToInt();
+                        //ActFormTree.Delete(iID);
+
+                        var actTr = ActFormTree.FindByKey(iID);
+                        actTr.Delete();
+
+                        MessageBox.Show("删除成功！", "提示！");
+                    }
+                }
+
+            }
         }
     }
 }

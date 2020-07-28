@@ -59,7 +59,8 @@ namespace SysDF._10销售模块
 
         private void inigbFindwhereGrid()
         {
-            string sPath1= System.IO.Directory.GetCurrentDirectory() + "\\CellFormat\\销售订单管理.flx";
+            string sPath1 =  System.IO.Directory.GetCurrentDirectory() + @"\CellFormat\销售订单管理.flx";
+            
             gdFindList.OpenFile(sPath1);
 
             //初始化查询条件

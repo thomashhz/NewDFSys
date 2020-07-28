@@ -6,16 +6,16 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SysDF.BaseForm
+namespace SysDF._13客服模块
 {
-    public partial class BsdrFormDJ : SysDF.BaseForm.BaseForm
+    public partial class 客服电话回访 : SysDF.BaseForm.BaseForm
     {
-        public BsdrFormDJ()
+        public 客服电话回访()
         {
             InitializeComponent();
         }
 
-        private void BsdrFormDJ_Load(object sender, EventArgs e)
+        private void 客服电话回访_Load(object sender, EventArgs e)
         {
 
         }

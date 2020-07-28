@@ -17,14 +17,14 @@ namespace Hhz.SysDF.SysModule
     public partial class ActFormTree : Entity<ActFormTree>
     {
         #region 对象操作
-            ﻿
+
 
         /// <summary>验证数据，通过抛出异常的方式提示验证失败。</summary>
         /// <param name="isNew"></param>
         public override void Valid(Boolean isNew)
         {
-			// 如果没有脏数据，则不需要进行任何处理
-			if (!HasDirty) return;
+            // 如果没有脏数据，则不需要进行任何处理
+            if (!HasDirty) return;
 
             // 这里验证参数范围，建议抛出参数异常，指定参数名，前端用户界面可以捕获参数异常并聚焦到对应的参数输入框
             //if (String.IsNullOrEmpty(Name)) throw new ArgumentNullException(_.Name, _.Name.DisplayName + "无效！");
@@ -35,7 +35,7 @@ namespace Hhz.SysDF.SysModule
 
             // 在新插入数据或者修改了指定字段时进行唯一性验证，CheckExist内部抛出参数异常
             //if (isNew || Dirtys[__.Name]) CheckExist(__.Name);
-            
+
         }
 
         ///// <summary>首次连接数据库时初始化数据，仅用于实体类重载，用户不应该调用该方法</summary>
@@ -86,20 +86,37 @@ namespace Hhz.SysDF.SysModule
         #region 扩展查询
 
         /// <summary>查询满足条件的记录集，分页、排序</summary>
-        
+
         /// <param name="key">关键字 ID</param>
-        
+
         /// <returns>实体集</returns>
         //public static IList<ActFormTree> FindAllTree(int key)
         //{
         //    if (Meta.Count >= 1000)
         //        return Find(_.ID, key);
-            
+
         //    else // 实体缓存
         //        return Meta.Cache.Entities.Find(_.ID, key);
         //    // 单对象缓存
+
         //    //return Meta.SingleCache[id];
         //}
+
+        /// <param name = "key" > 关键字 ID</param>
+
+        /// <returns>实体集</returns>
+        //public static IList<ActFormTree> FindTreeParID(int key)
+        //{
+        //    //if (Meta.Count >= 1000)
+        //    //    return Find(_.ID, key);
+
+        //    //else // 实体缓存
+        //    //    return Meta.Cache.Entities.Find(_.ID, key);
+        //    // 单对象缓存
+        //    //return Meta.SingleCache[id];
+        //    return Find(_.parenID, key);
+        //}
+
 
         #endregion
 
@@ -118,7 +135,7 @@ namespace Hhz.SysDF.SysModule
             // WhereExpression重载&和|运算符，作为And和Or的替代
             // SearchWhereByKeys系列方法用于构建针对字符串字段的模糊搜索，第二个参数可指定要搜索的字段
             var exp = SearchWhereByKeys(key, null, null);
-            
+
             // 以下仅为演示，Field（继承自FieldItem）重载了==、!=、>、<、>=、<=等运算符
             //if (userid > 0) exp &= _.OperatorID == userid;
             //if (isSign != null) exp &= _.IsSign == isSign.Value;
@@ -126,6 +143,16 @@ namespace Hhz.SysDF.SysModule
 
             return FindAll(exp, param);
         }
+
+        public static IList<ActFormTree> SearchPara(Int32 iPartid)
+        {
+            var exp = new WhereExpression();
+            if (iPartid > 0) exp &= _.parenID == iPartid;
+
+            return FindAll(exp);
+
+        }
+}
         #endregion
 
         #region 扩展操作
@@ -133,5 +160,5 @@ namespace Hhz.SysDF.SysModule
 
         #region 业务
         #endregion
-    }
+    
 }
